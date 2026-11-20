@@ -118,7 +118,7 @@ checkpoint through the code root it was trained with, with TF32 disabled, at bat
 Appendix I.7) is stored gzip-compressed because of its size; unpack it with `gunzip -k` before running
 `compare_e3_reference.py` (`REPRODUCTION_INDEX.md`, section 7).
 
-Paths of the machines that ran the experiments are replaced by placeholders (`<REPO>`, `<CLOUD_DISK>`, …) and machine
+Paths of the real machines name of us that ran the experiments are replaced by placeholders (`<REPO>`, `<CLOUD_DISK>`, …) and machine
 names by neutral labels; `REPRODUCTION_INDEX.md` lists them. Result files, run names, run directories and code fields
 keep their original identifiers; section 1 of the index maps them to the names used in the paper (for example `QRM`,
 `FW` and `range_mode=relevant_zero` denote FWM, and `Centroid` denotes the bin-mean reconstruction).
