@@ -1,0 +1,12 @@
+\begin{tabular}{@{}p{4.6cm}lll@{}}
+\toprule
+Forward at evaluation (weights unchanged) & NLL & $-$ native & $-$ suite A softmax (or as stated) \\
+\midrule
+native: IndexSoftmax (ii), UINT8, as trained & 3.2100 & --- & $+0.0172$ [$+0.0156$, $+0.0189$] \\
+IndexSoftmax (i), float normalization & 3.2188 & $+0.0088$ [$+0.0082$, $+0.0094$] & $+0.0260$ [$+0.0244$, $+0.0277$] \\
+exact fp32 softmax & 3.2177 & $+0.0077$ [$+0.0072$, $+0.0083$] & $+0.0250$ [$+0.0234$, $+0.0266$] \\
+native\enspace$-$\enspace suite A \FW--Prob ($K{=}4$) & 3.2100 &  & $-0.0020$ [$-0.0036$, $-0.0005$] \\
+native\enspace$-$\enspace suite A \FW--Weight ($K{=}16$) & 3.2100 &  & $+0.0134$ [$+0.0115$, $+0.0152$] \\
+native\enspace$-$\enspace suite A MinMax--LERP ($K{=}4$) & 3.2100 &  & $+0.0125$ [$+0.0107$, $+0.0143$] \\
+\bottomrule
+\end{tabular}

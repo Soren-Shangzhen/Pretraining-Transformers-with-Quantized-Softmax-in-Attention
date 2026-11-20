@@ -1,0 +1,17 @@
+{
+  "run": "exact_fp32_softmax_5m",
+  "label": "Exact",
+  "K": 0,
+  "range_grad": "n/a",
+  "seed": 1337,
+  "checkpoint": "<REPO>/training_code/legacy_exact_fp32/runs/exact_fp32_softmax_5m/ckpt.pt",
+  "step": 39,
+  "tokens_done": 5111808,
+  "max_tokens": 5000000,
+  "mean_nll": 6.920102007595109,
+  "n_blocks": 243,
+  "batch_size": 1,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/legacy_exact_fp32",
+  "eval_code_sha256": "3da199f854b97c6460577283af09ee4fa5bde1e1036c1585263d616801f0d4de",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

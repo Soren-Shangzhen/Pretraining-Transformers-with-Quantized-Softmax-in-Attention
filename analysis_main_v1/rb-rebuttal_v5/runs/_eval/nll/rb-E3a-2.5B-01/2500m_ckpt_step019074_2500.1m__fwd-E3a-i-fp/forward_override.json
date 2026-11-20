@@ -1,0 +1,27 @@
+{
+ "override": {
+  "attn_variant": "fp"
+ },
+ "checkpoint_config": {
+  "attn_variant": "u8"
+ },
+ "forward_config": {
+  "attn": "indexsoftmax",
+  "K": 8,
+  "approx": "lerp",
+  "range_grad": "full",
+  "range_mode": "minmax",
+  "range_tau": 6.0,
+  "tail_policy": "zero",
+  "resolved_h0": "",
+  "attn_variant": "fp",
+  "exaq_bits": 3,
+  "ema_decay": 0.999,
+  "nearest_surrogate": "prob"
+ },
+ "module_mode": "indexsoftmax",
+ "module_variant": "fp",
+ "script": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/eval/rb_eval_forward.py",
+ "script_sha256": "a957d0baeb0c766d99566735c8d12f8e09d7aec3589c46b1f6b5ad5dddac26b6",
+ "weights": "unchanged"
+}

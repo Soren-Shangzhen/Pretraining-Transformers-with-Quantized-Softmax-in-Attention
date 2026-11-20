@@ -1,0 +1,99 @@
+{
+  "label": "rb-E7-02",
+  "role": "E7",
+  "checkpoint": "<POD_WORKSPACE>/runs/rb-E7-02/ckpt_step000763_100.0m.pt",
+  "step": 763,
+  "tokens_done": 100007936,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "nearest_surrogate_used": "weight_strict",
+  "config": {
+    "run_name": "rb-E7-02",
+    "data_dir": "<POD_WORKSPACE>/data/wikitext103",
+    "out_dir": "<POD_WORKSPACE>/runs",
+    "overwrite_run": false,
+    "n_layer": 12,
+    "n_head": 12,
+    "n_embd": 768,
+    "block_size": 1024,
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "nearest_surrogate": "weight_strict",
+    "range_grad": "full",
+    "max_tokens": 100000000,
+    "batch_tokens": 131072,
+    "micro_batch": 1,
+    "lr": 0.0006,
+    "min_lr_ratio": 0.1,
+    "warmup_tokens": 10000000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "grad_clip": 1.0,
+    "seed": 7,
+    "grad_checkpointing": false,
+    "eval_every_tokens": 5000000,
+    "log_every_steps": 0,
+    "health_every_steps": 0,
+    "eval_batches": 100,
+    "stats_batches": 1,
+    "ckpt_every_tokens": 20000000,
+    "ckpt_tokens": "",
+    "resume": false,
+    "compile": false,
+    "device": "cuda"
+  },
+  "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/c2_roots/e2_minmax_probste_strict",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "92291324e4b9d90441d42b0c2824b744ec1896628b372628684d241673df4b88"
+  },
+  "dataset": "wikitext103",
+  "val_path": "<POD_WORKSPACE>/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "tf32": false,
+  "mean_nll": 4.353207061320175,
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "machine-B",
+  "seconds": 20.1,
+  "finished": "2026-11-12T10:20:54",
+  "provenance": {
+    "checkpoint": {
+      "path": "<POD_WORKSPACE>/runs/rb-E7-02/ckpt_step000763_100.0m.pt",
+      "realpath": "<POD_WORKSPACE>/runs/rb-E7-02/ckpt_step000763_100.0m.pt",
+      "bytes": 1492586667,
+      "sha256": "481f61d486e4000f6a716ef09dbef25ab661519e7395d6192c0c32b1ed08735c",
+      "manifest_sha256": "481f61d486e4000f6a716ef09dbef25ab661519e7395d6192c0c32b1ed08735c",
+      "manifest_source": "B checkpoint manifest runs/_ckpt_sha256.tsv",
+      "matches_manifest": true
+    },
+    "code_root": {
+      "path": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/c2_roots/e2_minmax_probste_strict",
+      "files": {
+        "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+        "quant_attention.py": "92291324e4b9d90441d42b0c2824b744ec1896628b372628684d241673df4b88",
+        "train_formal.py": "384e7c06e82985ec8a89e2f549f0faca84237e1dee8573e6a910d0124eb91b5f"
+      },
+      "sha256_of_file_hashes": "2fe9e410add6b820c6fed8eb721dfee8c20dae5784e313e36f13af59065cfde2"
+    },
+    "other_code_roots": [],
+    "scripts": {
+      "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+      "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057",
+      "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed"
+    }
+  }
+}

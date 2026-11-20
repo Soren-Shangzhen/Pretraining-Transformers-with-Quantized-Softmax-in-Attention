@@ -1,0 +1,20 @@
+{
+  "task": "sciq",
+  "subset": "full",
+  "n_examples": 1000,
+  "n_requests": 4000,
+  "truncation_rate": 0.0,
+  "metric_name": "length-normalised margin (gold \u2212 best wrong)",
+  "acc": 0.731,
+  "acc_norm": 0.675,
+  "chance": 0.25,
+  "acc_se": 0.014022802858202064,
+  "acc_above_chance_pp": 48.1,
+  "metric_mean": 0.1226474351958204,
+  "metric_sd": 0.48280400144727753,
+  "metric_se": 0.015267603080166276,
+  "detect_floor_metric": 0.03053520616033255,
+  "detect_floor_acc_pp": 2.8045605716404127,
+  "mean_options": 4.0,
+  "seconds": null
+}

@@ -1,0 +1,52 @@
+{
+  "job_id": "0376",
+  "phase": "trajectory",
+  "run_name": "QRM-Weight_K16_s1337",
+  "label": "QRM-Weight",
+  "cond": "QRM-Weight K16",
+  "calibration": "relevant_zero",
+  "reconstruction": "nearest",
+  "backward": "weight_ste",
+  "K": "16",
+  "seed": 1337,
+  "range_tau": "6",
+  "range_grad": "full",
+  "dataset": "wikitext103",
+  "source_origin": "original_local",
+  "checkpoint": "<REPO>/training_code/phaseB_base/qrm_runs_v1/qrm_s1337_nearest_k16_tau6_fullgrad_100m/ckpt_step000306_40.1m.pt",
+  "ckpt_index": 1,
+  "is_final": 0,
+  "step": 306,
+  "tokens_done": 40108032,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 16,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0
+  },
+  "val_path": "<REPO>/training_code/phaseB_base/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 4.996248403203831,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/local_phaseB_rr_qrm",
+  "eval_code_sha256": {
+    "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+    "quant_attention.py": "a402460d4545a76e19a65f858d4bee247fec26309431a94fd112670176546367"
+  },
+  "torch": "2.5.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "host": "local3090",
+  "seconds": {
+    "load": 1.9,
+    "nll": 27.1,
+    "geometry": 9.5
+  },
+  "finished": "2026-09-20T14:48:53"
+}

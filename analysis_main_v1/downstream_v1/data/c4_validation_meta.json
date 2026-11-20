@@ -1,0 +1,11 @@
+{
+  "corpus": "c4_validation",
+  "tokens": 309262,
+  "n_blocks": 302,
+  "block": 1024,
+  "tokenizer": "tiktoken:gpt2 encode_ordinary + EOT per document",
+  "dtype": "uint16",
+  "sha256": "f251c3dddf2dafe60c91a5d9e0d133c7bbd9c79d26e7fb749a55d0a7b20c8c72",
+  "documents": 717,
+  "block_document_map": "c4_validation_blocks.csv"
+}

@@ -1,0 +1,11 @@
+job_id	suite	run_name	label	K	seed	ckpt_index	step	tokens_m	is_final	dataset	model_scale	checkpoint_path	phase
+0000	D_robustness_124m_100m_5seed	LERP-Detach_K32_s42	LERP-Detach	32	42	4	763	100	1	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s42_lerp_k32_detach_100m/ckpt_step000763_100.0m.pt	endpoint
+0001	D_robustness_124m_100m_5seed	LERP-Detach_K32_s7	LERP-Detach	32	7	4	763	100	1	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s7_lerp_k32_detach_100m/ckpt_step000763_100.0m.pt	endpoint
+0003	D_robustness_124m_100m_5seed	LERP-Detach_K32_s42	LERP-Detach	32	42	0	153	20	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s42_lerp_k32_detach_100m/ckpt_step000153_20.1m.pt	trajectory
+0004	D_robustness_124m_100m_5seed	LERP-Detach_K32_s7	LERP-Detach	32	7	0	153	20	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s7_lerp_k32_detach_100m/ckpt_step000153_20.1m.pt	trajectory
+0006	D_robustness_124m_100m_5seed	LERP-Detach_K32_s42	LERP-Detach	32	42	1	306	40	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s42_lerp_k32_detach_100m/ckpt_step000306_40.1m.pt	trajectory
+0007	D_robustness_124m_100m_5seed	LERP-Detach_K32_s7	LERP-Detach	32	7	1	306	40	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s7_lerp_k32_detach_100m/ckpt_step000306_40.1m.pt	trajectory
+0009	D_robustness_124m_100m_5seed	LERP-Detach_K32_s42	LERP-Detach	32	42	2	459	60	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s42_lerp_k32_detach_100m/ckpt_step000459_60.2m.pt	trajectory
+0010	D_robustness_124m_100m_5seed	LERP-Detach_K32_s7	LERP-Detach	32	7	2	459	60	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s7_lerp_k32_detach_100m/ckpt_step000459_60.2m.pt	trajectory
+0012	D_robustness_124m_100m_5seed	LERP-Detach_K32_s42	LERP-Detach	32	42	3	612	80	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s42_lerp_k32_detach_100m/ckpt_step000612_80.2m.pt	trajectory
+0013	D_robustness_124m_100m_5seed	LERP-Detach_K32_s7	LERP-Detach	32	7	3	612	80	0	wikitext103	124M	<REPO>/training_code/phaseB_base/runs_20260921/rb_s7_lerp_k32_detach_100m/ckpt_step000612_80.2m.pt	trajectory

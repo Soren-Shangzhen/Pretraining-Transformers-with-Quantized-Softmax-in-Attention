@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "94d85b5e5f2082b2b4bdd6aafbdb0c03146476baccfac882d535a88f3adb487f",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "lambada_openai",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "3866b625240b7e88ef8a571e7cbaa6b3",
+  "n_rows": 5153,
+  "finished": "2026-09-20T14:22:08"
+}

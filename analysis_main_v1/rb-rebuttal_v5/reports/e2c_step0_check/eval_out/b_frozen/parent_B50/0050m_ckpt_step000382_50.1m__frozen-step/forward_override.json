@@ -1,0 +1,52 @@
+{
+ "override": {
+  "range_mode": "relevant_zero",
+  "tail_policy": "resolved",
+  "range_tau": "6.0",
+  "resolved_h0": "1.398775,4.924105,2.506495,4.201291,8.273577,8.624490,7.414962,6.529430,4.627206,3.793493,2.602424,2.196885",
+  "range_grad": "full",
+  "nearest_surrogate": "weight_strict"
+ },
+ "checkpoint_config": {
+  "range_mode": null,
+  "tail_policy": null,
+  "range_tau": null,
+  "resolved_h0": null,
+  "range_grad": "full",
+  "nearest_surrogate": null
+ },
+ "forward_config": {
+  "attn": "quant",
+  "K": 4,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "relevant_zero",
+  "range_tau": "6.0",
+  "tail_policy": "resolved",
+  "resolved_h0": "1.398775,4.924105,2.506495,4.201291,8.273577,8.624490,7.414962,6.529430,4.627206,3.793493,2.602424,2.196885",
+  "attn_variant": "",
+  "exaq_bits": 3,
+  "ema_decay": 0.999,
+  "nearest_surrogate": "weight_strict"
+ },
+ "module_mode": "quant",
+ "module_range_mode": "relevant_zero",
+ "module_tail_policy": "resolved",
+ "module_range_tau_per_layer": [
+  5.5951,
+  19.69642,
+  10.02598,
+  16.805164,
+  33.094308,
+  34.49796,
+  29.659848,
+  26.11772,
+  18.508824,
+  15.173972,
+  10.409696,
+  8.78754
+ ],
+ "script": "<REPO>/analysis_main_v1/rb-rebuttal_v5/reports/e2c_step0_check/code/e2c_forward_override.py",
+ "script_sha256": "b46a4fa188f434672b2e6bd17df7f1e55bb8c79c1e4058a80ced509aba9ab98e",
+ "weights": "unchanged"
+}

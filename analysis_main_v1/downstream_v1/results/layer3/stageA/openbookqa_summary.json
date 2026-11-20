@@ -1,0 +1,20 @@
+{
+  "task": "openbookqa",
+  "subset": "full",
+  "n_examples": 500,
+  "n_requests": 2000,
+  "truncation_rate": 0.0,
+  "metric_name": "length-normalised margin (gold \u2212 best wrong)",
+  "acc": 0.164,
+  "acc_norm": 0.284,
+  "chance": 0.25,
+  "acc_se": 0.0165592270351004,
+  "acc_above_chance_pp": -8.6,
+  "metric_mean": -0.24848874641803295,
+  "metric_sd": 0.5002495331097073,
+  "metric_se": 0.022371839234916747,
+  "detect_floor_metric": 0.044743678469833494,
+  "detect_floor_acc_pp": 3.3118454070200802,
+  "mean_options": 4.0,
+  "seconds": null
+}

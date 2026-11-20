@@ -1,0 +1,19 @@
+<REPO>/training_code/phaseB_base/data/wikitext103/train.bin: OK
+<REPO>/training_code/phaseB_base/data/wikitext103/val.bin: OK
+code/centroid_root_v2/model.py: OK
+code/centroid_root_v2/quant_attention.py: OK
+code/centroid_root_v2/train.py: OK
+code/eval_v2/common.py: OK
+code/eval_v2/cv1_eval.py: OK
+code/eval_v2/geometry_probe_v1.py: OK
+code/checks/check_v2_nearest_centroid_bwd.py: OK
+code/jobs/run_addendum_nfcb.sh: OK
+[2026-10-14T23:12:37Z] START cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 
+[2026-10-15T06:36:26Z] END cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m rc=0
+[2026-10-15T06:36:26Z] EVAL cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m
+done cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 20M nll=5.628648 59.6s
+done cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 40M nll=5.103521 59.0s
+done cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 60M nll=4.668490 59.0s
+done cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 80M nll=4.396699 59.1s
+done cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m 100M nll=4.278727 59.1s
+[2026-10-15T06:41:23Z] ALL DONE rc=0

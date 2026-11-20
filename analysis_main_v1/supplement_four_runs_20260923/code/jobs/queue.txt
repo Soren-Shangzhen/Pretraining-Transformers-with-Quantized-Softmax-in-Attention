@@ -1,0 +1,10 @@
+replay_oldmmprob_a
+replay_oldmmprob_b
+replay_oldlerpfull
+step0_e2w_det
+ops_e2_v2
+e2_mm_probstrict
+e2_mm_weightstrict
+e2_fwm_probstrict
+e2_fwm_weightstrict
+# e1_minonly / e1_maxonly moved to the local RTX 3090 on user instruction (2026-09-23)

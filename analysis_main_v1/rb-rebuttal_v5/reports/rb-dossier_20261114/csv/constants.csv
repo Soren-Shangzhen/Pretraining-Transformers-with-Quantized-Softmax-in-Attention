@@ -1,0 +1,8 @@
+name,value
+"t_0.975,2 (paired t interval over 3 seeds)",4.302652729911275
+bootstrap resamples,4000
+moving-block length,16
+block bootstrap seed (validation NLL),20260918
+stage C bootstrap seed (benchmarks),20260920
+single-seed interpretation threshold (nats),0.01
+tokens per step,131072

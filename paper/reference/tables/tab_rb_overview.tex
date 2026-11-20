@@ -1,0 +1,42 @@
+\begin{tabular}{@{}p{6.6cm}p{2.6cm}lrr@{}}
+\toprule
+Question and experiment & Suite protocol & Seeds & Runs & GPU-h \\
+\midrule
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Controls on the software stack of these experiments (Appendix~\ref{app:rb-overview})}} \\
+\quad same-stack softmax controls (100M, three seeds) & D (100M) & 7, 42, 1337 & 3 & 4.1 \\
+\quad same-stack softmax control (250M) & B (250M) & 1337 & 1 & 3.5 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Can LERP be paired with the fixed window, and does the calibration-gradient result carry over to a static grid? (\ref{app:rb-fwmlerp})}} \\
+\quad \FW--LERP, 100M and 250M & B (250M), D (100M) & 7, 42, 1337 & 8 & 17.7 \\
+\quad \FW--LERP $K{=}4$ at 2.5B & A (2.5B) & 1337 & 1 & 40.3 \\
+\quad row maximum detached under \FW & B (250M), D (100M) & 7, 42, 1337 & 9 & 20.2 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Is the surrogate rule a cause of the failure under MinMax? (\ref{app:rb-interv})}} \\
+\quad surrogate switch, frozen step & B (250M) & 1337 & 10 & 49.3 \\
+\quad the same on the 2.5B schedule & A (2.5B) & 1337 & 3 & 34.9 \\
+\quad surrogate switch on three seeds & D (100M) & 7, 42, 253 & 12 & 21.0 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Does a window that tracks the scores without being differentiated train? (\ref{app:rb-ema})}} \\
+\quad per-head exponential-moving-average (EMA) window & B (250M), D (100M) & 7, 42, 1337 & 8 & 32.5 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Do the rounding rules of standard number formats train? (\ref{app:rb-formats})}} \\
+\quad rounding rules of five formats, incl. MXFP8, NVFP4 & B (250M), D (100M) & 7, 42, 1337 & 18 & 37.7 \\
+\quad bf16 row sum and division & B (250M), D (100M) & 7, 42, 1337 & 4 & 7.9 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Does the calibration-gradient result hold for a published operator with tensor-level calibration? (\ref{app:rb-exaq})}} \\
+\quad EXAQ, statistics detached or in the graph & B (250M), D (100M) & 7, 42, 1337 & 8 & 31.5 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Does a published lookup operator train, with and without reduced-precision normalization? (\ref{app:rb-index})}} \\
+\quad IndexSoftmax, (i) float, (ii) UINT8 normalization & B (250M), D (100M) & 7, 42, 1337 & 8 & 21.1 \\
+\quad IndexSoftmax at 2.5B & A (2.5B) & 1337 & 1 & 47.3 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Which downstream differences persist on a second seed? (\ref{app:rb-seed})}} \\
+\quad second softmax seed at 2.5B & A (2.5B) & 7 & 1 & 33.2 \\
+\quad second LERP $K{=}16$ seed at 2.5B & A (2.5B) & 7 & 1 & 46.6 \\
+\addlinespace[3pt]
+\multicolumn{5}{@{}p{12.9cm}@{}}{\emph{Does TF32 in training change the result? (\ref{app:rb-evalset})}} \\
+\quad TF32 off in training & D (100M) & 7 & 2 & 5.5 \\
+\midrule
+Total &  &  & 98 & 454.1 \\
+\bottomrule
+\end{tabular}

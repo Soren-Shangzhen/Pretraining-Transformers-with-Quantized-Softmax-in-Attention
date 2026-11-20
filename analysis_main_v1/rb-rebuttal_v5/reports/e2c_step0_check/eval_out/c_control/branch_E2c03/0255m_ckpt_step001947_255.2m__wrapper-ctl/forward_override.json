@@ -1,0 +1,52 @@
+{
+ "override": {
+  "range_mode": "relevant_zero",
+  "tail_policy": "resolved",
+  "range_tau": "6.0",
+  "resolved_h0": "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618",
+  "range_grad": "full",
+  "nearest_surrogate": "weight_strict"
+ },
+ "checkpoint_config": {
+  "range_mode": "relevant_zero",
+  "tail_policy": "resolved",
+  "range_tau": 6.0,
+  "resolved_h0": "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618",
+  "range_grad": "full",
+  "nearest_surrogate": "weight_strict"
+ },
+ "forward_config": {
+  "attn": "quant",
+  "K": 4,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "relevant_zero",
+  "range_tau": "6.0",
+  "tail_policy": "resolved",
+  "resolved_h0": "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618",
+  "attn_variant": "",
+  "exaq_bits": 3,
+  "ema_decay": 0.999,
+  "nearest_surrogate": "weight_strict"
+ },
+ "module_mode": "quant",
+ "module_range_mode": "relevant_zero",
+ "module_tail_policy": "resolved",
+ "module_range_tau_per_layer": [
+  100.086372,
+  242.295208,
+  80.099528,
+  238.97082,
+  248.623644,
+  219.101932,
+  157.653704,
+  92.750016,
+  57.728544,
+  48.457624,
+  38.802524,
+  42.258472
+ ],
+ "script": "<REPO>/analysis_main_v1/rb-rebuttal_v5/reports/e2c_step0_check/code/e2c_forward_override.py",
+ "script_sha256": "b46a4fa188f434672b2e6bd17df7f1e55bb8c79c1e4058a80ced509aba9ab98e",
+ "weights": "unchanged"
+}

@@ -1,0 +1,4 @@
+corpus,metric,n,noise_floor_p90
+wikitext103_test,block NLL,276,0.05656399346780052
+ptb_test,block NLL,102,0.07245021427378974
+c4_validation,block NLL,302,0.13061083052587855

@@ -1,0 +1,10 @@
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Contrast & seed 7 & seed 42 & seed 1337 & mean, 95\% $t$ & 250M (seed 1337), 95\% CI \\
+\midrule
+statistics detached (d) $-$ softmax & $+0.0935$ & $+0.0841$ & $+0.0864$ & \begin{tabular}[c]{@{}l@{}}$+0.0880$\\{[$+0.0758$, $+0.1002$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0916$\\{[$+0.0901$, $+0.0931$]}\end{tabular} \\\addlinespace[2pt]
+statistics in the graph (g) $-$ softmax & $+0.0657$ & $+0.0724$ & $+0.0644$ & \begin{tabular}[c]{@{}l@{}}$+0.0675$\\{[$+0.0569$, $+0.0781$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0363$\\{[$+0.0349$, $+0.0377$]}\end{tabular} \\\addlinespace[2pt]
+d $-$ g & $+0.0279$ & $+0.0117$ & $+0.0220$ & \begin{tabular}[c]{@{}l@{}}$+0.0205$\\{[$+0.0002$, $+0.0408$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0553$\\{[$+0.0539$, $+0.0568$]}\end{tabular} \\\addlinespace[2pt]
+g $-$ IndexSoftmax (i) & $+0.0893$ & $+0.0679$ & $+0.0762$ & \begin{tabular}[c]{@{}l@{}}$+0.0778$\\{[$+0.0510$, $+0.1046$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0349$\\{[$+0.0334$, $+0.0364$]}\end{tabular} \\\addlinespace[2pt]
+\bottomrule
+\end{tabular}

@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "b1986057ffd6b2195fa2b6262c3f6cc86e7b906558c7f779ec2d03d00aaf9a26",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "hellaswag",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "43069e8bc7730949a7e2cf790ea32911",
+  "n_rows": 40168,
+  "finished": "2026-09-20T12:33:16"
+}

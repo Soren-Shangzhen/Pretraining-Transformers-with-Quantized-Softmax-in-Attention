@@ -1,0 +1,78 @@
+run_id,step,operator,zeroed,clip,rowsum,pmax
+rb-E1-01,763,FWM-LERP | K=4 | none (exact Jacobian) | full,0.00939986350765924,0.5824169441273919,0.9999999910205309,0.19162184295085952
+rb-E1-02,763,FWM-LERP | K=4 | none (exact Jacobian) | full,0.010018671266007811,0.5854181146416692,0.9999999911283609,0.19521904654723524
+rb-E1-03,763,FWM-LERP | K=4 | none (exact Jacobian) | full,0.009806285073336288,0.5748536549495881,0.9999999910266508,0.18909897257423489
+rb-E1-04,1908,FWM-LERP | K=4 | none (exact Jacobian) | full,0.013557896995763286,0.665404592864231,0.999999991332995,0.23859994059073364
+rb-E1-05,763,FWM-LERP | K=16 | none (exact Jacobian) | full,0.010031662314647773,0.57175194660506,0.9999999910463758,0.1993272223229875
+rb-E1-06,763,FWM-LERP | K=16 | none (exact Jacobian) | full,0.010269693581408931,0.5835135792597631,0.9999999911353911,0.20438275742624412
+rb-E1-07,763,FWM-LERP | K=16 | none (exact Jacobian) | full,0.010002198435912707,0.584672243762215,0.9999999910830947,0.20048274764892862
+rb-E1-08,1908,FWM-LERP | K=16 | none (exact Jacobian) | full,0.013385995331058958,0.661640957815913,0.9999999912854021,0.24883279949662307
+rb-E11-01,763,FWM-LERP | K=4 | none (exact Jacobian) | detach row max,0.005969474898389449,0.8988078716274654,0.9999999943435328,0.5921848241278967
+rb-E11-02,763,FWM-LERP | K=4 | none (exact Jacobian) | detach row max,0.005749823323885694,0.8794489404117893,0.9999999945332467,0.6013931889890448
+rb-E11-03,763,FWM-LERP | K=16 | none (exact Jacobian) | detach row max,0.009514475963393677,0.6321545099885861,0.9999999912815584,0.2413465987724178
+rb-E11-04,763,FWM-LERP | K=16 | none (exact Jacobian) | detach row max,0.010004121321959488,0.606120963163463,0.9999999911782803,0.22596604009299018
+rb-E11-05,763,FWM-Nearest | K=4 | Weight-STE (strict forward) | detach row max,0.001873142471213926,0.9740715777479675,0.9999999984688356,0.8577112428083904
+rb-E11-06,763,FWM-Nearest | K=4 | Weight-STE (strict forward) | full,0.006404561932026431,0.43120424637178556,0.999999985892036,0.1115327678334912
+rb-E11-07,763,FWM-Nearest | K=4 | Weight-STE (strict forward) | detach row max,0.0012971844288833393,0.9860954056934178,0.9999999981312856,0.884191256533195
+rb-E11-08,763,FWM-Nearest | K=4 | Weight-STE (strict forward) | full,0.006949259904677307,0.43462779751284675,0.9999999868715076,0.11154687499685571
+rb-E11-09,1908,FWM-LERP | K=4 | none (exact Jacobian) | detach row max,0.0005041357028197851,0.9941146052001709,0.9999999983430005,0.9513895529970537
+rb-E2ab-01,1908,MinMax-Nearest | K=4 | Weight-STE (strict forward) | full,1.2435740102391793e-35,,0.9999999952770807,0.0600657015626623
+rb-E2ab-02,1908,MinMax-Nearest | K=4 | Prob-STE (strict forward) | full,0.0,,0.9999999932246206,0.19613804469830667
+rb-E2ab-03,1908,"resolved-Nearest | K=4 | Weight-STE, resolved operator with per-layer constant step h0 (strict forward) | full",2.9423205933424976e-45,0.1834738835064049,0.9999999885403423,0.06180774565851003
+rb-E2ab-04,1908,MinMax-Nearest | K=4 | Prob-STE (strict forward) | full,3.3176927226863314e-43,,0.9999999933530859,0.20178487381213372
+rb-E2ab-05,1908,MinMax-Nearest | K=4 | Weight-STE (strict forward) | full,2.3687830224923553e-35,,0.9999999956420437,0.05520059074136798
+rb-E2ab-06,1908,MinMax-Nearest | K=4 | Weight-STE (strict forward) | full,9.570144904927742e-36,,0.9999999952779913,0.06519012782693968
+rb-E2ab-07,1908,MinMax-Nearest | K=4 | Prob-STE (strict forward) | full,3.694429572378189e-41,,0.9999999942347421,0.1620255785887935
+rb-E2ab-08,1908,"resolved-Nearest | K=4 | Weight-STE, resolved operator with per-layer constant step h0 (strict forward) | full",9.876760840335676e-45,0.09343849019391763,0.9999999865832194,0.05200081937351022
+rb-E2ab-09,1908,MinMax-Nearest | K=4 | Prob-STE (strict forward) | full,3.4100871184305447e-43,,0.9999999934658724,0.20130113440287703
+rb-E2ab-10,1908,MinMax-Nearest | K=4 | Weight-STE (strict forward) | full,3.017222751419223e-38,,0.9999999951641932,0.0724355371628397
+rb-E2c-01,4769,MinMax-Nearest | K=4 | Weight-STE (strict forward) | full,7.818139836999954e-24,,0.9999999972811895,0.056517335648001925
+rb-E2c-02,4769,MinMax-Nearest | K=4 | Prob-STE (strict forward) | full,4.3513743235764535e-37,,0.9999999958980638,0.1708337918840993
+rb-E2c-03,4769,"resolved-Nearest | K=4 | Weight-STE, resolved operator with per-layer constant step h0 (strict forward) | full",2.12324593519333e-37,0.10631696909197617,0.9999999858890013,0.041164970187073366
+rb-E3a-01,763,IndexSoftmax E3a-i lookup + float normalisation | K=31 | Prob-STE (strict forward) | row max in graph | fp,0.007062719056120596,,0.9999999940839723,0.20872197879492058
+rb-E3a-02,763,IndexSoftmax E3a-i lookup + float normalisation | K=31 | Prob-STE (strict forward) | row max in graph | fp,0.007046652843421288,,0.9999999940879173,0.20990307054332277
+rb-E3a-03,763,IndexSoftmax E3a-i lookup + float normalisation | K=31 | Prob-STE (strict forward) | row max in graph | fp,0.006681755302015275,,0.9999999941438048,0.19657655769924795
+rb-E3a-04,1908,IndexSoftmax E3a-i lookup + float normalisation | K=31 | Prob-STE (strict forward) | row max in graph | fp,0.010285302158191038,,0.9999999941167461,0.260673787781079
+rb-E3a-05,763,IndexSoftmax E3a-ii lookup + UINT8 probabilities | K=31 | Prob-STE (strict forward) | row max in graph | u8,0.12370048512976234,,0.9155186306841828,0.18984140394822127
+rb-E3a-06,763,IndexSoftmax E3a-ii lookup + UINT8 probabilities | K=31 | Prob-STE (strict forward) | row max in graph | u8,0.12594517990209655,,0.9136296396861142,0.18569943474447045
+rb-E3a-07,763,IndexSoftmax E3a-ii lookup + UINT8 probabilities | K=31 | Prob-STE (strict forward) | row max in graph | u8,0.11613570673360141,,0.9211834040735302,0.19647927307466825
+rb-E3a-08,1908,IndexSoftmax E3a-ii lookup + UINT8 probabilities | K=31 | Prob-STE (strict forward) | row max in graph | u8,0.11874107808327537,,0.9210108997187169,0.23403202604599607
+rb-E3a-2.5B-01,19074,"IndexSoftmax (E3a-ii if its 250M gap <= +0.05, else E3a-i) | K=31 | Prob-STE (strict forward) | row max in graph | u8",0.10234146752762109,,0.9335721751362597,0.2936359098625522
+rb-E3b-01,763,"EXAQ 3-bit, E3b-d calibration stats detached | K=7 | Prob-STE (strict forward) | row max in graph | detach",6.618444591429418e-36,,0.9999999948489982,0.14225898555746808
+rb-E3b-02,763,"EXAQ 3-bit, E3b-d calibration stats detached | K=7 | Prob-STE (strict forward) | row max in graph | detach",2.0346348554906685e-35,,0.9999999931175494,0.1461884178579459
+rb-E3b-03,763,"EXAQ 3-bit, E3b-d calibration stats detached | K=7 | Prob-STE (strict forward) | row max in graph | detach",4.030589068806984e-37,,0.9999999973001558,0.1428446320572999
+rb-E3b-04,1908,"EXAQ 3-bit, E3b-d calibration stats detached | K=7 | Prob-STE (strict forward) | row max in graph | detach",0.0,,0.9999999934114516,0.19650601055156347
+rb-E3b-05,763,"EXAQ 3-bit, E3b-g calibration stats in graph | K=7 | Prob-STE (strict forward) | row max in graph | graph",0.0,,0.9999999939985481,0.1577968806804473
+rb-E3b-06,763,"EXAQ 3-bit, E3b-g calibration stats in graph | K=7 | Prob-STE (strict forward) | row max in graph | graph",0.0,,0.9999999928822659,0.15866290153345822
+rb-E3b-07,763,"EXAQ 3-bit, E3b-g calibration stats in graph | K=7 | Prob-STE (strict forward) | row max in graph | graph",0.0,,0.9999999933876805,0.15574584615870088
+rb-E3b-08,1908,"EXAQ 3-bit, E3b-g calibration stats in graph | K=7 | Prob-STE (strict forward) | row max in graph | graph",0.0,,0.9999999990423775,0.1974824265415539
+rb-E4-01,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Weight-STE (strict forward) | row max in graph; EMA is a buffer",0.0010368400739125968,0.1362238424324784,0.9999999935231254,0.057384436199434265
+rb-E4-02,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Weight-STE (strict forward) | row max in graph; EMA is a buffer",0.0013229306554231612,0.13819863619478864,0.9999999934629389,0.05818290972908325
+rb-E4-03,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Weight-STE (strict forward) | row max in graph; EMA is a buffer",0.0011287458442321965,0.13360278107004353,0.9999999949183391,0.05819489634901661
+rb-E4-04,1908,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Weight-STE (strict forward) | row max in graph; EMA is a buffer",0.002265727177396268,0.1559604860490503,0.9999999940409819,0.06423544825343762
+rb-E4-05,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Prob-STE (strict forward) | row max in graph; EMA is a buffer",0.00028886998334301875,0.16594765461528022,0.9999999976260227,0.14796024981688569
+rb-E4-06,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Prob-STE (strict forward) | row max in graph; EMA is a buffer",0.00034185381087876873,0.16374733138570938,0.9999999956062857,0.14780171591214644
+rb-E4-07,763,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Prob-STE (strict forward) | row max in graph; EMA is a buffer",0.0003650950793827529,0.16724381719636153,0.9999999969922944,0.1486637520415965
+rb-E4-08,1908,"EMA-window Nearest (per layer and head, decay 0.999, zero tail) | K=4 | Prob-STE (strict forward) | row max in graph; EMA is a buffer",4.958927409922026e-05,0.17249710325604026,0.9999999979070783,0.17700244887588054
+rb-E5-01,763,BF16-exp | native autograd | row max in graph,5.4887137357602186e-42,,0.9999999928998665,0.20458250752488447
+rb-E5-02,763,BF16-exp | native autograd | row max in graph,5.429852447606061e-42,,0.999999992843271,0.1954745116685901
+rb-E5-03,1908,BF16-exp | native autograd | row max in graph,9.432374987544601e-42,,0.9999999928960733,0.2426994766744868
+rb-E5-04,763,FP8-E4M3 rounded exp | fp32 exp derivative | row max in graph,0.003864021664785632,,0.9999999941383425,0.2034192165933275
+rb-E5-05,763,FP8-E4M3 rounded exp | fp32 exp derivative | row max in graph,0.0038048351518644367,,0.9999999940607069,0.19469028427972834
+rb-E5-06,1908,FP8-E4M3 rounded exp | fp32 exp derivative | row max in graph,0.004998853125851527,,0.9999999941244339,0.24027508495139416
+rb-E5-07,763,MXFP8-style | fp32 exp derivative | row max in graph,1.7388334788752685e-07,,0.9999999942186587,0.19571164209285327
+rb-E5-08,763,MXFP8-style | fp32 exp derivative | row max in graph,2.1162737629141494e-07,,0.9999999942271556,0.19989474027968046
+rb-E5-09,763,MXFP8-style | fp32 exp derivative | row max in graph,2.2666073693878765e-07,,0.9999999940993477,0.19845322357604975
+rb-E5-10,1908,MXFP8-style | fp32 exp derivative | row max in graph,3.258951706458559e-07,,0.999999994054486,0.23667104213913706
+rb-E5-11,763,NVFP4-style | fp32 exp derivative | row max in graph,0.025446479223390456,,0.9999999906909216,0.1943370093789981
+rb-E5-12,763,NVFP4-style | fp32 exp derivative | row max in graph,0.025503166162323534,,0.999999990725769,0.1963724552585915
+rb-E5-13,763,NVFP4-style | fp32 exp derivative | row max in graph,0.025356664168030698,,0.9999999907965766,0.19329376461956907
+rb-E5-14,1908,NVFP4-style | fp32 exp derivative | row max in graph,0.027472596917009012,,0.9999999904245332,0.23017547048334142
+rb-E5-15,763,UINT8 uniform | fp32 exp derivative | row max in graph,0.007856031111332274,,0.9999999695529742,0.20371937565584552
+rb-E5-16,763,UINT8 uniform | fp32 exp derivative | row max in graph,0.008101669030809775,,0.9999999694078691,0.20318227798074284
+rb-E5-17,763,UINT8 uniform | fp32 exp derivative | row max in graph,0.007626357388516134,,0.9999999701827069,0.19754218843501978
+rb-E5-18,1908,UINT8 uniform | fp32 exp derivative | row max in graph,0.009864054851513817,,0.9999999654533646,0.23946511815019614
+rb-E5n-01,763,BF16 full-chain softmax | native autograd | row max in graph,1.2040062154228867e-41,,1.000020637727612,0.19766654609093073
+rb-E5n-02,763,BF16 full-chain softmax | native autograd | row max in graph,1.33116500412311e-41,,1.000021417462391,0.20088336926608696
+rb-E5n-03,763,BF16 full-chain softmax | native autograd | row max in graph,9.811886621298547e-42,,1.0000196558301855,0.19996540059196036
+rb-E5n-04,1908,BF16 full-chain softmax | native autograd | row max in graph,2.1726495780693017e-41,,1.0000149180991365,0.23798768116646563

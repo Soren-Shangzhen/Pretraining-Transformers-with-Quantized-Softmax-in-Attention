@@ -1,0 +1,93 @@
+{
+  "G1_gpu_fp32_vs_cpu_fp64": {
+    "centroid/minmax/scale1.0": {
+      "max_rel_output_err": 1.3138076732666964e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid/minmax/scale4.0": {
+      "max_rel_output_err": 4.447038443393429e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid/relevant_zero/scale1.0": {
+      "max_rel_output_err": 1.1653922384925593e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid/relevant_zero/scale4.0": {
+      "max_rel_output_err": 1.9624401549930715e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid2/minmax/scale1.0": {
+      "max_rel_output_err": 1.6674484790444646e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid2/minmax/scale4.0": {
+      "max_rel_output_err": 3.686099748765296e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid2/relevant_zero/scale1.0": {
+      "max_rel_output_err": 1.5703402040472576e-07,
+      "level_mismatch_fraction": 0.0
+    },
+    "centroid2/relevant_zero/scale4.0": {
+      "max_rel_output_err": 2.256629485002493e-07,
+      "level_mismatch_fraction": 0.0
+    }
+  },
+  "G2_bitwise_determinism_two_runs": {
+    "exact_fp32_softmax": true,
+    "fw_nearest_weightste_k4 (phaseB_rr)": true,
+    "fw_centroid_k4": false,
+    "fw_centroid2_k4": false,
+    "minmax_centroid_k4": false,
+    "minmax_centroid2_k4": false
+  },
+  "G3_step0_and_throughput": {
+    "exact_fp32_softmax": {
+      "step0_loss": 10.892333984375,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.8906828165054321,
+      "tok_per_s": 13221.096184976703,
+      "peak_mem_gib": 4.78462028503418
+    },
+    "fw_nearest_weightste_k4 (phaseB_rr)": {
+      "step0_loss": 10.89190673828125,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.9042577743530273,
+      "tok_per_s": 5312.634265329448,
+      "peak_mem_gib": 8.304829120635986
+    },
+    "fw_centroid_k4": {
+      "step0_loss": 10.89019775390625,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.13895753026008606,
+      "tok_per_s": 5276.345861269438,
+      "peak_mem_gib": 7.369358062744141
+    },
+    "fw_centroid2_k4": {
+      "step0_loss": 10.89093017578125,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.13870786130428314,
+      "tok_per_s": 4783.153922118636,
+      "peak_mem_gib": 7.374912261962891
+    },
+    "minmax_centroid_k4": {
+      "step0_loss": 10.8909912109375,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.44901058077812195,
+      "tok_per_s": 5087.30259242682,
+      "peak_mem_gib": 7.372058868408203
+    },
+    "minmax_centroid2_k4": {
+      "step0_loss": 10.89111328125,
+      "grads_finite": true,
+      "layer0_qk_grad_l2": 0.4488395154476166,
+      "tok_per_s": 4554.316854295081,
+      "peak_mem_gib": 7.378650665283203
+    }
+  },
+  "env": {
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  }
+}

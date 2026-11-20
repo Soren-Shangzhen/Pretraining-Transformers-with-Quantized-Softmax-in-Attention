@@ -1,0 +1,488 @@
+--- a/quant_attention.py
++++ b/quant_attention.py
+@@ -17,13 +17,18 @@
+ lerp:
+     linearly interpolate exp(boundary) values in weight space.
+ 
+-Phase B adds one controlled backward-only ablation while preserving the forward operator:
++Phase B/P1 exposes controlled backward-only ablations while preserving the
++forward operator:
+ - range_grad="detach": historical behavior; row min/max are detached.
++- range_grad="detach_proj": same detached calibration backward, followed by a
++  causal-valid row-wise zero-sum projection of the score gradient.
+ - range_grad="full": gradients flow through adaptive row min/max.
+ 
+-The FORWARD values are identical between the two modes.  Phase A1-A4 showed
++The FORWARD values are identical between all three modes.  Phase A1-A4 showed
+ that full range gradients restore the exact row-shift gradient symmetry while
+-preserving ordinary piecewise-smooth LERP derivatives.
++preserving ordinary piecewise-smooth LERP derivatives.  P1 tests whether
++removing only the spurious score-row common-mode component is sufficient to
++prevent the historical long-horizon runaway.
+ 
+ Diagnostics include:
+ - score-row min/max/center/span statistics;
+@@ -37,6 +42,39 @@
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
++
++
++
++def _project_causal_row_zero_sum_grad(grad: torch.Tensor,
++                                     causal: torch.Tensor) -> torch.Tensor:
++    """Project score gradients onto the causal-valid row-zero-sum subspace.
++
++    For every query row i, only keys j <= i are included in the row mean:
++
++        g'_ij = g_ij - mean_{k<=i}(g_ik).
++
++    Invalid causal positions are left unchanged.  In the quantized attention
++    path their incoming gradients are already zero because the forward masks
++    their reconstructed weights to zero.
++
++    This is a backward-only P1 ablation.  It removes exactly the row-wise
++    common-mode component that is inconsistent with the forward identity
++    F(S + c 1) = F(S), without restoring any other min/max calibration
++    derivatives deleted by range_grad="detach".
++    """
++    if grad.ndim != 4:
++        raise ValueError(f"expected grad with shape (B,H,T,T), got {tuple(grad.shape)}")
++    T = grad.shape[-1]
++    if grad.shape[-2] != T or causal.shape != (T, T):
++        raise ValueError(
++            f"shape mismatch: grad={tuple(grad.shape)}, causal={tuple(causal.shape)}"
++        )
++
++    valid = causal.view(1, 1, T, T)
++    g_valid = grad.masked_fill(~valid, 0.0)
++    n_valid = valid.sum(dim=-1, keepdim=True).to(dtype=grad.dtype)
++    row_mean = g_valid.sum(dim=-1, keepdim=True) / n_valid
++    return torch.where(valid, grad - row_mean, grad)
+ 
+ 
+ def _adaptive_interval_reconstruct(att: torch.Tensor,
+@@ -56,9 +94,11 @@
+         approx: 'nearest' or 'lerp'.
+         return_level_idx: when True, also return the actual nearest-boundary
+             reconstruction level index in [0,K].  For LERP this is None.
+-        range_grad: 'detach' reproduces the historical backward; 'full' lets
+-            autograd differentiate through each row's adaptive min/max.  This
+-            changes backward only; forward numerical values are identical.
++        range_grad: 'detach' reproduces the historical calibration backward;
++            'detach_proj' uses the same detached calibration values (the score
++            gradient projection itself is installed by QuantCausalSelfAttention);
++            'full' lets autograd differentiate through adaptive min/max.  All
++            three have identical forward numerical values.
+ 
+     Returns (default):
+         w, bin_idx, row_span
+@@ -70,16 +110,20 @@
+         raise ValueError(f"K must be >= 2, got {K}")
+     if approx not in {"nearest", "lerp"}:
+         raise ValueError(f"unknown approximation: {approx}")
+-    if range_grad not in {"detach", "full"}:
+-        raise ValueError(f"range_grad must be 'detach' or 'full', got {range_grad}")
++    if range_grad not in {"detach", "detach_proj", "full"}:
++        raise ValueError(
++            "range_grad must be 'detach', 'detach_proj', or 'full', "
++            f"got {range_grad}"
++        )
+ 
+     B, H, T, _ = att.shape
+     valid = causal.view(1, 1, T, T)
+ 
+     row_max_raw = att.masked_fill(~valid, -torch.inf).amax(dim=-1, keepdim=True)
+     row_min_raw = att.masked_fill(~valid, torch.inf).amin(dim=-1, keepdim=True)
+-    if range_grad == "detach":
+-        # Historical behavior / exact control for the completed runs.
++    if range_grad in {"detach", "detach_proj"}:
++        # Historical detached calibration.  detach_proj differs only via the
++        # score-gradient hook installed in QuantCausalSelfAttention below.
+         row_max = row_max_raw.detach()
+         row_min = row_min_raw.detach()
+     else:
+@@ -162,7 +206,7 @@
+         self.K = cfg.attn_K
+         self.approx = cfg.attn_approx
+         self.range_grad = getattr(cfg, "attn_range_grad", "detach")
+-        if self.range_grad not in {"detach", "full"}:
++        if self.range_grad not in {"detach", "detach_proj", "full"}:
+             raise ValueError(f"unknown attn_range_grad: {self.range_grad}")
+ 
+         self.collect_stats = False
+@@ -258,6 +302,15 @@
+             att = (qf @ kf.transpose(-2, -1)) / math.sqrt(D)
+             causal = torch.ones(T, T, dtype=torch.bool, device=q.device).tril()
+ 
++            if self.range_grad == "detach_proj" and att.requires_grad:
++                # P1: keep the historical detached-calibration backward, but
++                # remove only the causal-valid row common-mode score gradient.
++                # register_hook is backward-only, so forward values are unchanged.
++                att.register_hook(
++                    lambda grad, causal=causal:
++                        _project_causal_row_zero_sum_grad(grad, causal)
++                )
++
+             w, bins, row_span, level_idx = _adaptive_interval_reconstruct(
+                 att, causal, self.K, self.approx, return_level_idx=True,
+                 range_grad=self.range_grad
+--- a/model.py
++++ b/model.py
+@@ -22,7 +22,7 @@
+     attn_mode: str = "softmax"       # softmax | exact_fp32_softmax | quant
+     attn_K: int = 8
+     attn_approx: str = "lerp"        # 'nearest' | 'lerp'
+-    attn_range_grad: str = "detach"  # 'detach' | 'full' (quant backward only)
++    attn_range_grad: str = "detach"  # detach | detach_proj | full (quant backward only)
+ 
+ 
+ class MLP(nn.Module):
+--- a/train.py
++++ b/train.py
+@@ -7,10 +7,12 @@
+ - Exact FP32 Softmax is the matched arithmetic-path scientific control;
+ - validation RNG is reset at every evaluation for paired comparisons.
+ 
+-Phase B adds one controlled quantized-attention backward ablation:
++Phase B/P1 adds controlled quantized-attention backward ablations:
+ - --range_grad detach reproduces the historical calibration-detached backward;
++- --range_grad detach_proj keeps detached calibration but projects each causal
++  score-row gradient to zero sum;
+ - --range_grad full differentiates through per-row adaptive min/max;
+-- the quantized forward operator is numerically identical between the two.
++- the quantized forward operator is numerically identical across all three.
+ 
+ Instrumentation/checkpointing:
+ - preserved token-stamped checkpoints plus ckpt.pt -> latest snapshot;
+@@ -53,10 +55,14 @@
+     ap.add_argument("--K", type=int, default=8)
+     ap.add_argument("--approx", choices=["nearest", "lerp"], default="lerp",
+                     help="forward reconstruction inside each adaptive interval")
+-    ap.add_argument("--range_grad", choices=["detach", "full"], default="detach",
+-                    help="gradient treatment of adaptive row min/max. 'detach' "
+-                         "reproduces historical runs; 'full' changes backward "
+-                         "only and leaves forward values unchanged")
++    ap.add_argument("--range_grad",
++                    choices=["detach", "detach_proj", "full"],
++                    default="detach",
++                    help="quant backward ablation: 'detach' reproduces historical "
++                         "calibration-detached runs; 'detach_proj' additionally "
++                         "projects each causal-valid score-row gradient to zero "
++                         "sum; 'full' differentiates through adaptive min/max. "
++                         "Forward values are identical across all three.")
+     # training
+     ap.add_argument("--max_tokens", type=int, default=500_000_000)
+     ap.add_argument("--batch_tokens", type=int, default=131_072,
+--- /dev/null
++++ b/test_P1_detach_proj.py
+@@ -0,0 +1,271 @@
++#!/usr/bin/env python3
++"""P1-0 sanity tests for range_grad=detach_proj.
++
++Pass criteria:
++1) detach and detach_proj have bitwise-identical forward reconstruction.
++2) detach_proj score gradient equals the explicit causal-valid row-zero-sum
++   projection of the detach score gradient.
++3) projected score gradients have near-zero causal-valid row sums.
++4) all row-zero-sum tangent directional derivatives are preserved.
++5) module forward is bitwise identical between detach and detach_proj.
++6) detach_proj is compatible with non-reentrant gradient checkpointing.
++
++Run from the repository root after installing the patched files:
++    python test_P1_detach_proj.py
++"""
++
++import math
++import copy
++
++import torch
++
++from quant_attention import (
++    _adaptive_interval_reconstruct,
++    _project_causal_row_zero_sum_grad,
++    QuantCausalSelfAttention,
++)
++from model import GPT, GPTConfig
++
++
++def causal_mask(T, device):
++    return torch.ones(T, T, dtype=torch.bool, device=device).tril()
++
++
++def score_loss(scores, causal, K, range_grad, v, probe, install_projection=False):
++    if install_projection:
++        scores.register_hook(
++            lambda grad, causal=causal:
++                _project_causal_row_zero_sum_grad(grad, causal)
++        )
++    w, bins, span = _adaptive_interval_reconstruct(
++        scores, causal, K=K, approx="lerp", range_grad=range_grad
++    )
++    P = w / w.sum(dim=-1, keepdim=True)
++    y = P @ v
++    loss = (y * probe).sum() / y.numel()
++    return loss, w, bins, span
++
++
++def score_grad(base, causal, K, mode, v, probe):
++    s = base.detach().clone().requires_grad_(True)
++    install = mode == "detach_proj"
++    loss, w, bins, span = score_loss(
++        s, causal, K, mode, v, probe, install_projection=install
++    )
++    (g,) = torch.autograd.grad(loss, s)
++    return {
++        "loss": loss.detach(),
++        "w": w.detach(),
++        "bins": bins.detach(),
++        "span": span.detach(),
++        "g": g.detach(),
++    }
++
++
++def row_residual(g, causal):
++    T = g.shape[-1]
++    valid = causal.view(1, 1, T, T)
++    gv = g.masked_fill(~valid, 0.0)
++    row_sum = gv.sum(dim=-1)
++    row_l1 = gv.abs().sum(dim=-1)
++    active = row_l1 > 1e-30
++    rho = row_sum.abs()[active] / (row_l1[active] + 1e-30)
++    return float(rho.max()), float(rho.mean())
++
++
++def make_zero_sum_tangent(shape, causal, dtype, device):
++    d = torch.randn(shape, dtype=dtype, device=device)
++    T = shape[-1]
++    valid = causal.view(1, 1, T, T)
++    dv = d.masked_fill(~valid, 0.0)
++    n = valid.sum(dim=-1, keepdim=True).to(dtype=dtype)
++    mean = dv.sum(dim=-1, keepdim=True) / n
++    d = torch.where(valid, d - mean, torch.zeros_like(d))
++    return d
++
++
++def test_score_level(device):
++    print("\n[P1-0.1] score-level projection")
++    torch.manual_seed(20260828)
++
++    dtype = torch.float64
++    B, H, T, Dv, K = 2, 3, 37, 11, 32
++    causal = causal_mask(T, device)
++
++    base = torch.randn(B, H, T, T, dtype=dtype, device=device) * 3.0
++    v = torch.randn(B, H, T, Dv, dtype=dtype, device=device)
++    probe = torch.randn(B, H, T, Dv, dtype=dtype, device=device)
++
++    detach = score_grad(base, causal, K, "detach", v, probe)
++    proj = score_grad(base, causal, K, "detach_proj", v, probe)
++    full = score_grad(base, causal, K, "full", v, probe)
++
++    assert torch.equal(detach["w"], proj["w"]), "detach/proj forward weights differ"
++    assert torch.equal(detach["bins"], proj["bins"]), "detach/proj bins differ"
++    assert torch.equal(detach["span"], proj["span"]), "detach/proj spans differ"
++    assert torch.equal(detach["loss"], proj["loss"]), "detach/proj losses differ"
++
++    expected = _project_causal_row_zero_sum_grad(detach["g"], causal)
++    max_proj_err = float((proj["g"] - expected).abs().max())
++    assert max_proj_err < 1e-15, f"projection mismatch: {max_proj_err:.3e}"
++
++    rho_max, rho_mean = row_residual(proj["g"], causal)
++    assert rho_max < 1e-12, f"projected row residual too large: {rho_max:.3e}"
++
++    # Projection must preserve every tangent direction whose valid entries sum
++    # to zero independently in each query row.
++    tangent_errs = []
++    for _ in range(8):
++        d = make_zero_sum_tangent(base.shape, causal, dtype, device)
++        dd = torch.sum(detach["g"] * d)
++        dp = torch.sum(proj["g"] * d)
++        tangent_errs.append(float((dd - dp).abs()))
++    tangent_max = max(tangent_errs)
++    assert tangent_max < 1e-12, f"zero-sum tangent derivative changed: {tangent_max:.3e}"
++
++    # Diagnostic only: detach_proj is not intended to reproduce the full
++    # calibration derivative; it removes only the row common mode.
++    valid = causal.view(1, 1, T, T)
++    full_diff = float(
++        ((proj["g"] - full["g"]).masked_fill(~valid, 0.0)).abs().max()
++    )
++
++    print("  forward detach == detach_proj: BITWISE PASS")
++    print(f"  max |g_proj - Pi(g_detach)| = {max_proj_err:.3e}")
++    print(f"  projected rho_max           = {rho_max:.3e}")
++    print(f"  projected rho_mean          = {rho_mean:.3e}")
++    print(f"  tangent derivative max err  = {tangent_max:.3e}")
++    print(f"  max |g_proj - g_full|       = {full_diff:.3e}  (diagnostic)")
++
++
++def test_module_forward(device):
++    print("\n[P1-0.2] actual attention-module forward parity")
++    torch.manual_seed(20260828)
++
++    base_cfg = GPTConfig(
++        block_size=32,
++        vocab_size=128,
++        n_layer=1,
++        n_head=2,
++        n_embd=32,
++        attn_mode="quant",
++        attn_K=32,
++        attn_approx="lerp",
++        attn_range_grad="detach",
++    )
++    cfg_p = copy.deepcopy(base_cfg)
++    cfg_p.attn_range_grad = "detach_proj"
++
++    a = QuantCausalSelfAttention(base_cfg).to(device)
++    b = QuantCausalSelfAttention(cfg_p).to(device)
++    b.load_state_dict(a.state_dict())
++
++    x1 = torch.randn(2, 32, 32, device=device, dtype=torch.float32, requires_grad=True)
++    x2 = x1.detach().clone().requires_grad_(True)
++
++    y1 = a(x1)
++    y2 = b(x2)
++
++    if not torch.equal(y1, y2):
++        max_forward = float((y1 - y2).abs().max())
++        raise AssertionError(f"module forward not bitwise identical: {max_forward:.3e}")
++
++    probe = torch.randn_like(y1)
++    (y1 * probe).sum().backward()
++    (y2 * probe).sum().backward()
++
++    # c_proj sees exactly the same forward attention output, so its gradients
++    # should be identical. c_attn is expected to differ in Q/K gradient paths.
++    assert torch.equal(a.c_proj.weight.grad, b.c_proj.weight.grad), \
++        "c_proj gradients differ despite identical forward attention output"
++
++    print("  module output: BITWISE PASS")
++    print("  c_proj grad  : BITWISE PASS")
++
++
++def collect_grads(model):
++    return {
++        n: p.grad.detach().clone()
++        for n, p in model.named_parameters()
++        if p.grad is not None
++    }
++
++
++def test_gradient_checkpointing(device):
++    print("\n[P1-0.3] non-reentrant gradient-checkpoint compatibility")
++    torch.manual_seed(20260828)
++
++    cfg = GPTConfig(
++        block_size=16,
++        vocab_size=128,
++        n_layer=2,
++        n_head=2,
++        n_embd=32,
++        attn_mode="quant",
++        attn_K=32,
++        attn_approx="lerp",
++        attn_range_grad="detach_proj",
++    )
++
++    m0 = GPT(cfg).to(device)
++    m1 = GPT(copy.deepcopy(cfg)).to(device)
++    m1.load_state_dict(m0.state_dict())
++
++    m0.train()
++    m1.train()
++    m0.grad_checkpointing = False
++    m1.grad_checkpointing = True
++
++    idx = torch.randint(0, cfg.vocab_size, (2, cfg.block_size), device=device)
++    tgt = torch.randint(0, cfg.vocab_size, (2, cfg.block_size), device=device)
++
++    _, loss0 = m0(idx, tgt)
++    _, loss1 = m1(idx, tgt)
++    loss0.backward()
++    loss1.backward()
++
++    loss_err = abs(float(loss0.detach()) - float(loss1.detach()))
++    g0 = collect_grads(m0)
++    g1 = collect_grads(m1)
++    assert g0.keys() == g1.keys()
++
++    max_abs = 0.0
++    num = 0.0
++    den = 0.0
++    for k in g0:
++        diff = (g0[k] - g1[k]).double()
++        max_abs = max(max_abs, float(diff.abs().max()))
++        num += float((diff * diff).sum())
++        den += float((g0[k].double() ** 2).sum())
++    rel_l2 = math.sqrt(num / max(den, 1e-300))
++
++    # CPU is normally bitwise/near-bitwise here; CUDA checkpoint recomputation
++    # can differ at tiny floating-point scale.
++    assert loss_err < 1e-6, f"GC loss mismatch: {loss_err:.3e}"
++    assert rel_l2 < 2e-5, f"GC grad relative L2 too large: {rel_l2:.3e}"
++
++    print(f"  loss abs err = {loss_err:.3e}")
++    print(f"  grad max abs = {max_abs:.3e}")
++    print(f"  grad rel L2  = {rel_l2:.3e}")
++    print("  checkpointing compatibility: PASS")
++
++
++def main():
++    device = "cuda" if torch.cuda.is_available() else "cpu"
++    print("=" * 80)
++    print("P1-0 sanity: detach + causal-valid row-zero-sum score-gradient projection")
++    print("=" * 80)
++    print("torch :", torch.__version__)
++    print("device:", device)
++
++    test_score_level(device)
++    test_module_forward(device)
++    test_gradient_checkpointing(device)
++
++    print("\n" + "=" * 80)
++    print("P1-0 ALL TESTS PASSED")
++    print("=" * 80)
++
++
++if __name__ == "__main__":
++    main()
+--- /dev/null
++++ b/run_p1_detachproj_100m.sh
+@@ -0,0 +1,35 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++# P1 causal ablation: same 100M LR schedule / seed / checkpointing protocol as
++# the completed q32_lerp_100m (detach) and q32_lerp_fullgrad_100m (full) runs.
++
++RUN="q32_lerp_detachproj_100m"
++
++if [[ -e "runs/${RUN}/log.csv" || -e "runs/${RUN}/ckpt.pt" ]]; then
++    echo "ERROR: runs/${RUN} already contains run state."
++    echo "Refusing to overwrite. Inspect it or choose a deliberate recovery action."
++    exit 2
++fi
++
++mkdir -p terminal_logs
++
++python train.py \
++  --run_name "${RUN}" \
++  --data_dir data/wikitext103 \
++  --attn quant \
++  --K 32 \
++  --approx lerp \
++  --range_grad detach_proj \
++  --micro_batch 1 \
++  --batch_tokens 131072 \
++  --max_tokens 100000000 \
++  --warmup_tokens 10000000 \
++  --eval_every_tokens 5000000 \
++  --eval_batches 100 \
++  --stats_batches 1 \
++  --ckpt_every_tokens 20000000 \
++  --grad_checkpointing \
++  --device cuda \
++  --seed 1337 \
++  2>&1 | tee "terminal_logs/${RUN}.log"

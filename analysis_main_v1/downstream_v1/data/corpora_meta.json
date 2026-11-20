@@ -1,0 +1,24 @@
+{
+  "ptb": {
+    "corpus": "ptb_test",
+    "tokens": 105242,
+    "n_blocks": 102,
+    "block": 1024,
+    "tokenizer": "tiktoken:gpt2 encode_ordinary + EOT per document",
+    "dtype": "uint16",
+    "sha256": "f225b4b5cba14dcdd5d1d1b737f7630d7e4b4a39e10e2a9c483535aa71613612",
+    "documents": 1,
+    "source": "url:https://raw.githubusercontent.com/wojzaremba/lstm/master/data/ptb.test.txt sha256:dd65dff31e70846b2a6030a87482edcd5d199130cdcfa1f3dccbb033728deee0"
+  },
+  "c4": {
+    "corpus": "c4_validation",
+    "tokens": 309262,
+    "n_blocks": 302,
+    "block": 1024,
+    "tokenizer": "tiktoken:gpt2 encode_ordinary + EOT per document",
+    "dtype": "uint16",
+    "sha256": "f251c3dddf2dafe60c91a5d9e0d133c7bbd9c79d26e7fb749a55d0a7b20c8c72",
+    "documents": 717,
+    "block_document_map": "c4_validation_blocks.csv"
+  }
+}

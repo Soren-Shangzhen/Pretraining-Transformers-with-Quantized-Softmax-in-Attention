@@ -1,0 +1,48 @@
+params (non-emb-pos): 123.6M | attn=quant K=4 approx=centroid range_grad=full
+quant range_mode=relevant_zero range_tau=6 effective_h=1.5 cells=nearest
+step      1 |      0.1M tok | train 10.9338 | val 10.9337 | lr 0.00e+00 | gnorm 15.64 | 5.1k tok/s
+  stats: center=-0.015 span=1.407 qnorm=4.413 knorm=4.416 width=1.500
+step     40 |      5.2M tok | train 6.8522 | val 6.8075 | lr 3.07e-04 | gnorm 0.50 | 1.9k tok/s
+  stats: center=-0.013 span=2.179 qnorm=4.603 knorm=4.626 width=1.500
+step     79 |     10.4M tok | train 6.1925 | val 6.1566 | lr 6.00e-04 | gnorm 0.55 | 2.4k tok/s
+  stats: center=-0.002 span=2.103 qnorm=4.221 knorm=4.308 width=1.500
+step    118 |     15.5M tok | train 5.8974 | val 5.8086 | lr 5.95e-04 | gnorm 0.52 | 2.6k tok/s
+  stats: center=0.073 span=2.650 qnorm=4.320 knorm=4.351 width=1.500
+saved checkpoint: <REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_fw_centroid_k4_tau6_100m/ckpt_step000153_20.1m.pt
+step    157 |     20.6M tok | train 5.6629 | val 5.5958 | lr 5.82e-04 | gnorm 0.47 | 2.5k tok/s
+  stats: center=0.170 span=3.228 qnorm=4.582 knorm=4.588 width=1.500
+step    196 |     25.7M tok | train 5.4978 | val 5.4471 | lr 5.61e-04 | gnorm 0.37 | 2.5k tok/s
+  stats: center=0.298 span=4.149 qnorm=4.971 knorm=4.920 width=1.500
+step    235 |     30.8M tok | train 5.3826 | val 5.3101 | lr 5.33e-04 | gnorm 0.38 | 2.5k tok/s
+  stats: center=0.218 span=5.169 qnorm=5.393 knorm=5.183 width=1.500
+step    274 |     35.9M tok | train 5.2197 | val 5.1843 | lr 4.98e-04 | gnorm 0.40 | 2.5k tok/s
+  stats: center=-0.393 span=6.340 qnorm=5.880 knorm=5.579 width=1.500
+saved checkpoint: <REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_fw_centroid_k4_tau6_100m/ckpt_step000306_40.1m.pt
+step    313 |     41.0M tok | train 5.0850 | val 5.0539 | lr 4.58e-04 | gnorm 0.35 | 3.4k tok/s
+  stats: center=-1.414 span=8.710 qnorm=6.478 knorm=6.050 width=1.500
+step    352 |     46.1M tok | train 4.9831 | val 4.9419 | lr 4.13e-04 | gnorm 0.38 | 3.4k tok/s
+  stats: center=-2.262 span=10.668 qnorm=7.031 knorm=6.550 width=1.500
+step    391 |     51.2M tok | train 4.8790 | val 4.8161 | lr 3.66e-04 | gnorm 0.44 | 3.5k tok/s
+  stats: center=-2.923 span=12.019 qnorm=7.290 knorm=6.723 width=1.500
+step    430 |     56.4M tok | train 4.7689 | val 4.7160 | lr 3.18e-04 | gnorm 0.42 | 4.9k tok/s
+  stats: center=-3.689 span=13.274 qnorm=7.627 knorm=7.035 width=1.500
+saved checkpoint: <REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_fw_centroid_k4_tau6_100m/ckpt_step000459_60.2m.pt
+step    469 |     61.5M tok | train 4.7080 | val 4.6102 | lr 2.71e-04 | gnorm 0.37 | 5.3k tok/s
+  stats: center=-4.123 span=14.064 qnorm=7.853 knorm=7.158 width=1.500
+step    508 |     66.6M tok | train 4.5885 | val 4.5228 | lr 2.25e-04 | gnorm 0.36 | 5.4k tok/s
+  stats: center=-4.470 span=13.367 qnorm=7.870 knorm=7.189 width=1.500
+step    547 |     71.7M tok | train 4.4978 | val 4.4490 | lr 1.82e-04 | gnorm 0.43 | 5.4k tok/s
+  stats: center=-4.645 span=14.263 qnorm=8.029 knorm=7.239 width=1.500
+step    586 |     76.8M tok | train 4.4399 | val 4.3912 | lr 1.45e-04 | gnorm 0.38 | 5.4k tok/s
+  stats: center=-4.604 span=14.507 qnorm=8.087 knorm=7.298 width=1.500
+saved checkpoint: <REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_fw_centroid_k4_tau6_100m/ckpt_step000612_80.2m.pt
+step    625 |     81.9M tok | train 4.4048 | val 4.3424 | lr 1.13e-04 | gnorm 0.37 | 5.3k tok/s
+  stats: center=-4.827 span=14.216 qnorm=8.103 knorm=7.320 width=1.500
+step    664 |     87.0M tok | train 4.4058 | val 4.3023 | lr 8.77e-05 | gnorm 0.35 | 5.4k tok/s
+  stats: center=-5.109 span=14.141 qnorm=8.094 knorm=7.314 width=1.500
+step    703 |     92.1M tok | train 4.3172 | val 4.2719 | lr 7.04e-05 | gnorm 0.34 | 5.3k tok/s
+  stats: center=-5.062 span=14.400 qnorm=8.160 knorm=7.366 width=1.500
+step    742 |     97.3M tok | train 4.3462 | val 4.2494 | lr 6.14e-05 | gnorm 0.37 | 5.6k tok/s
+  stats: center=-5.040 span=14.335 qnorm=8.128 knorm=7.347 width=1.500
+saved checkpoint: <REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_fw_centroid_k4_tau6_100m/ckpt_step000763_100.0m.pt
+done.

@@ -1,0 +1,53 @@
+{
+  "job_id": "0181",
+  "phase": "trajectory",
+  "suite": "A_longhorizon_124m_2p5b",
+  "run_name": "formal_124m_s1337_lerp_k1_fullgrad_2p5b",
+  "label": "LERP",
+  "calibration": "minmax_row_adaptive",
+  "reconstruction": "lerp",
+  "backward": "native_differentiable",
+  "K": "1",
+  "range_tau": "",
+  "range_grad": "full",
+  "dataset": "finewebedu_3b",
+  "seed": "1337",
+  "model_scale": "124M",
+  "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_lerp_k1_fullgrad_2p5b/ckpt_step018120_2375.0m.pt",
+  "ckpt_index": 18,
+  "is_final": 0,
+  "step": 18120,
+  "tokens_done": 2375024640,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 1,
+    "approx": "lerp",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "val_path": "<CLOUD_DISK>/data/finewebedu_3b/val.bin",
+  "n_blocks": 976,
+  "block_size": 1024,
+  "eval_tokens": 999424,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 3.5456961564353255,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/training_code/formal_lerp_k1_v1",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "b72a1569aa6b18b72beed67aea88a137cdf9bd16a31f7f5519ecaea5d5b19b85"
+  },
+  "eval_scripts": "<REPO>/analysis_main_v1/code",
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "gpu-host-A",
+  "seconds": {
+    "load": 1.8,
+    "nll": 29.1,
+    "geometry": 11.6
+  },
+  "finished": "2026-09-17T09:54:28"
+}

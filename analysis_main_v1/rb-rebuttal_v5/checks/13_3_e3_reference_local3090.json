@@ -1,0 +1,556 @@
+{
+ "reference_meta": {
+  "source": "IntAttention-main ArtifactEvaluation/pysimulation (loaded read-only, not copied)",
+  "torch": "2.5.1+cu121",
+  "gpu": "NVIDIA GeForce RTX 3090"
+ },
+ "torch": "2.5.1+cu121",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "all_bitwise": true,
+ "results": [
+  {
+   "case": "random_n64_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  }
+ ]
+}

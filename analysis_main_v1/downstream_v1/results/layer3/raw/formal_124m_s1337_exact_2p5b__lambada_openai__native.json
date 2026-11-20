@@ -1,0 +1,23 @@
+{
+  "run": "formal_124m_s1337_exact_2p5b",
+  "condition": "Exact",
+  "K": "",
+  "forward_mode": "native",
+  "task": "lambada_openai",
+  "results": {
+    "lambada_openai": {
+      "name": "lambada_openai",
+      "alias": "lambada_openai",
+      "sample_len": 5153,
+      "perplexity,none": 213.34834114226362,
+      "perplexity_stderr,none": 10.999052550583482,
+      "acc,none": 0.21637880846109062,
+      "acc_stderr,none": 0.005736837143370836
+    }
+  },
+  "n_requests": 5153,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "seconds": 66.8,
+  "limit": null
+}

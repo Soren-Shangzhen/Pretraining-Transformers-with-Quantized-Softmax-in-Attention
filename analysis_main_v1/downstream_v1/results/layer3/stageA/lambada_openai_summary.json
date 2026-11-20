@@ -1,0 +1,20 @@
+{
+  "task": "lambada_openai",
+  "subset": "full",
+  "n_examples": 5153,
+  "n_requests": 5153,
+  "truncation_rate": 0.0,
+  "metric_name": "target NLL (nats)",
+  "acc": 0.21637880846109062,
+  "acc_norm": 0.21637880846109062,
+  "chance": 0.0,
+  "acc_se": 0.0057362804661444155,
+  "acc_above_chance_pp": 21.637880846109063,
+  "metric_mean": 5.362926234315586,
+  "metric_sd": 3.690587769759108,
+  "metric_se": 0.05141211460443213,
+  "detect_floor_metric": 0.10282422920886426,
+  "detect_floor_acc_pp": 1.1472560932288831,
+  "mean_options": 1.0,
+  "seconds": null
+}

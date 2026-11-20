@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "a78cc4c4d7f9bd5e481189fdcb6b78971800359e2be468c8b9453594a7103ab2",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_qrm_probste_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "hellaswag",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "43069e8bc7730949a7e2cf790ea32911",
+  "n_rows": 40168,
+  "finished": "2026-09-20T14:43:10"
+}

@@ -1,0 +1,68 @@
+{
+  "requested_pair": {
+    "condition_a": "MinMax-Weight K16",
+    "slope_a": -0.3367618272701895,
+    "ci_a": [
+      -0.37467163817087806,
+      -0.3001289244890213
+    ],
+    "condition_b": "MinMax-Prob K4",
+    "slope_b": 0.9389455537001289,
+    "ci_b": [
+      0.8965067141602437,
+      0.9804285370806853
+    ],
+    "slope_difference": -1.2753930442754426,
+    "diff_ci_lo": -1.3235297676225504,
+    "diff_ci_hi": -1.2255476607829332,
+    "cis_overlap": false,
+    "each_ci_excludes_zero": true,
+    "difference_excludes_zero": true,
+    "verdict": "reportable in the main text (descriptive): slopes differ, neither CI covers 0",
+    "caveat": "these two conditions differ in K (16 vs 4) as well as in surrogate position, so the contrast is not a clean surrogate-only comparison"
+  },
+  "matched_same_K": [
+    {
+      "condition_a": "MinMax-Weight K4",
+      "slope_a": 0.1057371407747264,
+      "ci_a": [
+        0.06400512842337319,
+        0.1464412147998814
+      ],
+      "condition_b": "MinMax-Prob K4",
+      "slope_b": 0.9389455537001289,
+      "ci_b": [
+        0.8965067141602437,
+        0.9804285370806853
+      ],
+      "slope_difference": -0.8330579979141057,
+      "diff_ci_lo": -0.8879277968307334,
+      "diff_ci_hi": -0.780035948475202,
+      "cis_overlap": false,
+      "each_ci_excludes_zero": true,
+      "difference_excludes_zero": true,
+      "note": "same calibration and K; only the surrogate position differs"
+    },
+    {
+      "condition_a": "QRM-Weight K4",
+      "slope_a": 0.23385768453280115,
+      "ci_a": [
+        0.1995115502178669,
+        0.26754540157318113
+      ],
+      "condition_b": "QRM-Prob K4",
+      "slope_b": 0.8766765445470807,
+      "ci_b": [
+        0.8467153595238924,
+        0.9068653029203415
+      ],
+      "slope_difference": -0.6426513919625679,
+      "diff_ci_lo": -0.6785548803011574,
+      "diff_ci_hi": -0.6065110575954119,
+      "cis_overlap": false,
+      "each_ci_excludes_zero": true,
+      "difference_excludes_zero": true,
+      "note": "same calibration and K; only the surrogate position differs"
+    }
+  ]
+}

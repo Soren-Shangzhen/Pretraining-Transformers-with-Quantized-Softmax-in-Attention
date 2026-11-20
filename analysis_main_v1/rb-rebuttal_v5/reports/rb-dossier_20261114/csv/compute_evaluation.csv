@@ -1,0 +1,9 @@
+machine,kind,units,gpu_hours
+B,validation NLL,632,6.227833333333334
+B,attention probes,513,0.5656666666666667
+B,E6,50,0.5008888888888889
+B,held-out corpora (native + exact forward),3,0.018694444444444448
+A,validation NLL,63,0.49538888888888893
+A,attention probes,20,0.016305555555555556
+A,E6,0,0.0
+A,held-out corpora (native + exact forward),2,0.01941666666666667

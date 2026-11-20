@@ -1,0 +1,13 @@
+\begin{tabular}{@{}lrllllll@{}}
+\toprule
+Operator & Seed & detach $-$ full [95\% CI] & span & $p_{\max}$ & clip fraction & zero-sum residual \\
+\midrule
+\FW--LERP $K{=}4$ & 7 & \begin{tabular}[c]{@{}l@{}}$+0.5215$\\{[$+0.5096$, $+0.5340$]}\end{tabular} & 660 vs 28 & 0.59 vs 0.19 & 0.90 vs 0.58 & 0.17 vs 7e-9 \\\addlinespace[2pt]
+\FW--LERP $K{=}4$ & 42 & \begin{tabular}[c]{@{}l@{}}$+0.8294$\\{[$+0.8124$, $+0.8476$]}\end{tabular} & 785 vs 28 & 0.60 vs 0.20 & 0.88 vs 0.59 & 0.17 vs 7e-9 \\\addlinespace[2pt]
+\FW--LERP $K{=}16$ & 7 & \begin{tabular}[c]{@{}l@{}}$+0.0907$\\{[$+0.0860$, $+0.0953$]}\end{tabular} & 57 vs 25 & 0.24 vs 0.20 & 0.63 vs 0.57 & 0.03 vs 6e-9 \\\addlinespace[2pt]
+\FW--LERP $K{=}16$ & 42 & \begin{tabular}[c]{@{}l@{}}$+0.0609$\\{[$+0.0580$, $+0.0633$]}\end{tabular} & 56 vs 25 & 0.23 vs 0.20 & 0.61 vs 0.58 & 0.03 vs 6e-9 \\\addlinespace[2pt]
+\FW--Weight $K{=}4$ & 7 & \begin{tabular}[c]{@{}l@{}}$+1.0812$\\{[$+1.0547$, $+1.1091$]}\end{tabular} & 762 vs 19 & 0.86 vs 0.11 & 0.97 vs 0.43 & 0.24 vs 6e-9 \\\addlinespace[2pt]
+\FW--Weight $K{=}4$ & 42 & \begin{tabular}[c]{@{}l@{}}$+1.1373$\\{[$+1.1106$, $+1.1650$]}\end{tabular} & 810 vs 19 & 0.88 vs 0.11 & 0.99 vs 0.43 & 0.24 vs 6e-9 \\\addlinespace[2pt]
+\FW--LERP $K{=}4$, 250M & 1337 & \begin{tabular}[c]{@{}l@{}}$+1.7143$\\{[$+1.6915$, $+1.7386$]}\end{tabular} & 2970 vs 29 & 0.95 vs 0.24 & 0.99 vs 0.67 & 0.25 vs 8e-9 \\\addlinespace[2pt]
+\bottomrule
+\end{tabular}

@@ -1,0 +1,6 @@
+label	eval_root	checkpoint	tokens_m	role
+cv1_s7_minmax_centroid_k4_100m	<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root	<REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_minmax_centroid_k4_100m/ckpt_step000153_20.1m.pt	20	centroid_v1 run, own frozen root, 3090 evaluator
+cv1_s7_minmax_centroid_k4_100m	<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root	<REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_minmax_centroid_k4_100m/ckpt_step000306_40.1m.pt	40	centroid_v1 run, own frozen root, 3090 evaluator
+cv1_s7_minmax_centroid_k4_100m	<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root	<REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_minmax_centroid_k4_100m/ckpt_step000459_60.2m.pt	60	centroid_v1 run, own frozen root, 3090 evaluator
+cv1_s7_minmax_centroid_k4_100m	<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root	<REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_minmax_centroid_k4_100m/ckpt_step000612_80.2m.pt	80	centroid_v1 run, own frozen root, 3090 evaluator
+cv1_s7_minmax_centroid_k4_100m	<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root	<REPO>/training_code/phaseB_base/centroid_runs_20261013/cv1_s7_minmax_centroid_k4_100m/ckpt_step000763_100.0m.pt	100	centroid_v1 run, own frozen root, 3090 evaluator

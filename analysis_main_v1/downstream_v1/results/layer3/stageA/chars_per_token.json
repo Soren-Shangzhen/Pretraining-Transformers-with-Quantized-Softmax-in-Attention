@@ -1,0 +1,82 @@
+{
+  "lambada_openai": {
+    "n_docs": 5153,
+    "n_cont": 5153,
+    "mean_chars": 6.671259460508442,
+    "mean_tokens": 1.2755676305065011,
+    "chars_per_token": 5.798775794035837,
+    "mean_chars_over_mean_tokens": 5.2300319488817895
+  },
+  "blimp": {
+    "n_docs": 13400,
+    "n_cont": 26800,
+    "mean_chars": 47.571529850746266,
+    "mean_tokens": 9.353843283582089,
+    "chars_per_token": 5.0912523995717,
+    "mean_chars_over_mean_tokens": 5.08577366634355
+  },
+  "sciq": {
+    "n_docs": 1000,
+    "n_cont": 4000,
+    "mean_chars": 11.20025,
+    "mean_tokens": 1.98,
+    "chars_per_token": 6.398003075396826,
+    "mean_chars_over_mean_tokens": 5.656691919191919
+  },
+  "sciq_nosupport": {
+    "n_docs": 1000,
+    "n_cont": 4000,
+    "mean_chars": 11.20025,
+    "mean_tokens": 1.98,
+    "chars_per_token": 6.398003075396826,
+    "mean_chars_over_mean_tokens": 5.656691919191919
+  },
+  "piqa": {
+    "n_docs": 1838,
+    "n_cont": 3676,
+    "mean_chars": 99.22062023939064,
+    "mean_tokens": 22.955386289445048,
+    "chars_per_token": 4.418848343949615,
+    "mean_chars_over_mean_tokens": 4.322324137277209
+  },
+  "arc_easy": {
+    "n_docs": 2376,
+    "n_cont": 9501,
+    "mean_chars": 23.58257025576255,
+    "mean_tokens": 4.501736659299021,
+    "chars_per_token": 5.728841051675384,
+    "mean_chars_over_mean_tokens": 5.238549484463772
+  },
+  "openbookqa": {
+    "n_docs": 500,
+    "n_cont": 2000,
+    "mean_chars": 17.7835,
+    "mean_tokens": 3.391,
+    "chars_per_token": 5.603493752162869,
+    "mean_chars_over_mean_tokens": 5.2443232084930695
+  },
+  "hellaswag": {
+    "n_docs": 10042,
+    "n_cont": 40168,
+    "mean_chars": 136.37076777534355,
+    "mean_tokens": 29.561566421031667,
+    "chars_per_token": 4.604768266070855,
+    "mean_chars_over_mean_tokens": 4.61311034175517
+  },
+  "winogrande": {
+    "n_docs": 1267,
+    "n_cont": 2534,
+    "mean_chars": 24.81610102604578,
+    "mean_tokens": 5.609313338595107,
+    "chars_per_token": 4.292685032905099,
+    "mean_chars_over_mean_tokens": 4.424088926410581
+  },
+  "arc_challenge": {
+    "n_docs": 1172,
+    "n_cont": 4687,
+    "mean_chars": 30.09323661190527,
+    "mean_tokens": 5.992959248986558,
+    "chars_per_token": 5.312558071866192,
+    "mean_chars_over_mean_tokens": 5.021431877247321
+  }
+}

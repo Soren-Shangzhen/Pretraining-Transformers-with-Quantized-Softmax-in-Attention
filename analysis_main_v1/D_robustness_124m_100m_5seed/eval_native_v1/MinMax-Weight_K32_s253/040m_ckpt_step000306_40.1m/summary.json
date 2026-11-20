@@ -1,0 +1,52 @@
+{
+  "job_id": "0330",
+  "phase": "trajectory",
+  "run_name": "MinMax-Weight_K32_s253",
+  "label": "MinMax-Weight",
+  "cond": "MinMax-Weight K32",
+  "calibration": "minmax_row_adaptive",
+  "reconstruction": "nearest",
+  "backward": "weight_ste",
+  "K": "32",
+  "seed": 253,
+  "range_tau": "",
+  "range_grad": "full",
+  "dataset": "wikitext103",
+  "source_origin": "original_local",
+  "checkpoint": "<REPO>/training_code/phaseB_base/runs/p3_s253_nearest_k32_fullgrad_100m/ckpt_step000306_40.1m.pt",
+  "ckpt_index": 1,
+  "is_final": 0,
+  "step": 306,
+  "tokens_done": 40108032,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 32,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "val_path": "<REPO>/training_code/phaseB_base/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 4.99344091748995,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/local_phaseB_base",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+  },
+  "torch": "2.5.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "host": "local3090",
+  "seconds": {
+    "load": 1.9,
+    "nll": 27.4,
+    "geometry": 9.7
+  },
+  "finished": "2026-09-20T14:11:20"
+}

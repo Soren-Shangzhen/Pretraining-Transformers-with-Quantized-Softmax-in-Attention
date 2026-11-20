@@ -1,0 +1,28 @@
+{
+ "checkpoint": {
+  "path": "<POD_WORKSPACE>/runs/rb-E8c-01/ckpt_step019074_2500.1m.pt",
+  "realpath": "<POD_WORKSPACE>/runs/rb-E8c-01/ckpt_step019074_2500.1m.pt",
+  "bytes": 1492587997,
+  "sha256": "279c7567921702637bef08bedccb65de805a09ca6b95140bd75ac1c0f036482b",
+  "manifest_sha256": "279c7567921702637bef08bedccb65de805a09ca6b95140bd75ac1c0f036482b",
+  "manifest_source": "B checkpoint manifest runs/_ckpt_sha256.tsv",
+  "matches_manifest": true
+ },
+ "code_root": {
+  "path": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+  "files": {
+   "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+   "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+   "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+  },
+  "sha256_of_file_hashes": "bcd74227691420bc0765d976b37e58de3e06ca1cd84d0e7713e82bcea50ee735"
+ },
+ "other_code_roots": [],
+ "scripts": {
+  "rb_downstream.py": "a5ca8d7fbb5ef3e572dbded8f7be1d6e1e510fc2ee10f3d4e1652e7d96cab5eb",
+  "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+  "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+  "common_loader.py": "c7a2e67fcf2bfd14d336cb47241b1dd8e7e438c467d502457429faba712087ce",
+  "layer3_stageC.py": "a3e6f49a3c6406fd00c3b6404def394076e4b0dfa441699b26638f21f7147b91"
+ }
+}

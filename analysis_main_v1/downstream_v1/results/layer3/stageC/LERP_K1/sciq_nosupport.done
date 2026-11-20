@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "769531782f1016fa88f3b185994c060af632d6f6e223f0e3b2862383e5bc2b52",
+    "train_code_root": "<REPO>/training_code/formal_lerp_k1_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "sciq_nosupport",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": "fbdf85ffdc0c8f58a1c2ba0ff16fafe6"
+  },
+  "order_hash": "b510e89a765c624389a865156be9d0b9",
+  "n_rows": 4000,
+  "finished": "2026-09-20T11:28:40"
+}

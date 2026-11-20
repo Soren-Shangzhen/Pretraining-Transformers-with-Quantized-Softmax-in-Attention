@@ -1,0 +1,169 @@
+{
+  "env": {
+    "torch": "2.13.0+cu132",
+    "cuda": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    }
+  },
+  "checks": [
+    {
+      "name": "--stop_at_tokens: first 3 steps identical to the full-schedule run (same LR schedule)",
+      "passed": true,
+      "b_rows": [
+        [
+          "1",
+          "256",
+          "10.84610",
+          "10.83892",
+          "0.000e+00"
+        ],
+        [
+          "2",
+          "512",
+          "10.84124",
+          "10.83735",
+          "3.000e-04"
+        ],
+        [
+          "3",
+          "768",
+          "10.83217",
+          "10.83278",
+          "6.000e-04"
+        ]
+      ]
+    },
+    {
+      "name": "stopped run saves a full checkpoint (optimizer + data RNG) at the stop",
+      "passed": true
+    },
+    {
+      "name": "--init_from continuation == straight run: logged rows of steps 4-6",
+      "passed": true,
+      "c_rows": [
+        [
+          "4",
+          "1024",
+          "10.84864",
+          "10.82971",
+          "5.209e-04"
+        ],
+        [
+          "5",
+          "1280",
+          "10.83475",
+          "10.82794",
+          "3.300e-04"
+        ],
+        [
+          "6",
+          "1536",
+          "10.82843",
+          "10.82732",
+          "1.391e-04"
+        ]
+      ]
+    },
+    {
+      "name": "--init_from continuation == straight run: final weights, optimizer state, data RNG, step/tokens bitwise",
+      "passed": true,
+      "weights": true,
+      "opt": true,
+      "rng": true,
+      "step_tokens": true
+    },
+    {
+      "name": "branch provenance recorded in the checkpoint config",
+      "passed": true,
+      "parent_step": 3,
+      "changes": {}
+    },
+    {
+      "name": "operator change without --branch_override is refused",
+      "passed": true
+    },
+    {
+      "name": "W->P switch: train loss of the first post-branch step identical (same forward, same data, same LR)",
+      "passed": true,
+      "branch_row": [
+        "4",
+        "1024",
+        "10.84864",
+        "10.82971",
+        "5.209e-04"
+      ],
+      "straight_row": [
+        "4",
+        "1024",
+        "10.84864",
+        "10.82971",
+        "5.209e-04"
+      ]
+    },
+    {
+      "name": "W->P switch: later steps differ (the backward changed)",
+      "passed": true
+    },
+    {
+      "name": "W->P switch recorded as an operator change",
+      "passed": true
+    },
+    {
+      "name": "protocol mismatch (lr) is refused",
+      "passed": true
+    },
+    {
+      "name": "historical parent without surrogate: refused unless --parent_surrogate is given",
+      "passed": true
+    },
+    {
+      "name": "historical W -> strict W recorded as weight_hist -> weight_strict, parent code hashes recorded",
+      "passed": true
+    },
+    {
+      "name": "--ckpt_weights_only: optimizer state only at --ckpt_full_tokens and at the end",
+      "passed": true,
+      "kinds": {
+        "ckpt_step000001_0.0m.pt": false,
+        "ckpt_step000002_0.0m.pt": true,
+        "ckpt_step000003_0.0m.pt": false,
+        "ckpt_step000004_0.0m.pt": false,
+        "ckpt_step000005_0.0m.pt": false,
+        "ckpt_step000006_0.0m.pt": true
+      }
+    },
+    {
+      "name": "checkpoint format does not change training",
+      "passed": true
+    },
+    {
+      "name": "--resume refuses a changed new-mode field (attn_variant)",
+      "passed": true
+    },
+    {
+      "name": "--resume continues an rb run to the end of the schedule",
+      "passed": true
+    },
+    {
+      "name": "--halt_on_nonfinite: exit code 3 and NONFINITE.json",
+      "passed": true,
+      "rc": 3,
+      "record": {
+        "step": 3,
+        "tokens_before_step": 512,
+        "train_loss": "nan",
+        "grad_norm": "nan",
+        "time_utc": "2026-11-10T22:59:43Z"
+      }
+    },
+    {
+      "name": "env.json records torch, code-root SHA-256 and the TF32 probe",
+      "passed": true
+    }
+  ],
+  "all_pass": true
+}

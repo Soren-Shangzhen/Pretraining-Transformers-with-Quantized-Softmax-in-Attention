@@ -1,0 +1,14 @@
+\begin{tabular}{p{5.2cm}p{5.3cm}rl}
+\toprule
+Operator (seed 7, 124M @ 100M) & Training GPU; software stack & $\Delta$NLL & 95\% eval.\ CI \\
+\midrule
+BF16-exp (new) & RTX 3090; torch 2.5.1+cu121 & -0.0034 & [-0.0058, -0.0009] \\
+FP8-rounded exp, FP32 exp backward (new) & RTX 3090; torch 2.5.1+cu121 & +0.0028 & [+0.0002, +0.0055] \\
+LERP $K{=}32$ & RTX 3090; torch 2.5.1+cu121 & +0.0047 & [+0.0024, +0.0069] \\
+LERP $K{=}4$ & RTX 3090; torch 2.5.1+cu121 & +0.0942 & [+0.0913, +0.0969] \\
+MinMax--Prob $K{=}4$ (historical) & RTX 5090; PyTorch version not recorded & +0.1452 & [+0.1412, +0.1493] \\
+MinMax--Weight $K{=}4$ (historical) & RTX 3090; torch 2.5.1+cu121 & +0.2245 & [+0.2190, +0.2302] \\
+FWM--Prob $K{=}4$ (historical) & RTX 5090; PyTorch version not recorded & +0.0083 & [+0.0057, +0.0107] \\
+FWM--Prob $K{=}4$ (strict forward, App.~\ref{app:strict}) & RTX 5090; torch 2.13.0+cu132 & -0.0036 & [-0.0070, -0.0003] \\
+\bottomrule
+\end{tabular}

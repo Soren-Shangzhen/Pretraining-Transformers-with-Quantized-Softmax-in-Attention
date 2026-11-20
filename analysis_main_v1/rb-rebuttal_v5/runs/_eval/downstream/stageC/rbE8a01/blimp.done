@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "0fe3d7126e35e2cb420e9432dd1ba68568e98547cd27f9813150f8b07e3f26e4",
+    "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "blimp",
+    "limit": 200,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "301b721d40acfecf9319ab1c8990ce65",
+  "n_rows": 26800,
+  "finished": "2026-11-12T12:44:18"
+}

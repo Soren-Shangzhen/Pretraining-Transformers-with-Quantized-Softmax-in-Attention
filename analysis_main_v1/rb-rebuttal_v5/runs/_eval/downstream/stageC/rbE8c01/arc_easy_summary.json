@@ -1,0 +1,63 @@
+{
+  "condition": "rb-E8c-01",
+  "run_name": "rb-E8c-01",
+  "cfg": "arc_easy",
+  "task": "arc_easy",
+  "kind": "mc",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 16,
+    "approx": "lerp",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0,
+    "tail_policy": "zero",
+    "resolved_h0": "",
+    "attn_variant": "",
+    "exaq_bits": 3,
+    "ema_decay": 0.999,
+    "nearest_surrogate": "prob"
+  },
+  "n_docs": 2376,
+  "n_rows": 9501,
+  "n_requests": 9501,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "9d76d9d8e66ec2c613c37b76182e071c",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.4890572390572391,
+      "acc_stderr,none": 0.010257326131172875,
+      "acc_norm,none": 0.44107744107744107,
+      "acc_norm_stderr,none": 0.010188293221040614
+    }
+  },
+  "seconds": 142.3,
+  "fingerprint": {
+    "checkpoint_sha256": "279c7567921702637bef08bedccb65de805a09ca6b95140bd75ac1c0f036482b",
+    "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "arc_easy",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

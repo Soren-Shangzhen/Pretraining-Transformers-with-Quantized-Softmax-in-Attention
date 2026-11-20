@@ -1,0 +1,549 @@
+{
+  "env": {
+    "torch": "2.13.0+cu132",
+    "cuda": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    }
+  },
+  "checks": [
+    {
+      "name": "[cpu] torch.exp2 returns exact powers of two for integer exponents -150..150",
+      "passed": true
+    },
+    {
+      "name": "[cuda] torch.exp2 returns exact powers of two for integer exponents -150..150",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_mxfp8 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_nvfp4 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cpu] softmax_uint8 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] softmax_mxfp8: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04296875,
+        0.125,
+        0.40625,
+        9.5367431640625e-07,
+        4.76837158203125e-07
+      ]
+    },
+    {
+      "name": "[cpu] softmax_nvfp4: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.0,
+        0.1666666716337204,
+        0.3333333432674408,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cpu] softmax_uint8: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04313725605607033,
+        0.125490203499794,
+        0.4156862795352936,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04296875,
+        0.125,
+        0.40625,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale0.3: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale0.3: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale2.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale2.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale6.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale6.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_mxfp8 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_nvfp4 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale20.0: quantised weights == independent reference (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00"
+    },
+    {
+      "name": "[cuda] softmax_uint8 scale20.0: training probabilities == reference normalisation (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] softmax_mxfp8: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04296875,
+        0.125,
+        0.40625,
+        9.5367431640625e-07,
+        4.76837158203125e-07
+      ]
+    },
+    {
+      "name": "[cuda] softmax_nvfp4: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.0,
+        0.1666666716337204,
+        0.3333333432674408,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cuda] softmax_uint8: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04313725605607033,
+        0.125490203499794,
+        0.4156862795352936,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp: edge cases (ties, zero blocks, tiny block max) == reference (bitwise)",
+      "passed": true,
+      "values": [
+        1.0,
+        0.04296875,
+        0.125,
+        0.40625,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "[cpu] softmax_bf16exp: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "5.36e-08",
+      "tol": 0.05
+    },
+    {
+      "name": "[cpu] softmax_fp8e4m3exp: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "6.38e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cpu] softmax_mxfp8: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "5.06e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cpu] softmax_nvfp4: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "1.23e-07",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cpu] softmax_uint8: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "8.63e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cpu] softmax_bf16chain: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "7.33e-08",
+      "tol": 0.05
+    },
+    {
+      "name": "[cuda] softmax_bf16exp: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "6.75e-08",
+      "tol": 0.05
+    },
+    {
+      "name": "[cuda] softmax_fp8e4m3exp: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "5.93e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cuda] softmax_mxfp8: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "6.19e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cuda] softmax_nvfp4: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "9.30e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cuda] softmax_uint8: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "7.12e-08",
+      "tol": 1e-05
+    },
+    {
+      "name": "[cuda] softmax_bf16chain: row-gradient zero-sum residual |sum g| / sum |g|",
+      "passed": true,
+      "worst": "5.66e-08",
+      "tol": 0.05
+    },
+    {
+      "name": "E0c softmax_fp8e4m3exp: levels and underflow threshold match the estimate",
+      "passed": true,
+      "got": {
+        "nonzero_levels_in_0_1": 56,
+        "underflow_below_z": -6.9315
+      },
+      "expected": {
+        "levels": 56,
+        "underflow_z": -6.93
+      }
+    },
+    {
+      "name": "E0c softmax_mxfp8: levels and underflow threshold match the estimate",
+      "passed": true,
+      "got": {
+        "nonzero_levels_in_0_1": 120,
+        "underflow_below_z": -12.4767
+      },
+      "expected": {
+        "levels": 120,
+        "underflow_z": -12.48
+      }
+    },
+    {
+      "name": "E0c softmax_nvfp4: levels and underflow threshold match the estimate",
+      "passed": true,
+      "got": {
+        "nonzero_levels_in_0_1": 7,
+        "underflow_below_z": -3.1781
+      },
+      "expected": {
+        "levels": 7,
+        "underflow_z": -3.18
+      }
+    },
+    {
+      "name": "E0c softmax_uint8: levels and underflow threshold match the estimate",
+      "passed": true,
+      "got": {
+        "nonzero_levels_in_0_1": 255,
+        "underflow_below_z": -6.2344
+      },
+      "expected": {
+        "levels": 255,
+        "underflow_z": -6.23
+      }
+    }
+  ],
+  "E0c_levels": {
+    "softmax_fp8e4m3exp": {
+      "nonzero_levels_in_0_1": 56,
+      "underflow_below_z": -6.9315
+    },
+    "softmax_mxfp8": {
+      "nonzero_levels_in_0_1": 120,
+      "underflow_below_z": -12.4767
+    },
+    "softmax_nvfp4": {
+      "nonzero_levels_in_0_1": 7,
+      "underflow_below_z": -3.1781
+    },
+    "softmax_uint8": {
+      "nonzero_levels_in_0_1": 255,
+      "underflow_below_z": -6.2344
+    },
+    "softmax_bf16exp": {
+      "nonzero_levels_in_0_1": 741,
+      "underflow_below_z": -Infinity
+    }
+  },
+  "all_pass": true
+}

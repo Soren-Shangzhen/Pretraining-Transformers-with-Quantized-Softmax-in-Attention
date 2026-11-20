@@ -1,0 +1,35 @@
+contrast,family,terms,delta,ci_lo,ci_hi,frac_blocks_negative,n_blocks,ci_class
+LERP K4 - Exact,vs_exact,+1*[LERP K4] -1*[Exact],0.051800643078616405,0.0504243689421259,0.0531788312570482,0.007172131147540984,976,positive
+MinMax-Prob K16 - Exact,vs_exact,+1*[MinMax-Prob K16] -1*[Exact],0.01713297357324694,0.016044502119060423,0.01823721755845625,0.16188524590163936,976,positive
+MinMax-Prob K4 - Exact,vs_exact,+1*[MinMax-Prob K4] -1*[Exact],0.07354313306144027,0.07190962517481359,0.0751127655938512,0.0,976,positive
+MinMax-Weight K16 - Exact,vs_exact,+1*[MinMax-Weight K16] -1*[Exact],0.12444250090200393,0.12283045747241035,0.12600493560560413,0.0,976,positive
+MinMax-Weight K4 - Exact,vs_exact,+1*[MinMax-Weight K4] -1*[Exact],0.38916086491014135,0.3850824974477291,0.39298071565075976,0.0,976,positive
+QRM-Prob K16 - Exact,vs_exact,+1*[QRM-Prob K16] -1*[Exact],-0.002036293999093478,-0.003208351519997003,-0.000875997470050561,0.5358606557377049,976,negative
+QRM-Prob K4 - Exact,vs_exact,+1*[QRM-Prob K4] -1*[Exact],0.006849183899457338,0.005781754637595083,0.007898327586103659,0.3709016393442623,976,positive
+QRM-Weight K16 - Exact,vs_exact,+1*[QRM-Weight K16] -1*[Exact],-0.003178449683502072,-0.0042158177030868224,-0.0021702337949002374,0.5727459016393442,976,negative
+QRM-Weight K4 - Exact,vs_exact,+1*[QRM-Weight K4] -1*[Exact],0.038823091104382375,0.03755946702278051,0.04012305464778767,0.030737704918032786,976,positive
+MinMax-Weight K4 - LERP K4,vs_lerp_matched_K,+1*[MinMax-Weight K4] -1*[LERP K4],0.337360221831525,0.33354011154199237,0.34082567621572096,0.0,976,positive
+MinMax-Prob K4 - LERP K4,vs_lerp_matched_K,+1*[MinMax-Prob K4] -1*[LERP K4],0.021742489982823857,0.020246559509732684,0.023246510204721668,0.16393442622950818,976,positive
+QRM-Weight K4 - LERP K4,vs_lerp_matched_K,+1*[QRM-Weight K4] -1*[LERP K4],-0.012977551974234034,-0.014443364427959333,-0.011514109574624749,0.7274590163934426,976,negative
+QRM-Prob K4 - LERP K4,vs_lerp_matched_K,+1*[QRM-Prob K4] -1*[LERP K4],-0.04495145917915907,-0.04657708333774668,-0.04335302344721849,0.9743852459016393,976,negative
+MinMax-Prob K4 - MinMax-Weight K4,backward_prob_minus_weight,+1*[MinMax-Prob K4] -1*[MinMax-Weight K4],-0.3156177318487011,-0.3190155773377809,-0.312011239378423,1.0,976,negative
+QRM-Prob K4 - QRM-Weight K4,backward_prob_minus_weight,+1*[QRM-Prob K4] -1*[QRM-Weight K4],-0.03197390720492504,-0.03343195339939633,-0.030513852981270337,0.9344262295081968,976,negative
+QRM-Weight K4 - MinMax-Weight K4,calibration_qrm_minus_minmax,+1*[QRM-Weight K4] -1*[MinMax-Weight K4],-0.350337773805759,-0.35389249946494566,-0.3463445976010111,1.0,976,negative
+QRM-Prob K4 - MinMax-Prob K4,calibration_qrm_minus_minmax,+1*[QRM-Prob K4] -1*[MinMax-Prob K4],-0.06669394916198293,-0.06839286150624517,-0.06487743885668575,0.9989754098360656,976,negative
+"K4 2x2 main effect: calibration (QRM - MinMax, avg over backward)",factorial_2x2,+0.5*[QRM-Weight K4] +0.5*[QRM-Prob K4] -0.5*[MinMax-Weight K4] -0.5*[MinMax-Prob K4],-0.20851586148387097,-0.2107162035940612,-0.20600254500559606,1.0,976,negative
+"K4 2x2 main effect: backward (Prob - Weight, avg over calibration)",factorial_2x2,+0.5*[MinMax-Prob K4] +0.5*[QRM-Prob K4] -0.5*[MinMax-Weight K4] -0.5*[QRM-Weight K4],-0.17379581952681306,-0.17570830333184023,-0.17171897659475197,1.0,976,negative
+K4 2x2 interaction: (QRM Prob-Weight) - (MinMax Prob-Weight),factorial_2x2,+1*[QRM-Prob K4] -1*[QRM-Weight K4] -1*[MinMax-Prob K4] +1*[MinMax-Weight K4],0.2836438246437761,0.2800429724584349,0.28712475275407073,0.0,976,positive
+MinMax-Prob K16 - MinMax-Weight K16,backward_prob_minus_weight,+1*[MinMax-Prob K16] -1*[MinMax-Weight K16],-0.107309527328757,-0.10885672766532077,-0.10576875298360332,1.0,976,negative
+QRM-Prob K16 - QRM-Weight K16,backward_prob_minus_weight,+1*[QRM-Prob K16] -1*[QRM-Weight K16],0.0011421556844085944,8.723533666524732e-05,0.0021664974081223127,0.4989754098360656,976,positive
+QRM-Weight K16 - MinMax-Weight K16,calibration_qrm_minus_minmax,+1*[QRM-Weight K16] -1*[MinMax-Weight K16],-0.127620950585506,-0.12908222334551028,-0.12612331829598694,1.0,976,negative
+QRM-Prob K16 - MinMax-Prob K16,calibration_qrm_minus_minmax,+1*[QRM-Prob K16] -1*[MinMax-Prob K16],-0.01916926757234042,-0.020355541228515205,-0.017941871224368203,0.8411885245901639,976,negative
+"K16 2x2 main effect: calibration (QRM - MinMax, avg over backward)",factorial_2x2,+0.5*[QRM-Weight K16] +0.5*[QRM-Prob K16] -0.5*[MinMax-Weight K16] -0.5*[MinMax-Prob K16],-0.07339510907892322,-0.07440865130209533,-0.07226753319751043,1.0,976,negative
+"K16 2x2 main effect: backward (Prob - Weight, avg over calibration)",factorial_2x2,+0.5*[MinMax-Prob K16] +0.5*[QRM-Prob K16] -0.5*[MinMax-Weight K16] -0.5*[QRM-Weight K16],-0.053083685822174195,-0.054054270767164035,-0.05208620452245728,1.0,976,negative
+K16 2x2 interaction: (QRM Prob-Weight) - (MinMax Prob-Weight),factorial_2x2,+1*[QRM-Prob K16] -1*[QRM-Weight K16] -1*[MinMax-Prob K16] +1*[MinMax-Weight K16],0.10845168301316559,0.10673106404967973,0.11022482204144118,0.0,976,positive
+MinMax-Weight K16 - MinMax-Weight K4,k_effect_within_cell,+1*[MinMax-Weight K16] -1*[MinMax-Weight K4],-0.2647183640081374,-0.2679734729413615,-0.26116213177437664,1.0,976,negative
+MinMax-Prob K16 - MinMax-Prob K4,k_effect_within_cell,+1*[MinMax-Prob K16] -1*[MinMax-Prob K4],-0.05641015948819333,-0.05797669426461712,-0.05484211046065463,0.9938524590163934,976,negative
+QRM-Weight K16 - QRM-Weight K4,k_effect_within_cell,+1*[QRM-Weight K16] -1*[QRM-Weight K4],-0.04200154078788445,-0.04340083917877713,-0.04064450053895106,0.9805327868852459,976,negative
+QRM-Prob K16 - QRM-Prob K4,k_effect_within_cell,+1*[QRM-Prob K16] -1*[QRM-Prob K4],-0.008885477898550815,-0.0101480170534771,-0.007585782875291637,0.6834016393442623,976,negative
+"K main effect (K16 - K4, avg over 4 hard-Nearest cells)",factorial_2x2x2,+0.25*[MinMax-Weight K16] +0.25*[MinMax-Prob K16] +0.25*[QRM-Weight K16] +0.25*[QRM-Prob K16] -0.25*[MinMax-Weight K4] -0.25*[MinMax-Prob K4] -0.25*[QRM-Weight K4] -0.25*[QRM-Prob K4],-0.0930038855456915,-0.0941883502176917,-0.09172031543690894,1.0,976,negative
+"K x calibration interaction: (QRM - MinMax at K16) - (QRM - MinMax at K4), avg backward",factorial_2x2x2,+0.5*[QRM-Weight K16] +0.5*[QRM-Prob K16] -0.5*[MinMax-Weight K16] -0.5*[MinMax-Prob K16] -0.5*[QRM-Weight K4] -0.5*[QRM-Prob K4] +0.5*[MinMax-Weight K4] +0.5*[MinMax-Prob K4],0.13512075240494775,0.13293669922124657,0.1371116804355969,0.0,976,positive
+"K x backward interaction: (Prob - Weight at K16) - (Prob - Weight at K4), avg calibration",factorial_2x2x2,+0.5*[MinMax-Prob K16] +0.5*[QRM-Prob K16] -0.5*[MinMax-Weight K16] -0.5*[QRM-Weight K16] -0.5*[MinMax-Prob K4] -0.5*[QRM-Prob K4] +0.5*[MinMax-Weight K4] +0.5*[QRM-Weight K4],0.12071213370463887,0.11860362117590963,0.12266156288382948,0.0,976,positive

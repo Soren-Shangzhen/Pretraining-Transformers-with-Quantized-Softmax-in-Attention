@@ -1,0 +1,17 @@
+{
+  "run": "q2_nearest_5m_s1339",
+  "label": "Nearest",
+  "K": 2,
+  "range_grad": "detach",
+  "seed": 1339,
+  "checkpoint": "<REPO>/training_code/legacy_exact_fp32/runs/q2_nearest_5m_s1339/ckpt.pt",
+  "step": 39,
+  "tokens_done": 5111808,
+  "max_tokens": 5000000,
+  "mean_nll": 6.926289079611194,
+  "n_blocks": 243,
+  "batch_size": 1,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/legacy_exact_fp32",
+  "eval_code_sha256": "3da199f854b97c6460577283af09ee4fa5bde1e1036c1585263d616801f0d4de",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

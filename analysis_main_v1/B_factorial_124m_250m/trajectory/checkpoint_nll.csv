@@ -1,0 +1,101 @@
+cond,label,K,run_name,ckpt_index,step,tokens_m,mean_nll,is_final
+Exact,Exact,,formal_124m_s1337_exact_matched250m,0,191,25.034752,6.0850915014743805,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,1,382,50.069504,5.332909952421657,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,2,573,75.104256,4.806054154380423,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,3,763,100.007936,4.442441164714391,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,4,954,125.042688,4.234583266445847,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,5,1145,150.07744,4.113062877146924,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,6,1336,175.112192,4.019897606284892,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,7,1526,200.015872,3.9573186904680533,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,8,1717,225.050624,3.913300805404538,0
+Exact,Exact,,formal_124m_s1337_exact_matched250m,9,1908,250.085376,3.888275131583214,1
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,0,191,25.034752,6.099351577094344,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,1,382,50.069504,5.4140950495102365,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,2,573,75.104256,4.922733369909349,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,3,763,100.007936,4.583235332711798,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,4,954,125.042688,4.3256649460460315,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,5,1145,150.07744,4.186526217177266,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,6,1336,175.112192,4.081926905962288,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,7,1526,200.015872,4.012452385708934,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,8,1717,225.050624,3.9656516755702067,0
+LERP K4,LERP,4,formal_124m_s1337_lerp_k4_matched250m,9,1908,250.085376,3.94007577466183,1
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,0,191,25.034752,6.0909287406772865,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,1,382,50.069504,5.3406456269201685,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,2,573,75.104256,4.836554028704518,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,3,763,100.007936,4.4574704514663726,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,4,954,125.042688,4.255291426768069,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,5,1145,150.07744,4.131695845332302,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,6,1336,175.112192,4.037610085284124,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,7,1526,200.015872,3.9747109840639303,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,8,1717,225.050624,3.9309801574124665,0
+MinMax-Prob K16,MinMax-Prob,16,formal_124m_s1337_minmax_nearest_k16_probste_250m,9,1908,250.085376,3.905408105156461,1
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,0,191,25.034752,6.0868784301593655,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,1,382,50.069504,5.362347702022459,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,2,573,75.104256,4.887014003317864,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,3,763,100.007936,4.541623041033745,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,4,954,125.042688,4.345767031927577,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,5,1145,150.07744,4.220585664031936,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,6,1336,175.112192,4.1334434930906925,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,7,1526,200.015872,4.074227148636442,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,8,1717,225.050624,4.036165209578686,0
+MinMax-Weight K16,MinMax-Weight,16,formal_124m_s1337_minmax_nearest_k16_weightste_250m,9,1908,250.085376,4.012717632485217,1
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,0,191,25.034752,6.0999995279507555,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,1,382,50.069504,5.404797565741617,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,2,573,75.104256,4.943010710790509,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,3,763,100.007936,4.606936813133662,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,4,954,125.042688,4.352998110847395,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,5,1145,150.07744,4.207997721482496,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,6,1336,175.112192,4.103092667997861,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,7,1526,200.015872,4.033099026465025,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,8,1717,225.050624,3.9882715857419813,0
+MinMax-Prob K4,MinMax-Prob,4,formal_124m_s1337_nearest_k4_probste_250m,9,1908,250.085376,3.9618182646446543,1
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,0,191,25.034752,6.096499962884872,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,1,382,50.069504,5.451376285220756,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,2,573,75.104256,5.028829511804659,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,3,763,100.007936,4.740173945905732,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,4,954,125.042688,4.575187379219493,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,5,1145,150.07744,4.478705198061271,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,6,1336,175.112192,4.407625950262195,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,7,1526,200.015872,4.3439840305535515,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,8,1717,225.050624,4.30232145502919,0
+MinMax-Weight K4,MinMax-Weight,4,formal_124m_s1337_nearest_k4_weightste_250m,9,1908,250.085376,4.277435996493355,1
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,0,191,25.034752,6.086794146260277,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,1,382,50.069504,5.327378024820422,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,2,573,75.104256,4.812676805697504,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,3,763,100.007936,4.436450824874346,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,4,954,125.042688,4.239330138583652,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,5,1145,150.07744,4.112608376096507,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,6,1336,175.112192,4.019186047501251,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,7,1526,200.015872,3.9555993710384993,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,8,1717,225.050624,3.911217378788307,0
+QRM-Prob K16,QRM-Prob,16,formal_124m_s1337_qrm_k16_tau6_probste_250m,9,1908,250.085376,3.8862388375841204,1
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,0,191,25.034752,6.082159560723383,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,1,382,50.069504,5.329802222916337,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,2,573,75.104256,4.800814664754712,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,3,763,100.007936,4.43066077935891,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,4,954,125.042688,4.230025026397627,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,5,1145,150.07744,4.106326554398068,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,6,1336,175.112192,4.01741197729697,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,7,1526,200.015872,3.9539315441592793,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,8,1717,225.050624,3.910184829694326,0
+QRM-Weight K16,QRM-Weight,16,formal_124m_s1337_qrm_k16_tau6_weightste_250m,9,1908,250.085376,3.8850966818997117,1
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,0,191,25.034752,6.127804870488213,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,1,382,50.069504,5.350610077381134,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,2,573,75.104256,4.829998051778215,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,3,763,100.007936,4.466608260254391,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,4,954,125.042688,4.271860103871002,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,5,1145,150.07744,4.151010432448543,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,6,1336,175.112192,4.056955334104475,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,7,1526,200.015872,3.9939003093320817,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,8,1717,225.050624,3.9512930942363425,0
+QRM-Weight K4,QRM-Weight,4,formal_124m_s1337_qrm_k4_tau6_matched250m,9,1908,250.085376,3.9270982226875963,1
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,0,191,25.034752,6.092085925770587,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,1,382,50.069504,5.328433623567957,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,2,573,75.104256,4.806838000162703,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,3,763,100.007936,4.4441421916250325,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,4,954,125.042688,4.243966635621962,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,5,1145,150.07744,4.119194098427648,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,6,1336,175.112192,4.025548769313781,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,7,1526,200.015872,3.9623943032299884,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,8,1717,225.050624,3.9191226959228516,0
+QRM-Prob K4,QRM-Prob,4,formal_124m_s1337_qrm_k4_tau6_probste_250m,9,1908,250.085376,3.895124315482671,1

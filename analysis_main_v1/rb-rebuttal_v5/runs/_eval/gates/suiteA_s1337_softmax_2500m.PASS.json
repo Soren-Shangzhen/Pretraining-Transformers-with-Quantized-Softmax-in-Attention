@@ -1,0 +1,13 @@
+{
+ "name": "suiteA_s1337_softmax_2500m",
+ "got": 3.1927719292093495,
+ "recorded": 3.1927719292093495,
+ "recorded_source": "eval_native_v1/A_longhorizon_124m_2p5b/formal_124m_s1337_exact_2p5b/ckpt_step019074_2500.1m/summary.json (RTX 5090, torch 2.13.0)",
+ "diff": 0.0,
+ "tol": 0.0005,
+ "bitwise_equal": true,
+ "passed": true,
+ "summary": [
+  "<POD_WORKSPACE>/runs/_eval/nll/suiteA_s1337_softmax_2500m/2500m_ckpt_step019074_2500.1m/summary.json"
+ ]
+}

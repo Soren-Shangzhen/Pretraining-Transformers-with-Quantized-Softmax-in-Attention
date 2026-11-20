@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "a9df559ebfea7bc262b56c3f99a127969f44aa51d31922e95888c3d6a5f401b6",
+    "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "piqa",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "6a23428e01d0f9190c2708bd8bf50b8f",
+  "n_rows": 3676,
+  "finished": "2026-11-13T22:27:45"
+}

@@ -1,0 +1,53 @@
+{
+  "job_id": "0386",
+  "phase": "trajectory",
+  "suite": "A_longhorizon_124m_2p5b",
+  "run_name": "formal_124m_s1337_qrm_nearest_k4_tau6_fullgrad_2p5b",
+  "label": "QRM-Weight",
+  "calibration": "relevant_zero",
+  "reconstruction": "nearest",
+  "backward": "weight_ste",
+  "K": "4",
+  "range_tau": "6",
+  "range_grad": "full",
+  "dataset": "finewebedu_3b",
+  "seed": "1337",
+  "model_scale": "124M",
+  "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_qrm_nearest_k4_tau6_fullgrad_2p5b/ckpt_step014306_1875.1m.pt",
+  "ckpt_index": 14,
+  "is_final": 0,
+  "step": 14306,
+  "tokens_done": 1875116032,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0
+  },
+  "val_path": "<CLOUD_DISK>/data/finewebedu_3b/val.bin",
+  "n_blocks": 976,
+  "block_size": 1024,
+  "eval_tokens": 999424,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 3.2852126291540804,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/training_code/formal_code_factorial250_v1/formal_qrm_v1",
+  "eval_code_sha256": {
+    "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+    "quant_attention.py": "a402460d4545a76e19a65f858d4bee247fec26309431a94fd112670176546367"
+  },
+  "eval_scripts": "<REPO>/analysis_main_v1/code",
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "gpu-host-A",
+  "seconds": {
+    "load": 2.3,
+    "nll": 40.8,
+    "geometry": 11.6
+  },
+  "finished": "2026-09-17T13:00:35"
+}

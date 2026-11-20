@@ -1,0 +1,3851 @@
+{
+  "passed": true,
+  "n_checks": 768,
+  "n_failed": 0,
+  "total_rows": 1399470,
+  "total_truncated": 0,
+  "total_failed_requests": 0,
+  "total_retries": 0,
+  "checks": [
+    {
+      "check": "15 conditions in manifest",
+      "passed": true,
+      "detail": "15"
+    },
+    {
+      "check": "checkpoints are 15 distinct files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all conditions at the same final step",
+      "passed": true,
+      "detail": "step 19074, tokens 2,500,067,328"
+    },
+    {
+      "check": "Exact: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'exact_fp32_softmax', 'K': 8, 'approx': 'lerp', 'range_grad': 'detach', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "LERP K1: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 1, 'approx': 'lerp', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "LERP K2: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 2, 'approx': 'lerp', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "LERP K4: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'lerp', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "LERP K16: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 16, 'approx': 'lerp', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "LERP K32: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 32, 'approx': 'lerp', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "MinMax-Prob K4: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "MinMax-Weight K4: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "MinMax-Weight K16: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 16, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "MinMax-Weight K32: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 32, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "MinMax-Weight K64: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 64, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "QRM-Prob K4: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'relevant_zero', 'range_tau': 6.0}"
+    },
+    {
+      "check": "QRM-Weight K2: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 2, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'relevant_zero', 'range_tau': 6.0}"
+    },
+    {
+      "check": "QRM-Weight K4: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'relevant_zero', 'range_tau': 6.0}"
+    },
+    {
+      "check": "QRM-Weight K16: checkpoint operator matches the manifest label",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 16, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'relevant_zero', 'range_tau': 6.0}"
+    },
+    {
+      "check": "blimp/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/blimp_summary.json"
+    },
+    {
+      "check": "blimp/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/blimp_summary.json"
+    },
+    {
+      "check": "blimp/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/blimp_summary.json"
+    },
+    {
+      "check": "blimp/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/blimp_summary.json"
+    },
+    {
+      "check": "blimp/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/blimp_summary.json"
+    },
+    {
+      "check": "blimp/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/blimp_summary.json"
+    },
+    {
+      "check": "blimp/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/blimp_summary.json"
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/blimp_summary.json"
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/blimp_summary.json"
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/blimp_summary.json"
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/blimp_summary.json"
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/blimp_summary.json"
+    },
+    {
+      "check": "blimp/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/blimp_summary.json"
+    },
+    {
+      "check": "blimp/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/blimp_summary.json"
+    },
+    {
+      "check": "blimp/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/blimp_summary.json"
+    },
+    {
+      "check": "blimp/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "301b721d40acfecf"
+    },
+    {
+      "check": "blimp: identical row count across conditions",
+      "passed": true,
+      "detail": "26800"
+    },
+    {
+      "check": "blimp: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "blimp: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "blimp/Exact: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/Exact: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.794776"
+    },
+    {
+      "check": "blimp/Exact: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K1: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K1: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.742313"
+    },
+    {
+      "check": "blimp/LERP K1: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K2: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K2: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.785000"
+    },
+    {
+      "check": "blimp/LERP K2: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K4: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K4: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.783731"
+    },
+    {
+      "check": "blimp/LERP K4: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K16: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K16: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.782164"
+    },
+    {
+      "check": "blimp/LERP K16: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K32: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K32: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.778955"
+    },
+    {
+      "check": "blimp/LERP K32: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.782761"
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.600821"
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.699627"
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.757164"
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.775299"
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Prob K4: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Prob K4: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.784254"
+    },
+    {
+      "check": "blimp/QRM-Prob K4: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K2: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K2: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.740373"
+    },
+    {
+      "check": "blimp/QRM-Weight K2: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K4: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K4: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.767164"
+    },
+    {
+      "check": "blimp/QRM-Weight K4: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K16: every paradigm accuracy matches the harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K16: paradigm macro == harness group acc",
+      "passed": true,
+      "detail": "0.789627"
+    },
+    {
+      "check": "blimp/QRM-Weight K16: 67 paradigms x 200 pairs",
+      "passed": true,
+      "detail": "67 paradigms"
+    },
+    {
+      "check": "blimp/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/hellaswag_summary.json"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "43069e8bc7730949"
+    },
+    {
+      "check": "hellaswag: identical row count across conditions",
+      "passed": true,
+      "detail": "40168"
+    },
+    {
+      "check": "hellaswag: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "hellaswag: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "hellaswag/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.282513"
+    },
+    {
+      "check": "hellaswag/Exact: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.299940"
+    },
+    {
+      "check": "hellaswag/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.274945"
+    },
+    {
+      "check": "hellaswag/LERP K1: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.280522"
+    },
+    {
+      "check": "hellaswag/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.282215"
+    },
+    {
+      "check": "hellaswag/LERP K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.299741"
+    },
+    {
+      "check": "hellaswag/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.283609"
+    },
+    {
+      "check": "hellaswag/LERP K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.303525"
+    },
+    {
+      "check": "hellaswag/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.284306"
+    },
+    {
+      "check": "hellaswag/LERP K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.301733"
+    },
+    {
+      "check": "hellaswag/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.283509"
+    },
+    {
+      "check": "hellaswag/LERP K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.301534"
+    },
+    {
+      "check": "hellaswag/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.281318"
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.293667"
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.262298"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.260805"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.268871"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.273153"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.275941"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.283708"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.282016"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.296754"
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.285600"
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.296256"
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.278132"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.288887"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.281816"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.295359"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.284306"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.298745"
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "hellaswag/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/piqa_summary.json"
+    },
+    {
+      "check": "piqa/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/piqa_summary.json"
+    },
+    {
+      "check": "piqa/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/piqa_summary.json"
+    },
+    {
+      "check": "piqa/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/piqa_summary.json"
+    },
+    {
+      "check": "piqa/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/piqa_summary.json"
+    },
+    {
+      "check": "piqa/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/piqa_summary.json"
+    },
+    {
+      "check": "piqa/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/piqa_summary.json"
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/piqa_summary.json"
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/piqa_summary.json"
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/piqa_summary.json"
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/piqa_summary.json"
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/piqa_summary.json"
+    },
+    {
+      "check": "piqa/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/piqa_summary.json"
+    },
+    {
+      "check": "piqa/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/piqa_summary.json"
+    },
+    {
+      "check": "piqa/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/piqa_summary.json"
+    },
+    {
+      "check": "piqa/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "6a23428e01d0f919"
+    },
+    {
+      "check": "piqa: identical row count across conditions",
+      "passed": true,
+      "detail": "3676"
+    },
+    {
+      "check": "piqa: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "piqa: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "piqa/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.608270"
+    },
+    {
+      "check": "piqa/Exact: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.597388"
+    },
+    {
+      "check": "piqa/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.606638"
+    },
+    {
+      "check": "piqa/LERP K1: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.595212"
+    },
+    {
+      "check": "piqa/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.622960"
+    },
+    {
+      "check": "piqa/LERP K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.599565"
+    },
+    {
+      "check": "piqa/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.612078"
+    },
+    {
+      "check": "piqa/LERP K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.595212"
+    },
+    {
+      "check": "piqa/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.614255"
+    },
+    {
+      "check": "piqa/LERP K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.605550"
+    },
+    {
+      "check": "piqa/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.603917"
+    },
+    {
+      "check": "piqa/LERP K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.602285"
+    },
+    {
+      "check": "piqa/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.607182"
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.609902"
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.575082"
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.556039"
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.584331"
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.575082"
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.603373"
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.593036"
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.616975"
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.601197"
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.612622"
+    },
+    {
+      "check": "piqa/QRM-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.605005"
+    },
+    {
+      "check": "piqa/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.604461"
+    },
+    {
+      "check": "piqa/QRM-Weight K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.587595"
+    },
+    {
+      "check": "piqa/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.614799"
+    },
+    {
+      "check": "piqa/QRM-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.607182"
+    },
+    {
+      "check": "piqa/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.614255"
+    },
+    {
+      "check": "piqa/QRM-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.614255"
+    },
+    {
+      "check": "piqa/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "piqa/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/arc_easy_summary.json"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "9d76d9d8e66ec2c6"
+    },
+    {
+      "check": "arc_easy: identical row count across conditions",
+      "passed": true,
+      "detail": "9501"
+    },
+    {
+      "check": "arc_easy: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "arc_easy: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "arc_easy/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.497896"
+    },
+    {
+      "check": "arc_easy/Exact: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.452020"
+    },
+    {
+      "check": "arc_easy/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.455387"
+    },
+    {
+      "check": "arc_easy/LERP K1: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.412879"
+    },
+    {
+      "check": "arc_easy/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.494108"
+    },
+    {
+      "check": "arc_easy/LERP K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.428451"
+    },
+    {
+      "check": "arc_easy/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.489057"
+    },
+    {
+      "check": "arc_easy/LERP K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.446128"
+    },
+    {
+      "check": "arc_easy/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.497896"
+    },
+    {
+      "check": "arc_easy/LERP K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.454966"
+    },
+    {
+      "check": "arc_easy/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.507155"
+    },
+    {
+      "check": "arc_easy/LERP K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.445707"
+    },
+    {
+      "check": "arc_easy/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.493687"
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.440236"
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.380471"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.356061"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.438131"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.395202"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.465067"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.417508"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.497054"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.445286"
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.497896"
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.444024"
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.481061"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.425926"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.494949"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.450337"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.501684"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.449074"
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "arc_easy/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/lambada_openai_summary.json"
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "3866b625240b7e88"
+    },
+    {
+      "check": "lambada_openai: identical row count across conditions",
+      "passed": true,
+      "detail": "5153"
+    },
+    {
+      "check": "lambada_openai: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "lambada_openai: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "lambada_openai/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/Exact: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/Exact: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K1: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K1: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K2: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K2: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K4: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K4: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K16: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K16: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K32: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/LERP K32: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Prob K4: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Prob K4: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K4: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K4: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K16: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K16: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K32: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K32: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K64: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/MinMax-Weight K64: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Prob K4: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Prob K4: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K2: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K2: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K4: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K4: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K16: harness perplexity == exp(mean per-example total target NLL)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "lambada_openai/QRM-Weight K16: target token counts identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/sciq_default_summary.json"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "676b85be222fe1bd"
+    },
+    {
+      "check": "sciq_default: identical row count across conditions",
+      "passed": true,
+      "detail": "4000"
+    },
+    {
+      "check": "sciq_default: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "sciq_default: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "sciq_default/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.731000"
+    },
+    {
+      "check": "sciq_default/Exact: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.661000"
+    },
+    {
+      "check": "sciq_default/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.646000"
+    },
+    {
+      "check": "sciq_default/LERP K1: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.588000"
+    },
+    {
+      "check": "sciq_default/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.751000"
+    },
+    {
+      "check": "sciq_default/LERP K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.656000"
+    },
+    {
+      "check": "sciq_default/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.744000"
+    },
+    {
+      "check": "sciq_default/LERP K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.672000"
+    },
+    {
+      "check": "sciq_default/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.735000"
+    },
+    {
+      "check": "sciq_default/LERP K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.638000"
+    },
+    {
+      "check": "sciq_default/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.741000"
+    },
+    {
+      "check": "sciq_default/LERP K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.656000"
+    },
+    {
+      "check": "sciq_default/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.726000"
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.653000"
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.538000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.499000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.638000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.567000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.709000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.622000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.742000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.651000"
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.724000"
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.648000"
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.719000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.629000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.747000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.658000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.770000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.661000"
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_default/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/Exact: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/Exact/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/Exact: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K1/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K2/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K4/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K16/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/LERP_K32/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxProb_K4/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K4/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K16/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K32/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/MinMaxWeight_K64/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMProb_K4/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K2/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K4/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: finished",
+      "passed": true,
+      "detail": "<REPO>/analysis_main_v1/downstream_v1/results/layer3/stageC/QRMWeight_K16/sciq_nosupport_summary.json"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: done-file fingerprint matches summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport: identical example set, order and scored inputs across all 15 conditions",
+      "passed": true,
+      "detail": "b510e89a765c6243"
+    },
+    {
+      "check": "sciq_nosupport: identical row count across conditions",
+      "passed": true,
+      "detail": "4000"
+    },
+    {
+      "check": "sciq_nosupport: no failed rows",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "check": "sciq_nosupport: truncation rate",
+      "passed": true,
+      "detail": "0.000000 max over conditions"
+    },
+    {
+      "check": "sciq_nosupport/Exact: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.512000"
+    },
+    {
+      "check": "sciq_nosupport/Exact: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.476000"
+    },
+    {
+      "check": "sciq_nosupport/Exact: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/Exact: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/Exact: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.460000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.430000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K1: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.527000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.455000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.527000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.471000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.517000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.461000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.516000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.473000"
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/LERP K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.521000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.461000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.336000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.358000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.425000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.383000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.498000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.438000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K32: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.518000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.474000"
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/MinMax-Weight K64: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.535000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.472000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Prob K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.498000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.449000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K2: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.521000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.460000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K4: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.545000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.476000"
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: token-normalised score == raw / scored tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: choice_chars == cont_chars minus delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "sciq_nosupport/QRM-Weight K16: document hashes identical to the reference condition",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SciQ arms: same documents, identical original hashes and gold index",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SciQ arms: every scored input differs (support removed)",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# keep every file byte for byte (records carry SHA-256 values; some CSV files have CRLF line ends)
+* -text

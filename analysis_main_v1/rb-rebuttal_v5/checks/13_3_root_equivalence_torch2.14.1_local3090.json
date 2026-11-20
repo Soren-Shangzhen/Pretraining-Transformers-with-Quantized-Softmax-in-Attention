@@ -1,0 +1,669 @@
+{
+  "env": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    }
+  },
+  "roots": {
+    "rb": "<REPO>/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "e2_fwm": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/code/e2_fwm_probste_strict",
+    "e2_minmax": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/code/e2_minmax_probste_strict",
+    "r3": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/code/r3_lowprec_softmax",
+    "phaseB_base": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/local_phaseB_base",
+    "rb_tail_weight": "<REPO>/training_code/phaseB_base/code/rb_tail_weight"
+  },
+  "part_a_cpu": [
+    {
+      "mode": "exact_fp32_softmax",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944425582885742,
+      "loss_rb": 6.944425582885742,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "exact_fp32_softmax",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944425582885742,
+      "loss_rb": 6.944425582885742,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "bf16exp",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944423675537109,
+      "loss_rb": 6.944423675537109,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fp8e4m3exp",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.94440221786499,
+      "loss_rb": 6.94440221786499,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "minmax_lerp_k4_full",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944425582885742,
+      "loss_rb": 6.944425582885742,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "minmax_lerp_k4_full",
+      "base": "phaseB_base",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944425582885742,
+      "loss_rb": 6.944425582885742,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_prob_strict",
+      "base": "e2_minmax",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944427967071533,
+      "loss_rb": 6.944427967071533,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_weight_strict",
+      "base": "e2_minmax",
+      "surrogate": "weight_strict",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944427967071533,
+      "loss_rb": 6.944427967071533,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_prob_strict",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944374084472656,
+      "loss_rb": 6.944374084472656,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict",
+      "base": "e2_fwm",
+      "surrogate": "weight_strict",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944374084472656,
+      "loss_rb": 6.944374084472656,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict_detach",
+      "base": "e2_fwm",
+      "surrogate": "weight_strict",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944374084472656,
+      "loss_rb": 6.944374084472656,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fwm_lerp_k4_full",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944396495819092,
+      "loss_rb": 6.944396495819092,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    },
+    {
+      "mode": "fwm_lerp_k16_detach",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cpu",
+      "init_bitwise": true,
+      "loss_base": 6.944415092468262,
+      "loss_rb": 6.944415092468262,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "pass": true
+    }
+  ],
+  "part_a_gpu": [
+    {
+      "mode": "exact_fp32_softmax",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.937744140625,
+      "loss_rb": 6.937744140625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "exact_fp32_softmax",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.937744140625,
+      "loss_rb": 6.937744140625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "bf16exp",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.938232421875,
+      "loss_rb": 6.938232421875,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fp8e4m3exp",
+      "base": "r3",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.93896484375,
+      "loss_rb": 6.93896484375,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "minmax_lerp_k4_full",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.93798828125,
+      "loss_rb": 6.93798828125,
+      "loss_bitwise": true,
+      "grad_bitwise": false,
+      "grad_maxdiff_vs_base": 1.1920928955078125e-07,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0762939453125,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "minmax_lerp_k4_full",
+      "base": "phaseB_base",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.93798828125,
+      "loss_rb": 6.93798828125,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 5.960464477539063e-08,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_prob_strict",
+      "base": "e2_minmax",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9375,
+      "loss_rb": 6.9375,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_weight_strict",
+      "base": "e2_minmax",
+      "surrogate": "weight_strict",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9375,
+      "loss_rb": 6.9375,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_prob_strict",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9384765625,
+      "loss_rb": 6.9384765625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict",
+      "base": "e2_fwm",
+      "surrogate": "weight_strict",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9384765625,
+      "loss_rb": 6.9384765625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict_detach",
+      "base": "e2_fwm",
+      "surrogate": "weight_strict",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9384765625,
+      "loss_rb": 6.9384765625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fwm_lerp_k4_full",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.938232421875,
+      "loss_rb": 6.938232421875,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    },
+    {
+      "mode": "fwm_lerp_k16_detach",
+      "base": "e2_fwm",
+      "surrogate": "prob",
+      "device": "cuda",
+      "init_bitwise": true,
+      "loss_base": 6.9384765625,
+      "loss_rb": 6.9384765625,
+      "loss_bitwise": true,
+      "grad_bitwise": true,
+      "grad_maxdiff_vs_base": 0.0,
+      "grad_maxdiff_rb_repeat": 0.0,
+      "grad_worst_ratio_to_allowed": 0.0,
+      "grad_rule": "max|d| <= max(0.0001 max|g|, 3.0 x noise of 6 repeats)",
+      "pass": true
+    }
+  ],
+  "part_b_cpu_training": [
+    {
+      "mode": "exact_fp32_softmax",
+      "base": "r3",
+      "base_script": "train.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84610",
+          "10.83893"
+        ],
+        [
+          "2",
+          "10.84124",
+          "10.83571"
+        ],
+        [
+          "3",
+          "10.83313",
+          "10.83318"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "bf16exp",
+      "base": "r3",
+      "base_script": "train.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84610",
+          "10.83892"
+        ],
+        [
+          "2",
+          "10.84124",
+          "10.83571"
+        ],
+        [
+          "3",
+          "10.83313",
+          "10.83318"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "fp8e4m3exp",
+      "base": "r3",
+      "base_script": "train.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84607",
+          "10.83896"
+        ],
+        [
+          "2",
+          "10.84121",
+          "10.83573"
+        ],
+        [
+          "3",
+          "10.83314",
+          "10.83321"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "minmax_lerp_k4_full",
+      "base": "r3",
+      "base_script": "train.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84610",
+          "10.83893"
+        ],
+        [
+          "2",
+          "10.84124",
+          "10.83571"
+        ],
+        [
+          "3",
+          "10.83313",
+          "10.83318"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_prob_strict",
+      "base": "e2_minmax",
+      "base_script": "train_formal.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84610",
+          "10.83892"
+        ],
+        [
+          "2",
+          "10.84124",
+          "10.83570"
+        ],
+        [
+          "3",
+          "10.83312",
+          "10.83318"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "minmax_nearest_k4_weight_strict",
+      "base": "e2_minmax",
+      "base_script": "train_formal.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84610",
+          "10.83892"
+        ],
+        [
+          "2",
+          "10.84124",
+          "10.83570"
+        ],
+        [
+          "3",
+          "10.83312",
+          "10.83318"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict",
+      "base": "e2_fwm",
+      "base_script": "train_formal.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84608",
+          "10.83901"
+        ],
+        [
+          "2",
+          "10.84120",
+          "10.83579"
+        ],
+        [
+          "3",
+          "10.83310",
+          "10.83326"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "fwm_nearest_k4_weight_strict_detach",
+      "base": "e2_fwm",
+      "base_script": "train_formal.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84608",
+          "10.83901"
+        ],
+        [
+          "2",
+          "10.84120",
+          "10.83579"
+        ],
+        [
+          "3",
+          "10.83310",
+          "10.83326"
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "mode": "fwm_lerp_k4_full",
+      "base": "e2_fwm",
+      "base_script": "train_formal.py",
+      "steps": 3,
+      "logged_losses_identical": true,
+      "final_weights_bitwise": true,
+      "optimizer_state_bitwise": true,
+      "data_rng_identical": true,
+      "log_rows": [
+        [
+          "1",
+          "10.84609",
+          "10.83897"
+        ],
+        [
+          "2",
+          "10.84122",
+          "10.83574"
+        ],
+        [
+          "3",
+          "10.83311",
+          "10.83322"
+        ]
+      ],
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

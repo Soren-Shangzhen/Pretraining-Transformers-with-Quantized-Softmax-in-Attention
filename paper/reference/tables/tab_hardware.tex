@@ -1,0 +1,18 @@
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.2cm}rp{5.0cm}>{\raggedright\arraybackslash}p{2.4cm}r}
+\toprule
+Suite / group & Runs & Training stack (one GPU per run) & Evaluation GPU & GPU-h \\
+\midrule
+A (124M @ 2.5B) & 15 & S1 (13 runs); S2 (2 Prob-STE runs) & RTX 5090 & 763 \\
+B (124M @ 250M) & 10 & S1 (5 runs); S2 (5 runs) & RTX 5090 & 56 \\
+C (1B @ 100M) & 12 & S1 (10 runs); S2 (2 Prob-STE runs) & RTX 5090 & 245 \\
+D (124M @ 100M, 5 seeds) & 130 & S3 (70 runs); S2 (60 runs); family split: Table~\ref{tab:dstack} & RTX 3090 & 498 \\
+\midrule Historical detach record (\S\ref{sec:res-detach}) & 16 & S3 & RTX 3090 & --- \\
+Detach replication, seeds 7/42 (App.~\ref{app:detach}) & 2 & S3 & RTX 3090 & 11 \\
+Single-channel ablation, seeds 7/42 (App.~\ref{app:detach}) & 4 & S3 & RTX 3090 & 18 \\
+Strict-forward retraining (App.~\ref{app:strict}) & 4 & S1 & RTX 5090 and RTX~3090 & 11 \\
+Tail-policy (App.~\ref{app:taildecomp}) & 2 & S3 & RTX 3090 & 16 \\
+Reduced-precision exponential baselines (App.~\ref{app:lowprec}) & 2 & S3 & RTX 3090 & 4.5 \\
+Bin-mean control (App.~\ref{app:binmean}) & 5 & S3 & RTX 3090 & 31 \\
+\midrule Appendix~\ref{app:rb} (a 2-GPU and an 8-GPU RTX 5090 machine) & 98 & S1 (Python 3.12.11, CUDA 13.2) & RTX 5090 & 454.1 \\
+\bottomrule
+\end{tabular}

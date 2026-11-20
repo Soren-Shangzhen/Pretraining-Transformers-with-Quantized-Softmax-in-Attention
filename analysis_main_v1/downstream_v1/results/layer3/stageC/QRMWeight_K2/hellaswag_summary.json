@@ -1,0 +1,57 @@
+{
+  "condition": "QRM-Weight K2",
+  "run_name": "formal_124m_s1337_qrm_nearest_k2_tau6_fullgrad_2p5b",
+  "cfg": "hellaswag",
+  "task": "hellaswag",
+  "kind": "mc",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 2,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0
+  },
+  "n_docs": 10042,
+  "n_rows": 40168,
+  "n_requests": 40168,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "43069e8bc7730949a7e2cf790ea32911",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "hellaswag": {
+      "name": "hellaswag",
+      "alias": "hellaswag",
+      "sample_len": 10042,
+      "acc,none": 0.27813184624576776,
+      "acc_stderr,none": 0.0044716295468955935,
+      "acc_norm,none": 0.28888667596096396,
+      "acc_norm_stderr,none": 0.004523188431143017
+    }
+  },
+  "seconds": 483.5,
+  "fingerprint": {
+    "checkpoint_sha256": "bf0735e5c6405d570f7e87c52bfc28caa187acce5c2adbaccabb3c114487bc95",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_qrm_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "hellaswag",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

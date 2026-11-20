@@ -1,0 +1,86 @@
+{
+ "condition": "rb-E3a-2.5B-01",
+ "run_name": "rb-E3a-2.5B-01",
+ "checkpoint": "<POD_WORKSPACE>/runs/rb-E3a-2.5B-01/ckpt_step019074_2500.1m.pt",
+ "checkpoint_sha256": "a9df559ebfea7bc262b56c3f99a127969f44aa51d31922e95888c3d6a5f401b6",
+ "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+ "corpora_sha256": {
+  "wikitext103_test": "345b5f4436ea6d8536d6a1853f7dd515772101e0b05c1dce415235d41339d4de",
+  "ptb_test": "f225b4b5cba14dcdd5d1d1b737f7630d7e4b4a39e10e2a9c483535aa71613612",
+  "c4_validation": "f251c3dddf2dafe60c91a5d9e0d133c7bbd9c79d26e7fb749a55d0a7b20c8c72"
+ },
+ "block": 1024,
+ "batch_size": 1,
+ "autocast": "bfloat16",
+ "tf32": false,
+ "torch": "2.13.0+cu132",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "results": {
+  "wikitext103_test__native": {
+   "n_blocks": 276,
+   "nll": 3.758416039356287,
+   "ppl": 42.880451211193545,
+   "nonfinite": 0
+  },
+  "ptb_test__native": {
+   "n_blocks": 102,
+   "nll": 4.111234344688117,
+   "ppl": 61.021993275238565,
+   "nonfinite": 0
+  },
+  "c4_validation__native": {
+   "n_blocks": 302,
+   "nll": 3.660309686171298,
+   "ppl": 38.8733795555189,
+   "nonfinite": 0
+  },
+  "wikitext103_test__exact": {
+   "n_blocks": 276,
+   "nll": 3.7785959744798965,
+   "ppl": 43.75456606159372,
+   "nonfinite": 0
+  },
+  "ptb_test__exact": {
+   "n_blocks": 102,
+   "nll": 4.128790058341681,
+   "ppl": 62.10273677018308,
+   "nonfinite": 0
+  },
+  "c4_validation__exact": {
+   "n_blocks": 302,
+   "nll": 3.666146499036953,
+   "ppl": 39.10093966427523,
+   "nonfinite": 0
+  }
+ },
+ "seconds_native": 29.8,
+ "seconds_exact": 8.2,
+ "provenance": {
+  "checkpoint": {
+   "path": "<POD_WORKSPACE>/runs/rb-E3a-2.5B-01/ckpt_step019074_2500.1m.pt",
+   "realpath": "<POD_WORKSPACE>/runs/rb-E3a-2.5B-01/ckpt_step019074_2500.1m.pt",
+   "bytes": 1492587997,
+   "sha256": "a9df559ebfea7bc262b56c3f99a127969f44aa51d31922e95888c3d6a5f401b6",
+   "manifest_sha256": "a9df559ebfea7bc262b56c3f99a127969f44aa51d31922e95888c3d6a5f401b6",
+   "manifest_source": "B checkpoint manifest runs/_ckpt_sha256.tsv",
+   "matches_manifest": true
+  },
+  "code_root": {
+   "path": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+   "files": {
+    "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+    "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+    "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+   },
+   "sha256_of_file_hashes": "bcd74227691420bc0765d976b37e58de3e06ca1cd84d0e7713e82bcea50ee735"
+  },
+  "other_code_roots": [],
+  "scripts": {
+   "rb_downstream.py": "a5ca8d7fbb5ef3e572dbded8f7be1d6e1e510fc2ee10f3d4e1652e7d96cab5eb",
+   "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+   "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+   "common_loader.py": "c7a2e67fcf2bfd14d336cb47241b1dd8e7e438c467d502457429faba712087ce",
+   "layer3_stageC.py": "a3e6f49a3c6406fd00c3b6404def394076e4b0dfa441699b26638f21f7147b91"
+  }
+ }
+}

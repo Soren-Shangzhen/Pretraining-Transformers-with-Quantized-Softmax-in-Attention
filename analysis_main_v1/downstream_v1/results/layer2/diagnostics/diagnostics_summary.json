@@ -1,0 +1,55 @@
+{
+  "D1": {
+    "per_token_confirmed": true,
+    "targets_equal_segment_length": true,
+    "exact_by_length": {
+      "32": {
+        "n_samples": 300,
+        "n_target_tokens": 32,
+        "exact_nll": 1.7229538794358572
+      },
+      "64": {
+        "n_samples": 300,
+        "n_target_tokens": 64,
+        "exact_nll": 1.5755220798651377
+      },
+      "128": {
+        "n_samples": 300,
+        "n_target_tokens": 128,
+        "exact_nll": 1.7760124516487121
+      }
+    },
+    "note": "score() averages cross-entropy over target positions, so probe C values are per-token means, not sums"
+  },
+  "D2": {
+    "exact_gain_by_distance": {
+      "64": 1.2238080894947052,
+      "128": 1.2475088477134704,
+      "256": 1.0424586856365203,
+      "512": 0.600192768573761,
+      "896": 0.20879831194877624
+    },
+    "gain_retained_at_896": 0.17061360661129998,
+    "kept_distances": [
+      "64",
+      "128",
+      "256"
+    ],
+    "matched_family_ok": true,
+    "extra_A_occurrences_max": 0,
+    "extra_B_occurrences_max": 0
+  },
+  "D3": {
+    "uniform_nll": 10.82490511970208,
+    "exact_nll": 10.255144624710082,
+    "exact_headroom": 0.5697604949919981,
+    "exact_top1": 0.007083333333333333,
+    "verdict_counts": {
+      "retrieval loss (NLL and top-1 both degrade)": 9,
+      "sharpness effect (NLL degrades, top-1 does not)": 4,
+      "reference": 1,
+      "no detectable degradation": 1
+    }
+  },
+  "gain_keep_frac": 0.5
+}

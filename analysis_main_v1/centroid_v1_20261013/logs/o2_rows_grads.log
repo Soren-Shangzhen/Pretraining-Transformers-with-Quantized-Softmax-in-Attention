@@ -1,0 +1,72 @@
+[2026-10-13T10:57:47Z] O2 start
+Exact_s7_020m done 321s
+Exact_s7_040m done 322s
+Exact_s7_060m done 323s
+Exact_s7_080m done 311s
+Exact_s7_100m done 322s
+Exact_s42_100m done 322s
+Exact_s253_100m done 322s
+Exact_s1337_100m done 322s
+Exact_s2026_100m done 322s
+Traceback (most recent call last):
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/o2_rows_grads.py", line 288, in <module>
+    main()
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/o2_rows_grads.py", line 261, in main
+    store, loss = capture(model, x, yt, own)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/o2_rows_grads.py", line 90, in capture
+    _, loss = model(x, y)
+              ^^^^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/model.py", line 95, in forward
+    x = block(x)
+        ^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/model.py", line 51, in forward
+    x = x + self.attn(self.ln_1(x))
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<LOCAL_HOME>/miniconda3/envs/bta/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/quant_attention.py", line 789, in forward
+    y = self._exact_fp32_softmax(q, k, v)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/o2_rows_grads.py", line 78, in _op
+    P = ops_ref.operator_P(att, causal, rule, cal, K)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/ops_ref.py", line 114, in operator_P
+    w = _existing(att, causal, K, rm, "lerp", tau)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/analysis/ops_ref.py", line 130, in _existing
+    return QA._adaptive_interval_reconstruct(att, causal, K, approx, range_grad="full")[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/quant_attention.py", line 151, in _adaptive_interval_reconstruct
+    bin_idx = torch.floor(rel).to(torch.long).clamp_(0, K - 1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 23.54 GiB of which 47.44 MiB is free. Process 1132579 has 7.27 GiB memory in use. Including non-PyTorch memory, this process has 15.66 GiB memory in use. Of the allocated memory 15.14 GiB is allocated by PyTorch, and 205.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2026-10-13T11:45:58Z] O2 end rc=0
+LERP_K4_s7_100m done 325s
+MinMax-Prob_K4_s7_100m done 325s
+FWM-Prob_K4_s7_100m done 325s
+FWM-Weight_K4_s7_100m done 323s
+cv1_s7_fw_centroid_k4_tau6_100m_020m done 321s
+cv1_s7_fw_centroid_k4_tau6_100m_100m done 316s
+cv1_s7_minmax_centroid_k4_100m_020m done 316s
+cv1_s7_minmax_centroid_k4_100m_100m done 318s
+cv1_s7_fw_centroid2_k4_tau6_100m_020m done 349s
+cv1_s7_fw_centroid2_k4_tau6_100m_100m done 358s
+cv1_s7_minmax_centroid2_k4_100m_020m done 105s
+cv1_s7_minmax_centroid2_k4_100m_100m done 104s

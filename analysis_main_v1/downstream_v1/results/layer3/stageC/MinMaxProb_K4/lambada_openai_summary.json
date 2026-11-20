@@ -1,0 +1,57 @@
+{
+  "condition": "MinMax-Prob K4",
+  "run_name": "formal_124m_s1337_minmax_nearest_k4_probste_2p5b",
+  "cfg": "lambada_openai",
+  "task": "lambada_openai",
+  "kind": "lambada",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "n_docs": 5153,
+  "n_rows": 5153,
+  "n_requests": 5153,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "3866b625240b7e88ef8a571e7cbaa6b3",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "lambada_openai": {
+      "name": "lambada_openai",
+      "alias": "lambada_openai",
+      "sample_len": 5153,
+      "perplexity,none": 253.0920557222355,
+      "perplexity_stderr,none": 12.749296804021572,
+      "acc,none": 0.19250921793130216,
+      "acc_stderr,none": 0.005492962376018935
+    }
+  },
+  "seconds": 108.9,
+  "fingerprint": {
+    "checkpoint_sha256": "ca3c761a1645ee3b0b1c904476ca29e3a437e263c48935a2a0a9e52fa2ef3b6d",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_nearest_probste_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "lambada_openai",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

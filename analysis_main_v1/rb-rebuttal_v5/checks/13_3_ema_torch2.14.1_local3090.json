@@ -1,0 +1,101 @@
+{
+  "env": {
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    }
+  },
+  "checks": [
+    {
+      "name": "[cpu] buffer registered, not a parameter, no grad",
+      "passed": true
+    },
+    {
+      "name": "[cpu] buffer starts as NaN (unset)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] window cannot be used before the first training forward",
+      "passed": true
+    },
+    {
+      "name": "[cpu] first training forward initialises EMA = current mean span",
+      "passed": true,
+      "max_abs": "2.4e-08"
+    },
+    {
+      "name": "[cpu] buffer has no gradient after backward",
+      "passed": true
+    },
+    {
+      "name": "[cpu] second training forward follows EMA <- 0.999 EMA + 0.001 current",
+      "passed": true,
+      "max_abs": "1.1e-08"
+    },
+    {
+      "name": "[cpu] eval-mode forward and no_grad train-mode forward leave the buffer bitwise unchanged",
+      "passed": true
+    },
+    {
+      "name": "[cpu] checkpoint save/load keeps the buffer bitwise",
+      "passed": true
+    },
+    {
+      "name": "[cpu] strict Weight-STE forward == strict Prob-STE forward == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] buffer registered, not a parameter, no grad",
+      "passed": true
+    },
+    {
+      "name": "[cuda] buffer starts as NaN (unset)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] window cannot be used before the first training forward",
+      "passed": true
+    },
+    {
+      "name": "[cuda] first training forward initialises EMA = current mean span",
+      "passed": true,
+      "max_abs": "1.5e-08"
+    },
+    {
+      "name": "[cuda] buffer has no gradient after backward",
+      "passed": true
+    },
+    {
+      "name": "[cuda] second training forward follows EMA <- 0.999 EMA + 0.001 current",
+      "passed": true,
+      "max_abs": "1.2e-08"
+    },
+    {
+      "name": "[cuda] eval-mode forward and no_grad train-mode forward leave the buffer bitwise unchanged",
+      "passed": true
+    },
+    {
+      "name": "[cuda] checkpoint save/load keeps the buffer bitwise",
+      "passed": true
+    },
+    {
+      "name": "[cuda] strict Weight-STE forward == strict Prob-STE forward == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "E4 surrogate gradient vs closed form (float64, 200 rows x 2 heads x 2 surrogates)",
+      "passed": true,
+      "max_abs_err": "2.22e-16"
+    },
+    {
+      "name": "E4 row gradient sums to zero",
+      "passed": true,
+      "max_abs_rowsum": "1.66e-16"
+    }
+  ],
+  "all_pass": true
+}

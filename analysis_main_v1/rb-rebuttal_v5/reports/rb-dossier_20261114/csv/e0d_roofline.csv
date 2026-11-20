@@ -1,0 +1,4 @@
+implementation,matmul,exp_unit,shared_memory,bound,relative_to_fa4,function
+"FA4, exact softmax, single pass",1024,1024,768,1024,1.0,exact softmax
+"lookup operator, single pass, grid anchored at the running max",1024,0,768,1024,1.0,different from the trained operator
+"lookup operator, two passes (full-row max first)",1536,0,1280,1536,1.5,same as the trained operator

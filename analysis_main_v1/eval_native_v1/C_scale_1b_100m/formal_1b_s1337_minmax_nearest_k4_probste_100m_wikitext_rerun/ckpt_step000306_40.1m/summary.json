@@ -1,0 +1,53 @@
+{
+  "job_id": "0429",
+  "phase": "trajectory",
+  "suite": "C_scale_1b_100m",
+  "run_name": "formal_1b_s1337_minmax_nearest_k4_probste_100m_wikitext_rerun",
+  "label": "MinMax-Prob",
+  "calibration": "minmax_row_adaptive",
+  "reconstruction": "nearest",
+  "backward": "prob_ste",
+  "K": "4",
+  "range_tau": "",
+  "range_grad": "full",
+  "dataset": "wikitext103",
+  "seed": "1337",
+  "model_scale": "1B",
+  "checkpoint": "<CLOUD_DISK>/formal_runs_rerun_wikitext_1b_probste_20260917/formal_1b_s1337_minmax_nearest_k4_probste_100m_wikitext_rerun/ckpt_step000306_40.1m.pt",
+  "ckpt_index": 1,
+  "is_final": 0,
+  "step": 306,
+  "tokens_done": 40108032,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "val_path": "<CLOUD_DISK>/data/wikitext103/val.bin",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "eval_tokens": 248832,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 5.194571383205461,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/training_code/formal_code_factorial250_v1/formal_nearest_probste_v1",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce"
+  },
+  "eval_scripts": "<REPO>/analysis_main_v1/code",
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "gpu-host-A",
+  "seconds": {
+    "load": 13.9,
+    "nll": 112.6,
+    "geometry": 40.4
+  },
+  "finished": "2026-09-20T04:35:34"
+}

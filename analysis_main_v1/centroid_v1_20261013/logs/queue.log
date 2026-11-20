@@ -1,0 +1,17 @@
+<REPO>/training_code/phaseB_base/data/wikitext103/train.bin: OK
+<REPO>/training_code/phaseB_base/data/wikitext103/val.bin: OK
+d6253b972b4423e40c31b55bc1332b784e0e77996c847058caab811006a59611  <REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/model.py
+23f92c06b13e9a589b3cfe732a4f0b616791e46a62228cc49f5595ed9d1357b0  <REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/quant_attention.py
+122d6b241a57006d3d6d1c7d8aa987bfab5d9902cce7c71fdcf2cc8dc52d09d9  <REPO>/analysis_main_v1/centroid_v1_20261013/code/centroid_root/train.py
+code/centroid_root/model.py: OK
+code/centroid_root/quant_attention.py: OK
+code/centroid_root/train.py: OK
+[2026-10-13T06:42:28Z] START cv1_s7_fw_centroid_k4_tau6_100m 
+[2026-10-13T14:43:46Z] END cv1_s7_fw_centroid_k4_tau6_100m rc=0
+[2026-10-13T14:47:06Z] START cv1_s7_minmax_centroid_k4_100m 
+[2026-10-13T19:53:40Z] END cv1_s7_minmax_centroid_k4_100m rc=0
+[2026-10-13T19:57:05Z] START cv1_s7_fw_centroid2_k4_tau6_100m 
+[2026-10-14T01:33:05Z] END cv1_s7_fw_centroid2_k4_tau6_100m rc=0
+[2026-10-14T01:36:45Z] START cv1_s7_minmax_centroid2_k4_100m 
+[2026-10-14T07:45:53Z] END cv1_s7_minmax_centroid2_k4_100m rc=0
+[2026-10-14T07:49:34Z] QUEUE DONE

@@ -1,0 +1,13 @@
+# Training and evaluation stack of the Appendix I runs (stack S1 of Table S4): Python 3.12.11, CUDA 13.2.
+# Complete package lists: env/pip_freeze_rb-s1.txt (training), env/pip_freeze_rb-ds.txt (downstream).
+# torch is pinned: detaching the row maximum under FWM relies on torch.clamp passing a gradient of 1 at its bounds (Appendix I.12); check: analysis_main_v1/rb-rebuttal_v5/code/tools/clamp_boundary_check.py
+torch==2.13.0
+numpy==2.3.5
+# Analysis, tables and figures (versions with which the paper's tables and figures were regenerated from this repository)
+pandas==3.0.5
+scipy==1.18.0
+matplotlib==3.11.0
+# Downstream evaluation (Appendix E and the benchmarks of Appendix I)
+lm_eval==0.4.13
+datasets==5.2.0
+tiktoken==0.14.0

@@ -1,0 +1,153 @@
+{
+  "gate": {
+    "Exact": {
+      "target": 3.1928,
+      "got": 3.1927719463090427,
+      "diff": -2.8053690957374755e-05,
+      "tol": 4.5e-05,
+      "passed": true,
+      "n_blocks": 976
+    },
+    "MinMax-Weight K4": {
+      "target": 4.0831,
+      "got": 4.083115893064952,
+      "diff": 1.589306495208831e-05,
+      "tol": 0.001,
+      "passed": true,
+      "n_blocks": 976
+    }
+  },
+  "identity": {
+    "Exact": {
+      "ok": true,
+      "range_grad": "detach",
+      "K": 8,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_exact_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "LERP K1": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 1,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_lerp_k1_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "LERP K2": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 2,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_lerp_k2_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "LERP K4": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 4,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_lerp_k4_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "LERP K16": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 16,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_lerp_k16_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "LERP K32": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 32,
+      "approx": "lerp",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_lerp_k32_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "MinMax-Prob K4": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 4,
+      "approx": "nearest",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_probste_2p5b_v1/formal_124m_s1337_minmax_nearest_k4_probste_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "MinMax-Weight K4": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 4,
+      "approx": "nearest",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "MinMax-Weight K16": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 16,
+      "approx": "nearest",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k16_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "MinMax-Weight K32": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 32,
+      "approx": "nearest",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k32_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "MinMax-Weight K64": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 64,
+      "approx": "nearest",
+      "range_mode": "minmax",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k64_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "QRM-Prob K4": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 4,
+      "approx": "nearest",
+      "range_mode": "relevant_zero",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_probste_2p5b_v1/formal_124m_s1337_qrm_nearest_k4_tau6_probste_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "QRM-Weight K2": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 2,
+      "approx": "nearest",
+      "range_mode": "relevant_zero",
+      "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_qrm_nearest_k2_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "QRM-Weight K4": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 4,
+      "approx": "nearest",
+      "range_mode": "relevant_zero",
+      "checkpoint": "<CLOUD_DISK>/vast_formal_extension_v1/formal_runs_extension_v1/formal_124m_s1337_qrm_nearest_k4_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    },
+    "QRM-Weight K16": {
+      "ok": true,
+      "range_grad": "full",
+      "K": 16,
+      "approx": "nearest",
+      "range_mode": "relevant_zero",
+      "checkpoint": "<CLOUD_DISK>/formal_runs_qrm_k16_2p5b_v1/formal_124m_s1337_qrm_nearest_k16_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt"
+    }
+  },
+  "determinism": {
+    "MinMax-Weight K4": {
+      "bit_identical": true,
+      "max_abs_diff": 0.0
+    }
+  },
+  "exact_forward_self_consistency": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0,
+    "n_blocks": 64
+  }
+}

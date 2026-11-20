@@ -1,0 +1,167 @@
+{
+  "label": "rb-E2c-03",
+  "role": "E2c",
+  "checkpoint": "<POD_WORKSPACE>/runs/rb-E2c-03/ckpt_step001985_260.2m.pt",
+  "step": 1985,
+  "tokens_done": 260177920,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0,
+    "tail_policy": "resolved",
+    "resolved_h0": "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618",
+    "attn_variant": "",
+    "exaq_bits": 3,
+    "ema_decay": 0.999,
+    "nearest_surrogate": "weight_strict"
+  },
+  "nearest_surrogate_used": "weight_strict",
+  "config": {
+    "run_name": "rb-E2c-03",
+    "data_dir": "<POD_WORKSPACE>/data/finewebedu_3b",
+    "out_dir": "<POD_WORKSPACE>/runs",
+    "overwrite_run": false,
+    "n_layer": 12,
+    "n_head": 12,
+    "n_embd": 768,
+    "block_size": 1024,
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "nearest_surrogate": "weight_strict",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0,
+    "tail_policy": "resolved",
+    "resolved_h0": "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618",
+    "attn_variant": "",
+    "exaq_bits": 3,
+    "ema_decay": 0.999,
+    "init_from": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step001908_250.1m.pt",
+    "branch_override": true,
+    "parent_surrogate": "weight_hist",
+    "parent_code_root": "<CLOUD_DISK>/formal_code_factorial250_v1/formal_base_v2",
+    "stop_at_tokens": 625000000,
+    "ckpt_weights_only": true,
+    "ckpt_full_tokens": "",
+    "halt_on_nonfinite": true,
+    "max_tokens": 2500000000,
+    "batch_tokens": 131072,
+    "micro_batch": 1,
+    "lr": 0.0006,
+    "min_lr_ratio": 0.1,
+    "warmup_tokens": 25000000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "grad_clip": 1.0,
+    "seed": 1337,
+    "grad_checkpointing": false,
+    "eval_every_tokens": 5000000,
+    "log_every_steps": 0,
+    "health_every_steps": 1,
+    "eval_batches": 100,
+    "stats_batches": 1,
+    "ckpt_every_tokens": 100000000,
+    "ckpt_tokens": "255085376,260085376,265085376,270085376,275000000,300000000,325000000,350000000,375000000,400000000,425000000,450000000,475000000,500000000,525000000,550000000,575000000,600000000,625000000",
+    "resume": false,
+    "compile": false,
+    "device": "cuda",
+    "code_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    },
+    "tf32_effective": true,
+    "parent_code_sha256": {
+      "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+      "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+    },
+    "branch_parent": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step001908_250.1m.pt",
+    "branch_parent_sha256": "456d86c5dea4c5e4bb8c642de43b6185f8ad2affe5f61a32028cb4aef94a1752",
+    "branch_parent_run": "formal_124m_s1337_nearest_k4_fullgrad_2p5b",
+    "branch_parent_step": 1908,
+    "branch_parent_tokens": 250085376,
+    "branch_parent_operator": {
+      "attn": "quant",
+      "K": 4,
+      "approx": "nearest",
+      "nearest_surrogate": "weight_hist",
+      "range_grad": "full",
+      "range_mode": "minmax",
+      "range_tau": 6.0,
+      "tail_policy": "zero",
+      "resolved_h0": "",
+      "attn_variant": "",
+      "exaq_bits": 3,
+      "ema_decay": 0.999
+    },
+    "branch_operator_changes": {
+      "nearest_surrogate": [
+        "weight_hist",
+        "weight_strict"
+      ],
+      "range_mode": [
+        "minmax",
+        "relevant_zero"
+      ],
+      "tail_policy": [
+        "zero",
+        "resolved"
+      ],
+      "resolved_h0": [
+        "",
+        "25.021593,60.573802,20.024882,59.742705,62.155911,54.775483,39.413426,23.187504,14.432136,12.114406,9.700631,10.564618"
+      ]
+    }
+  },
+  "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+  "eval_code_sha256": {
+    "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+    "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7"
+  },
+  "dataset": "finewebedu_3b",
+  "val_path": "<POD_WORKSPACE>/data/finewebedu_3b/val.bin",
+  "val_sha256": "682c9e4492c051ccb5cbde6e9a61099c17aab9f044a6201b901854e9f3943ec5",
+  "n_blocks": 976,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "tf32": false,
+  "mean_nll": 8.784673051267374,
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "machine-B",
+  "seconds": 87.2,
+  "finished": "2026-11-12T11:35:48",
+  "provenance": {
+    "checkpoint": {
+      "path": "<POD_WORKSPACE>/runs/rb-E2c-03/ckpt_step001985_260.2m.pt",
+      "realpath": "<POD_WORKSPACE>/runs/rb-E2c-03/ckpt_step001985_260.2m.pt",
+      "bytes": 497530036,
+      "sha256": "9f472629d43c974d9fb62ad6054bc30a8951489aea024621ad8f72344e79e141",
+      "manifest_sha256": "9f472629d43c974d9fb62ad6054bc30a8951489aea024621ad8f72344e79e141",
+      "manifest_source": "B checkpoint manifest runs/_ckpt_sha256.tsv",
+      "matches_manifest": true
+    },
+    "code_root": {
+      "path": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+      "files": {
+        "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+        "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+        "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+      },
+      "sha256_of_file_hashes": "bcd74227691420bc0765d976b37e58de3e06ca1cd84d0e7713e82bcea50ee735"
+    },
+    "other_code_roots": [],
+    "scripts": {
+      "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+      "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057",
+      "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed"
+    }
+  }
+}

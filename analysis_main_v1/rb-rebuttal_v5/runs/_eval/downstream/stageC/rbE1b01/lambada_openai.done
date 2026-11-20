@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "ef64eb0bad98839342701ed3cd6d688ced00ec8278b0bbacd667cc6ea424355f",
+    "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "lambada_openai",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "3866b625240b7e88ef8a571e7cbaa6b3",
+  "n_rows": 5153,
+  "finished": "2026-11-12T13:02:10"
+}

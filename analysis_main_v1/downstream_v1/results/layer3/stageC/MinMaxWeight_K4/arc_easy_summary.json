@@ -1,0 +1,57 @@
+{
+  "condition": "MinMax-Weight K4",
+  "run_name": "formal_124m_s1337_nearest_k4_fullgrad_2p5b",
+  "cfg": "arc_easy",
+  "task": "arc_easy",
+  "kind": "mc",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "n_docs": 2376,
+  "n_rows": 9501,
+  "n_requests": 9501,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "9d76d9d8e66ec2c613c37b76182e071c",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.38047138047138046,
+      "acc_stderr,none": 0.009962305992058424,
+      "acc_norm,none": 0.3560606060606061,
+      "acc_norm_stderr,none": 0.009825454608416157
+    }
+  },
+  "seconds": 117.5,
+  "fingerprint": {
+    "checkpoint_sha256": "1b68d04f48b6f5dc5d8323602fecca84af87e0c5fc244b78a39c0591d1c332a6",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "arc_easy",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

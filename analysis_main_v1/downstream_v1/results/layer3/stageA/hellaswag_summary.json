@@ -1,0 +1,20 @@
+{
+  "task": "hellaswag",
+  "subset": "full",
+  "n_examples": 10042,
+  "n_requests": 40168,
+  "truncation_rate": 0.0,
+  "metric_name": "length-normalised margin (gold \u2212 best wrong)",
+  "acc": 0.28251344353714397,
+  "acc_norm": 0.30103565026887075,
+  "chance": 0.25,
+  "acc_se": 0.0044927922288199845,
+  "acc_above_chance_pp": 3.251344353714397,
+  "metric_mean": -0.08400053140416494,
+  "metric_sd": 0.16705819538224514,
+  "metric_se": 0.001667084744082507,
+  "detect_floor_metric": 0.003334169488165014,
+  "detect_floor_acc_pp": 0.8985584457639969,
+  "mean_options": 4.0,
+  "seconds": null
+}

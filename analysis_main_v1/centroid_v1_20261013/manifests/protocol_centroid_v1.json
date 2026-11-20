@@ -1,0 +1,74 @@
+{
+  "name": "centroid_v1_20261013",
+  "date": "2026-10-13",
+  "status": "written before any training run, any frozen-model substitution and any Qwen evaluation of the new rules; only the operator checks in checks/ had been run",
+  "input": {
+    "method_description": "manifests/method_description_input.md (copy of ~/Downloads/centroid_reconstruction_training_side (1).md)",
+    "method_description_sha256": "5d83d44cba539d10052be3d59fa4df382aebce9edda37fa359df94d18c8c8adf",
+    "request": "fill in the experimental analysis of the Centroid / Centroid-2 reconstruction rule described there, on the training side"
+  },
+
+  "interpretation_decisions": {
+    "cells_primary": "The K+1 grid-centred rounding cells of the existing hard rule (Nearest, paper symbol CH): cell index l_j = r_j + 1[t_j >= 1/2], computed with exactly the arithmetic of the existing functions (bitwise check C10). Reasons: the description says the partition is that of the existing operator and only the representative changes; its table gives Nearest's representative as exp(cell centre), which holds only for these grid-centred cells; it gives the P index width as ceil(log2(K+1)) for Nearest and Centroid alike. Under this reading a K=4 operator has at most K+1=5 nonzero levels, the same budget as Nearest.",
+    "cells_secondary": "The K calibration intervals [b_r, b_{r+1}) (index r_j), K nonzero levels. Offline analyses only (substitution, row-level fidelity, Qwen); not trained.",
+    "fw_tail": "FW keeps the zero tail: keys with z < -tau are members of no cell and get weight 0, as in FW-Nearest/LERP. Cell-level mass conservation then holds for every in-window cell, the denominator equals Z restricted to the window, and the tail mass is lost exactly as in the existing FW operators. A variant that treats the tail as one extra centroid cell is offline-only (Qwen part, label C+tail).",
+    "centroid2_numerics": "count, sum(u), sum(u^2) with u = z - c_b (c_b the cell's grid centre); identical mean/variance, better conditioned fp32 sums. No clamping of the representative to the cell range (the description has none); the consequence is measured.",
+    "range_grad": "full, as in suite D. For both rules the output does not depend on the calibration statistics except through membership; checks C6 show full and detach give the same gradient to 1e-15 (fp64).",
+    "implementation": "per-cell sums by scatter_add over keys and gather back; on CUDA not bitwise reproducible run to run (atomic adds), like the MinMax gather backward of the existing runs. Same throughput as FW-Nearest Weight-STE (checks/check_gpu_step0.json)."
+  },
+
+  "code_root": {
+    "path": "code/centroid_root (copy of files_adaptive_quant_phaseB/code/phaseB_rr: model a cf76032a, quant a402460d, train 63a8001d) with approx centroid/centroid2 and --cells added",
+    "regression": "every pre-existing path (softmax, exact_fp32_softmax, LERP, Nearest x MinMax/FW x detach/full x K 4/8) gives bitwise-identical loss and parameter gradients to phaseB_rr (check C9)",
+    "sha256": "filled by code/jobs/freeze_protocol.py into manifests/PRETRAINING_RECORD.txt"
+  },
+
+  "part_T_training": {
+    "question": "Can the new rule be pretrained from scratch at K=4, and where does it land relative to the same-calibration Nearest operators (Weight-STE, Prob-STE), LERP and softmax?",
+    "setting": "124M GPT (12x12x768), WikiText-103 (train/val sha 6c355b28.. / 397ae25d..), 100M tokens, block 1024, micro-batch 1, 131072 tokens/step, lr 6e-4 cosine to 0.1x, warmup 10M, AdamW (0.9,0.95) wd 0.1, clip 1.0, bf16 autocast outside the fp32 attention operator, TF32 on, seed 7, local RTX 3090, bta env (torch 2.5.1+cu121). Identical to the seed-7 suite-D controls and the round-3 baselines; in-training eval every 5M tokens on 100 batches (logging only).",
+    "runs_in_launch_order": [
+      {"run": "cv1_s7_fw_centroid_k4_tau6_100m", "args": "--attn quant --approx centroid --cells nearest --K 4 --range_mode relevant_zero --range_tau 6 --range_grad full"},
+      {"run": "cv1_s7_minmax_centroid_k4_100m", "args": "--attn quant --approx centroid --cells nearest --K 4 --range_mode minmax --range_grad full"},
+      {"run": "cv1_s7_fw_centroid2_k4_tau6_100m", "args": "--attn quant --approx centroid2 --cells nearest --K 4 --range_mode relevant_zero --range_tau 6 --range_grad full"},
+      {"run": "cv1_s7_minmax_centroid2_k4_100m", "args": "--attn quant --approx centroid2 --cells nearest --K 4 --range_mode minmax --range_grad full"}
+    ],
+    "output_dir": "adaptive_k_interval_training_phaseB/files_adaptive_quant_phaseB/centroid_runs_20261013/<run>/",
+    "evaluation": "20/40/60/80/100M checkpoints, own frozen root, full WikiText-103 validation (243 non-overlapping 1024-token blocks), batch 1, bf16 autocast outside the fp32 operator, TF32 off, local RTX 3090; geometry probe on the first 8 blocks (patched only to call the centroid reconstruct). Same evaluator protocol as the seed-7 controls in D_robustness_124m_100m_5seed/eval_native_v1 and supplement eval/local3090.",
+    "controls_seed7_same_gpu": ["Exact", "LERP K4", "MinMax-Weight K4 (hist)", "MinMax-Prob K4 (hist)", "MinMax-Prob K4 strict", "MinMax-Weight K4 strict", "FWM-Weight K4 (hist)", "FWM-Prob K4 (hist)", "FWM-Prob K4 strict", "FWM-Weight K4 strict", "bf16-exp", "FP8-e4m3-exp"],
+    "primary_contrasts_100M": [
+      "FW-Centroid - Exact", "FW-Centroid - FWM-Prob K4 strict", "FW-Centroid - FWM-Prob K4 hist", "FW-Centroid - FWM-Weight K4 hist",
+      "MinMax-Centroid - Exact", "MinMax-Centroid - MinMax-Prob K4 strict", "MinMax-Centroid - MinMax-Weight K4 hist", "MinMax-Centroid - LERP K4"
+    ],
+    "secondary_contrasts_100M": ["FW-Centroid-2 - FW-Centroid", "MinMax-Centroid-2 - MinMax-Centroid", "each Centroid-2 run - Exact and - same-calibration Prob-STE strict"],
+    "descriptive": "trajectories 20-100M vs Exact; training-log stability (non-finite values, largest loss increase between logs, grad norm); geometry at 100M (span, entropy, top-cell keys and mass); step-0 Q/K gradient norm"
+  },
+
+  "part_O_offline_124m": {
+    "O1_substitution": "Frozen suite-D Exact endpoints (100M, seeds 7/42/253/1337/2026). All 12 attention layers replaced at inference by rule x calibration x K: rules {Nearest (strict hard forward), LERP, Centroid, Centroid-2, Centroid-0 = exp(mean z) (the zero-variance term of Centroid-2), Centroid on interval cells}, calibration {MinMax, FW tau=6}, K {4,8,16,32}. Full validation (243 blocks), batch 1, bf16 autocast, TF32 off; Delta NLL vs the same model through the same analysis path with exact softmax. Reported per seed and as mean and SD over the five seeds.",
+    "O2_rows_and_gradients": "First 4 validation blocks, all 12 layers and heads, exact forward and LM-loss backward of the frozen model supply S, V and the upstream dO of every attention output. For each rule x calibration x K in {2,4,8,16,32,64}: TV(P_hat, P), cell-level mass error on the Nearest cells, relative output error, and the score / dQ / dK gradient of the rule's backward (Centroid, Centroid-2: autograd; LERP: exact Jacobian; Nearest: Weight-STE and Prob-STE) contracted with the same dO, compared with the exact softmax gradient (cosine, relative L2). Also the within-cell contrast share of the exact score gradient, ||p_j (g_j - gbar_b)||^2 / ||p_j (g_j - <g>)||^2, i.e. the part a cell-averaged backward cannot represent; and per-cell representative statistics (lme - cell centre vs h^2/24; Centroid-2 log gap; share of cells whose Centroid-2 value exceeds the largest member weight). Models: Exact s7 at 20/40/60/80/100M, Exact 100M of the other four seeds, the seed-7 K4 endpoints of LERP, MinMax-Prob, FWM-Prob, FWM-Weight, and (after training) the four new runs.",
+    "role": "mechanism and operator-level evidence only; never substitutes for the training result"
+  },
+
+  "part_Q_qwen": {
+    "question": "Measure the new representative on the frozen-model setting quoted in section 7 of the description (Qwen2.5-1.5B, three target layers, K=4 FW-type grid).",
+    "infrastructure": "SideProject3/attention_coarsening2 (read only; its src is imported, nothing in it is modified). Same model revision, fp32 query-chunked reference path on layers {7,14,21}, other layers native sdpa, per-document mean NLL over all N-1 next tokens at N=2048 and 8192.",
+    "documents": "the 64 documents of its independent-replication set (manifests/replication_manifest.jsonl); none was used to define or tune the new rules",
+    "methods": {"exact_ref": "exact on the three layers", "A0": "grid g_k=-6k/4, nearest grid point, zero below -6 (= FW-Nearest K4 tau 6)", "C": "Centroid on the A0 cells", "C2": "Centroid-2 on the A0 cells", "C0": "exp(mean z) on the A0 cells", "C-int": "Centroid on the 4 interval cells of [-6,0]", "C+tail": "Centroid on the A0 cells plus the tail z<-6 as one more centroid cell (full mass conservation)"},
+    "statistics": "document-level paired bootstrap, 10000 resamples, seed 20261013, 2K and 8K of a document resampled together, 95% percentile intervals; contrasts C-A0, C-exact_ref, C2-C, C0-C, C-int-C, C+tail-C, A0-exact_ref",
+    "regression": "exact_ref per-token NLL on these documents must equal the stored stage-4 exact_ref values bitwise (cache/nll_tail_g1_rep/exact_ref)",
+    "Q2_local": "captured rows of its first-round test split (32 documents x 2 lengths x 32 rows, layers 7/14/21, all heads): post-W_O joint squared error of A0, C, C2, C0, C-int on the FW grid tau=6 for K in {4,8,16}; error reduction relative to A0 and the C0-vs-C and C2-vs-C gaps as functions of K"
+  },
+
+  "statistics_training": "circular moving-block bootstrap over the 243 per-block NLL differences, block 16, 4000 resamples, RNG 20260920 re-seeded per contrast, 95% percentile; identical to the round-3 analysis. These intervals cover validation-sample uncertainty only, not training randomness.",
+  "decision_labels_training": {
+    "seed_scale": "five-seed SD of Exact endpoint NLL = 0.0062 (D_robustness analysis_v1); SDs of Delta NLL for the K4 controls are quoted next to every contrast",
+    "not_separable": "|Delta| < 0.0062, or its 95% CI contains 0",
+    "suggestive": "0.0062 <= |Delta| < 0.0186 with CI excluding 0: needs further seeds before any ranking",
+    "clear_single_seed": "|Delta| >= 0.0186 (3 Exact seed SDs) with CI excluding 0",
+    "no_equivalence_claims": "a not_separable result is never written as equivalence",
+    "trainability": "reported descriptively (completion, non-finite values, loss spikes, endpoint gap); no binary 'trainable' label beyond 'completed without non-finite loss'"
+  },
+  "no_adaptive_changes": "no early stopping, no hyperparameter or tau changes, no extra seeds or K values decided from the results inside this round; follow-ups are written as recommendations only",
+  "compute": {"device": "local RTX 3090 only, no rented GPU", "training": "4 runs, about 5.5-6 h each", "offline": "<= 6 device-hours", "qwen": "<= 2 device-hours"},
+  "out_of_scope": ["fused kernels or speed claims", "other model sizes or token budgets", "K other than 4 in training", "other seeds", "downstream tasks", "any edit of the submitted paper"]
+}

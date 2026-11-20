@@ -1,0 +1,56 @@
+{
+ "endpoint": "A_FW_P4",
+ "setting": "tf32_on",
+ "checkpoint": "<CLOUD_DISK>/formal_runs_probste_2p5b_v1/formal_124m_s1337_qrm_nearest_k4_tau6_probste_2p5b/ckpt_step019074_2500.1m.pt",
+ "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_qrm_probste_v1",
+ "eval_code_sha256": {
+  "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+  "quant_attention.py": "ce2bd02bc34defb1997f8233e6fc2bf054818b7288fe5c8592b3d28ed0fa3c2d"
+ },
+ "dataset": "finewebedu_3b",
+ "val_sha256": "682c9e4492c051ccb5cbde6e9a61099c17aab9f044a6201b901854e9f3943ec5",
+ "n_blocks": 976,
+ "mean_nll": 3.2120614760234707,
+ "nonfinite": 0,
+ "recorded_native": 3.2120564816916577,
+ "recorded_gpu": "RTX 5090",
+ "tf32": true,
+ "batch_size": 1,
+ "operator": {
+  "attn": "quant",
+  "K": 4,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "relevant_zero",
+  "range_tau": 6.0
+ },
+ "torch": "2.13.0+cu132",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "host": "machine-B",
+ "seconds": 68.8,
+ "provenance": {
+  "checkpoint": {
+   "path": "<CLOUD_DISK>/formal_runs_probste_2p5b_v1/formal_124m_s1337_qrm_nearest_k4_tau6_probste_2p5b/ckpt_step019074_2500.1m.pt",
+   "realpath": "<POD_WORKSPACE>/cloud_mirror/formal_runs_probste_2p5b_v1/formal_124m_s1337_qrm_nearest_k4_tau6_probste_2p5b/ckpt_step019074_2500.1m.pt",
+   "bytes": 1492587357,
+   "sha256": "a78cc4c4d7f9bd5e481189fdcb6b78971800359e2be468c8b9453594a7103ab2",
+   "manifest_sha256": "a78cc4c4d7f9bd5e481189fdcb6b78971800359e2be468c8b9453594a7103ab2",
+   "manifest_source": "manifests/rb-recorded_sha256.tsv (private transfer record)",
+   "matches_manifest": true
+  },
+  "code_root": {
+   "path": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_qrm_probste_v1",
+   "files": {
+    "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+    "quant_attention.py": "ce2bd02bc34defb1997f8233e6fc2bf054818b7288fe5c8592b3d28ed0fa3c2d"
+   },
+   "sha256_of_file_hashes": "f11268e33d07bb8142d93eebb75fc3eca70f6242dec6679d1d4ff6452b688373"
+  },
+  "other_code_roots": [],
+  "scripts": {
+   "rb_e6.py": "97edfa7db6bdd4451d04e2e74f7ad79d6e258d6b76a65c096bbdfaba3a5ca6eb",
+   "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+   "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057"
+  }
+ }
+}

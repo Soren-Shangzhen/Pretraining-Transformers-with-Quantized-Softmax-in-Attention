@@ -1,0 +1,56 @@
+{
+ "endpoint": "A_MM_W4",
+ "setting": "tf32_on",
+ "checkpoint": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+ "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_base_v2",
+ "eval_code_sha256": {
+  "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+  "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+ },
+ "dataset": "finewebedu_3b",
+ "val_sha256": "682c9e4492c051ccb5cbde6e9a61099c17aab9f044a6201b901854e9f3943ec5",
+ "n_blocks": 976,
+ "mean_nll": 4.08365921700587,
+ "nonfinite": 0,
+ "recorded_native": 4.083115883049418,
+ "recorded_gpu": "RTX 5090",
+ "tf32": true,
+ "batch_size": 1,
+ "operator": {
+  "attn": "quant",
+  "K": 4,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "minmax",
+  "range_tau": 6.0
+ },
+ "torch": "2.13.0+cu132",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "host": "machine-B",
+ "seconds": 44.0,
+ "provenance": {
+  "checkpoint": {
+   "path": "<CLOUD_DISK>/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+   "realpath": "<POD_WORKSPACE>/cloud_mirror/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+   "bytes": 1492587229,
+   "sha256": "1b68d04f48b6f5dc5d8323602fecca84af87e0c5fc244b78a39c0591d1c332a6",
+   "manifest_sha256": "1b68d04f48b6f5dc5d8323602fecca84af87e0c5fc244b78a39c0591d1c332a6",
+   "manifest_source": "manifests/rb-recorded_sha256.tsv (private transfer record)",
+   "matches_manifest": true
+  },
+  "code_root": {
+   "path": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_base_v2",
+   "files": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+   },
+   "sha256_of_file_hashes": "1cdfa7d44e2f012e9bfd41d50ba29b63845a4895eef9c38439453a62dc104b81"
+  },
+  "other_code_roots": [],
+  "scripts": {
+   "rb_e6.py": "97edfa7db6bdd4451d04e2e74f7ad79d6e258d6b76a65c096bbdfaba3a5ca6eb",
+   "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+   "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057"
+  }
+ }
+}

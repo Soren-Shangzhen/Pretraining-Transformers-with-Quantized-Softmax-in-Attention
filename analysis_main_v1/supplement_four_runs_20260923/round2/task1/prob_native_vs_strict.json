@@ -1,0 +1,1721 @@
+{
+ "script": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/code/prob_native_vs_strict.py",
+ "script_sha256": "8f05fa28fafb1971db9012221bdd496a0cdaa6dcce1c131f208bc0b7b42a02ca",
+ "env": {
+  "python": "3.11.15",
+  "torch": "2.5.1+cu121",
+  "cuda_runtime": "12.1",
+  "cudnn": 90100,
+  "numpy": "2.4.6",
+  "num_threads": 8,
+  "deterministic_algorithms": false,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "driver_capability": [
+   8,
+   6
+  ]
+ },
+ "precision": "bf16 autocast outside fp32 attention, TF32 off, batch 1, eval mode",
+ "concurrency": "evaluated while the seed-42 E1 training run used the same GPU; process capped at 33% of GPU memory",
+ "roots": {
+  "native_formal_nearest_probste_v1": {
+   "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+   "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce"
+  },
+  "native_formal_qrm_probste_v1": {
+   "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+   "quant_attention.py": "ce2bd02bc34defb1997f8233e6fc2bf054818b7288fe5c8592b3d28ed0fa3c2d"
+  },
+  "strict_formal_nearest_probste_v1": {
+   "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+   "quant_attention.py": "7f894862baa904b1303d77678ba56cd60f9cd6763952003027e9353380039db3"
+  },
+  "strict_formal_qrm_probste_v1": {
+   "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+   "quant_attention.py": "126651e44b49743582f11a09cb068c2d26c4c627c87c6d653071e32d40a470fc"
+  }
+ },
+ "softmax_per_block": "task1/per_block/{A,B,D}_EXACT__native.npy (same GPU, weight_native_vs_strict.py)",
+ "runs": {
+  "A_MM_P4": {
+   "checkpoint": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/model_only_prob/A_MM_P4.model_only.pt",
+   "checkpoint_sha256": "98dc7a3d43f656c053ba35a21b24c3b3d47729649244055894e3a7157301ed92",
+   "step": 19074,
+   "tokens": 2500067328,
+   "native_root": "native_formal_nearest_probste_v1",
+   "strict_root": "strict_formal_nearest_probste_v1",
+   "calibration": "minmax",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5971416095020325
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5544677337398374
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5502205602134146
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.558543730945122
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5209868838922764
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5209305132113821
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.515314087906504
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5366341145833333
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5582747395833333
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5700112741361789
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5609892657520326
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5575376333841463
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.5866172033790651,
+     0.5680867711509147,
+     0.9491725022230691,
+     0.9895468313325712,
+     0.9942292301829269,
+     0.9974337247522865,
+     0.9982009614773882,
+     0.9984030027311992,
+     0.9984822789634147,
+     0.9985318216463415,
+     0.9988943605500508,
+     0.9996299582380589
+    ],
+    "same_input_frac_per_layer": [
+     0.5866172033790651,
+     0.5520748578823679,
+     0.5524613940231199,
+     0.5585651676829269,
+     0.5238062317390753,
+     0.524414657964939,
+     0.5231847846798781,
+     0.5390890775851118,
+     0.55999221925813,
+     0.5716656146786078,
+     0.5604263330475102,
+     0.5564665309006606
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 976,
+   "native_mean_nll": 3.2544155751095443,
+   "strict_mean_nll": 3.254461378836241,
+   "delta_native_minus_strict": -4.580372669657723e-05,
+   "delta_ci95": [
+    -0.00029984281444158707,
+    0.0002172116495546748
+   ],
+   "mean_abs_delta": 0.003325463318433918,
+   "max_abs_delta": 0.014298200607299805,
+   "n_blocks_exactly_equal": 0,
+   "native_minus_softmax": [
+    0.061645871058839265,
+    0.05976132632034724,
+    0.06353215183757367
+   ],
+   "strict_minus_softmax": [
+    0.06169167478553585,
+    0.059827593555215934,
+    0.0635609188804128
+   ],
+   "reported": 3.2541911374838626,
+   "reported_source": "<REPO>/analysis_main_v1/A_longhorizon_124m_2p5b/endpoint_fullval/endpoint_table.csv (gpu-host-A RTX 5090 eval)",
+   "native_minus_reported": 0.0002244376256816949,
+   "eval_seconds": 749.3
+  },
+  "A_FW_P4": {
+   "checkpoint": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/model_only_prob/A_FW_P4.model_only.pt",
+   "checkpoint_sha256": "f73a998468eb042137611611ab0e7c6905bf02e2df91e8b60e4a60249a56d922",
+   "step": 19074,
+   "tokens": 2500067328,
+   "native_root": "native_formal_qrm_probste_v1",
+   "strict_root": "strict_formal_qrm_probste_v1",
+   "calibration": "fwm",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.034444867886178863
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0204981262703252
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02796287474593496
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.020019848831300813
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.002949853912601626
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.003437817581300813
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0018553099593495936
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.006646023882113821
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.011658727134146342
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.018164221290650408
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02000317581300813
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02591749237804878
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.03616278423526423,
+     0.020444772611788616,
+     0.07962839018038619,
+     0.11602640291539634,
+     0.019187865218495935,
+     0.030534052654979674,
+     0.01887814405487805,
+     0.09421422446646341,
+     0.15788973180259147,
+     0.2708407369474085,
+     0.2945403606135671,
+     0.4169790872713415
+    ],
+    "same_input_frac_per_layer": [
+     0.03616278423526423,
+     0.020237213382876016,
+     0.0281591995363313,
+     0.018800733612804876,
+     0.002634257494918699,
+     0.0031462977959857722,
+     0.0018454649390243901,
+     0.0064384448043699185,
+     0.010245073520071138,
+     0.017062809641768293,
+     0.01831249206046748,
+     0.02538768737296748
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 976,
+   "native_mean_nll": 3.2119837665899853,
+   "strict_mean_nll": 3.21206784052927,
+   "delta_native_minus_strict": -8.407393928434028e-05,
+   "delta_ci95": [
+    -0.0002694218129408164,
+    0.00010173777576352734
+   ],
+   "mean_abs_delta": 0.002246299361596342,
+   "max_abs_delta": 0.011180639266967773,
+   "n_blocks_exactly_equal": 0,
+   "native_minus_softmax": [
+    0.019214062539280437,
+    0.017730258115124506,
+    0.020677046282369584
+   ],
+   "strict_minus_softmax": [
+    0.01929813647856478,
+    0.01777288633719331,
+    0.020780380671752283
+   ],
+   "reported": 3.2120564816916577,
+   "reported_source": "<REPO>/analysis_main_v1/A_longhorizon_124m_2p5b/endpoint_fullval/endpoint_table.csv (gpu-host-A RTX 5090 eval)",
+   "native_minus_reported": -7.27151016723937e-05,
+   "eval_seconds": 760.0
+  },
+  "B_MM_P4": {
+   "checkpoint": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/model_only_prob/B_MM_P4.model_only.pt",
+   "checkpoint_sha256": "32191c0296dda806f64a4c507539431ac98f51143b10ae9a482247b8f7bdaf5c",
+   "step": 1908,
+   "tokens": 250085376,
+   "native_root": "native_formal_nearest_probste_v1",
+   "strict_root": "strict_formal_nearest_probste_v1",
+   "calibration": "minmax",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5429909806910569
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5325612931910569
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5064037093495934
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5545280741869919
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5719491552337398
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5349266387195122
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5235248348577236
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5236339240345529
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5134848196138211
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5096084222560976
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.45228388592479674
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.4068548335873984
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.5397666174415651,
+     0.5447785862868394,
+     0.9282816668254573,
+     0.9866984446455793,
+     0.9933447464113313,
+     0.9949808260289634,
+     0.9953090463033537,
+     0.9961729865345529,
+     0.9972402978912601,
+     0.9980260535759654,
+     0.9977958269817073,
+     0.9980370696773374
+    ],
+    "same_input_frac_per_layer": [
+     0.5397666174415651,
+     0.529629501714939,
+     0.5028807005843496,
+     0.5614256026105183,
+     0.5760630637068089,
+     0.5388033933561992,
+     0.5222043715066057,
+     0.5246756303988821,
+     0.5135169151740345,
+     0.5164210969258131,
+     0.47132276581554877,
+     0.4199248126270325
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 976,
+   "native_mean_nll": 3.9618253053211774,
+   "strict_mean_nll": 3.9618665768963393,
+   "delta_native_minus_strict": -4.127157516166812e-05,
+   "delta_ci95": [
+    -0.0003828953340893886,
+    0.00029138110455919486
+   ],
+   "mean_abs_delta": 0.0041192718705192945,
+   "max_abs_delta": 0.02391195297241211,
+   "n_blocks_exactly_equal": 0,
+   "native_minus_softmax": [
+    0.07356548797888834,
+    0.07199257665359583,
+    0.07516222262113798
+   ],
+   "strict_minus_softmax": [
+    0.07360675955405001,
+    0.07202927759069888,
+    0.07518717118340437
+   ],
+   "reported": 3.9618182646446543,
+   "reported_source": "<REPO>/analysis_main_v1/B_factorial_124m_250m/endpoint_fullval/endpoint_table.csv (gpu-host-A RTX 5090 eval)",
+   "native_minus_reported": 7.040676523129008e-06,
+   "eval_seconds": 749.9
+  },
+  "B_FW_P4": {
+   "checkpoint": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/model_only_prob/B_FW_P4.model_only.pt",
+   "checkpoint_sha256": "ba93d108e0b2702556f3131812612b955f5829ba20d2926835b281b692940d6b",
+   "step": 1908,
+   "tokens": 250085376,
+   "native_root": "native_formal_qrm_probste_v1",
+   "strict_root": "strict_formal_qrm_probste_v1",
+   "calibration": "fwm",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.03467606707317073
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.016059768800813008
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.03248555005081301
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.03268514989837398
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.004372141768292683
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0027862995426829267
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0020241044207317074
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0060270579268292684
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.014381986788617886
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02042381224593496
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0268213287601626
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.03185626270325203
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.03434250746316057,
+     0.01634130462398374,
+     0.07527002350101626,
+     0.1562160386496443,
+     0.01819945296620935,
+     0.01837702061102642,
+     0.01858257510797764,
+     0.06300330681529472,
+     0.16544653915777438,
+     0.26634658441310977,
+     0.3945357556847053,
+     0.5355829403264736
+    ],
+    "same_input_frac_per_layer": [
+     0.03434250746316057,
+     0.016079935213414633,
+     0.03318881399263211,
+     0.03176974164761179,
+     0.004030067009654472,
+     0.0026642490790142275,
+     0.0020661442454268293,
+     0.00562378922129065,
+     0.013089748475609756,
+     0.019897083809705285,
+     0.02671122729293699,
+     0.033338692517784554
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 976,
+   "native_mean_nll": 3.8953487750936726,
+   "strict_mean_nll": 3.8954827099061404,
+   "delta_native_minus_strict": -0.00013393481246760634,
+   "delta_ci95": [
+    -0.00033768833782829225,
+    5.7281694207035175e-05
+   ],
+   "mean_abs_delta": 0.0023029453930307605,
+   "max_abs_delta": 0.011347293853759766,
+   "n_blocks_exactly_equal": 0,
+   "native_minus_softmax": [
+    0.007088957751383547,
+    0.006043120180485678,
+    0.008161529324582365
+   ],
+   "strict_minus_softmax": [
+    0.007222892563851153,
+    0.0061774233142372036,
+    0.008289926786158905
+   ],
+   "reported": 3.895124315482671,
+   "reported_source": "<REPO>/analysis_main_v1/B_factorial_124m_250m/endpoint_fullval/endpoint_table.csv (gpu-host-A RTX 5090 eval)",
+   "native_minus_reported": 0.00022445961100148182,
+   "eval_seconds": 759.4
+  },
+  "D_MM_P4_s7": {
+   "checkpoint": "<REPO>/training_code/phaseB_base/formal_runs_probste_5seeds_100m_v1/formal_124m_s7_minmax_nearest_k4_probste_100m/ckpt_step000763_100.0m.pt",
+   "checkpoint_sha256": "575a5351bf6801e49402ec24406395494ee77924659135f46d97bd07edd670e9",
+   "step": 763,
+   "tokens": 100007936,
+   "native_root": "native_formal_nearest_probste_v1",
+   "strict_root": "strict_formal_nearest_probste_v1",
+   "calibration": "minmax",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.4584940294715447
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.47799288617886176
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5215455094004066
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5849474402947155
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5555667238313008
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5254063452743902
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5158249174288618
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.5097322789634147
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.46582190040650406
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.4487838224085366
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.34102991615853656
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.19093861153455285
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.45541210143546745,
+     0.4882758114202236,
+     0.8771450433498476,
+     0.9862938857660061,
+     0.9897639180005081,
+     0.993193557863313,
+     0.9946438921176322,
+     0.9956419509019309,
+     0.9959520888910061,
+     0.995889267339939,
+     0.9960552234184451,
+     0.9960551241742887
+    ],
+    "same_input_frac_per_layer": [
+     0.45541210143546745,
+     0.4741110700901931,
+     0.5054192867123983,
+     0.5766017808371443,
+     0.550282945090193,
+     0.5223663776676829,
+     0.5182784513147866,
+     0.5099525612931911,
+     0.4588316183943089,
+     0.42952275470020324,
+     0.33743930227388214,
+     0.21494938548018291
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 243,
+   "native_mean_nll": 4.282058656951527,
+   "strict_mean_nll": 4.281812669808972,
+   "delta_native_minus_strict": 0.00024598714255501703,
+   "delta_ci95": [
+    -0.00015289908573951248,
+    0.0006241664229106512
+   ],
+   "mean_abs_delta": 0.0025698520519115307,
+   "max_abs_delta": 0.01093912124633789,
+   "n_blocks_exactly_equal": 0,
+   "native_minus_softmax": [
+    0.14523102422800574,
+    0.1412161469950107,
+    0.14925597189875786
+   ],
+   "strict_minus_softmax": [
+    0.1449850370854507,
+    0.14096932151190047,
+    0.14906005910885187
+   ],
+   "reported": 4.282058656951527,
+   "reported_source": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/eval_native_v1/MinMax-Prob_K4_s7/100m_ckpt_step000763_100.0m/per_block_nll.npy (local RTX 3090 eval)",
+   "native_minus_reported": 0.0,
+   "eval_seconds": 186.7
+  },
+  "D_FW_P4_s7": {
+   "checkpoint": "<REPO>/training_code/phaseB_base/formal_runs_probste_5seeds_100m_v1/formal_124m_s7_qrm_nearest_k4_tau6_probste_100m/ckpt_step000763_100.0m.pt",
+   "checkpoint_sha256": "c38b6f072b0ca2cde9de8783bdeeb61db52fd98b77d64927f97000806889f2c0",
+   "step": 763,
+   "tokens": 100007936,
+   "native_root": "native_formal_qrm_probste_v1",
+   "strict_root": "strict_formal_qrm_probste_v1",
+   "calibration": "fwm",
+   "verification": {
+    "random_rows_w": [
+     {
+      "span_scale": 1.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 4.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 8.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 16.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     },
+     {
+      "span_scale": 32.0,
+      "strict_vs_direct": {
+       "shape_a": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "shape_b": [
+        1,
+        12,
+        256,
+        256
+       ],
+       "dtype_a": "torch.float32",
+       "dtype_b": "torch.float32",
+       "n": 786432,
+       "finite_a": true,
+       "finite_b": true,
+       "eq_numeric": true,
+       "eq_rawbits": true,
+       "mismatch_count": 0,
+       "max_abs": 0.0,
+       "rel_l2": 0.0
+      }
+     }
+    ],
+    "real_scores_block0_P": [
+     {
+      "layer": 0,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.034315294715447156
+     },
+     {
+      "layer": 1,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02187817581300813
+     },
+     {
+      "layer": 2,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.026546303353658537
+     },
+     {
+      "layer": 3,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0246997268800813
+     },
+     {
+      "layer": 4,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.01687357088414634
+     },
+     {
+      "layer": 5,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.007895229928861788
+     },
+     {
+      "layer": 6,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.006187277693089431
+     },
+     {
+      "layer": 7,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0050260416666666665
+     },
+     {
+      "layer": 8,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.013507367886178862
+     },
+     {
+      "layer": 9,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.02909028836382114
+     },
+     {
+      "layer": 10,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.0335986725101626
+     },
+     {
+      "layer": 11,
+      "strict_model_P_vs_direct_PN": true,
+      "mismatch": 0,
+      "native_model_P_vs_direct_PN_mismatch_frac_valid": 0.040793318089430895
+     }
+    ]
+   },
+   "strict_equals_direct_all": true,
+   "attn_weight_mismatch_first8": {
+    "in_model_frac_per_layer": [
+     0.03474406916920732,
+     0.023070217225609757,
+     0.07512076028963414,
+     0.16278977308816056,
+     0.1755372681656504,
+     0.08571664205411586,
+     0.0896581832761687,
+     0.07791100974974594,
+     0.2594349434705285,
+     0.5390527939214939,
+     0.664606338128811,
+     0.8864222481580285
+    ],
+    "same_input_frac_per_layer": [
+     0.03474406916920732,
+     0.022688266164888213,
+     0.02714162935086382,
+     0.02458077283409553,
+     0.016624706237296748,
+     0.007407980818089431,
+     0.006304465193089431,
+     0.005231278582317073,
+     0.015285862868394309,
+     0.030236002604166666,
+     0.0347753509273374,
+     0.04052567644817073
+    ],
+    "valid_elements_per_layer": 50380800,
+    "note": "in_model: each forward on its own activations; same_input: native P vs P^N computed from the native model's scores of that layer"
+   },
+   "n_blocks": 243,
+   "native_mean_nll": 4.145112031771813,
+   "strict_mean_nll": 4.145221417823446,
+   "delta_native_minus_strict": -0.00010938605163323045,
+   "delta_ci95": [
+    -0.0003775217650849142,
+    0.00016911049438602153
+   ],
+   "mean_abs_delta": 0.0019031336278091241,
+   "max_abs_delta": 0.008830070495605469,
+   "n_blocks_exactly_equal": 1,
+   "native_minus_softmax": [
+    0.008284399048291115,
+    0.005749895273412697,
+    0.010703463784951732
+   ],
+   "strict_minus_softmax": [
+    0.008393785099924347,
+    0.005835657968442626,
+    0.010849673463483896
+   ],
+   "reported": 4.145112031771813,
+   "reported_source": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/eval_native_v1/QRM-Prob_K4_s7/100m_ckpt_step000763_100.0m/per_block_nll.npy (local RTX 3090 eval)",
+   "native_minus_reported": 0.0,
+   "eval_seconds": 189.2
+  }
+ }
+}

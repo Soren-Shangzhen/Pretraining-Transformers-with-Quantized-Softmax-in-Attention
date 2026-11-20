@@ -1,0 +1,20 @@
+{
+  "fingerprint": {
+    "checkpoint_sha256": "71021f080c702c4b88c4213358fe509c0f9b6f71f8a617b25f8a1a1a00c8f5fe",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "sciq",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  },
+  "order_hash": "676b85be222fe1bd423f5943575ebc82",
+  "n_rows": 4000,
+  "finished": "2026-09-20T13:43:59"
+}

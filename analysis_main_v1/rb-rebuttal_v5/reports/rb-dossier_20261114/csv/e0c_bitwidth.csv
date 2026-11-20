@@ -1,0 +1,17 @@
+scheme,levels,index_bits,nonzero_levels_in_0_1,underflow_below_z,note,levels_all_z,underflow_all_z,sweep_recount
+"K-interval grid, K=2",3,2,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=3",4,2,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=4",5,3,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=7",8,3,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=8",9,4,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=15",16,4,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=16",17,5,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=31",32,5,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=32",33,6,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=63",64,6,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+"K-interval grid, K=64",65,7,,,K intervals → K+1 levels; bits = ceil(log2(K+1)),,,
+E5 format bf16exp,,,741,-inf,identical in all check records,1021,-93.0,741
+E5 format fp8e4m3exp,,,56,-6.9315,identical in all check records,56,-6.9315,
+E5 format mxfp8,,,120,-12.4767,identical in all check records,120,-12.4767,
+E5 format nvfp4,,,7,-3.1781,identical in all check records,7,-3.1781,
+E5 format uint8,,,255,-6.2344,identical in all check records,255,-6.2344,

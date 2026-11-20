@@ -1,0 +1,15 @@
+# base roots of the new code (frozen, read-only)
+e1_lerp_range_grad_single <- phaseB base (local .../files_adaptive_quant_phaseB = cloud code/phaseB): quant_attention 9d03d7a6.., model dd032a5a.., train 91bf8e10..
+e2_minmax_probste_strict  <- formal_code_probste_5seeds_100m_v1/formal_nearest_probste_v1: quant_attention 0e20aea0.., model dd032a5a.., train_formal cd4fe907..
+e2_fwm_probste_strict     <- formal_code_probste_5seeds_100m_v1/formal_qrm_probste_v1: quant_attention ce2bd02b.., model cf76032a.., train_formal 83d72c34..
+
+# new root hashes
+dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6  e1_lerp_range_grad_single/model.py
+c1f8d2ceffa46b41f81d75e508565bdc827164646ece40b06f4c91b2f919bd6e  e1_lerp_range_grad_single/quant_attention.py
+07a98d71b09a5ef033d96c006070bd89c27daeb7e1d9baa6682c413fb6c515e4  e1_lerp_range_grad_single/train.py
+dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6  e2_minmax_probste_strict/model.py
+92291324e4b9d90441d42b0c2824b744ec1896628b372628684d241673df4b88  e2_minmax_probste_strict/quant_attention.py
+384e7c06e82985ec8a89e2f549f0faca84237e1dee8573e6a910d0124eb91b5f  e2_minmax_probste_strict/train_formal.py
+cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2  e2_fwm_probste_strict/model.py
+98fe5b931f83ba5f4621bdff6a5aa4a033a0b910a0fbffaebdc20cd40244e338  e2_fwm_probste_strict/quant_attention.py
+b817d1f32768303ca54dc6dc5b4070d02706c988d5982abb21d88ec80d682ed7  e2_fwm_probste_strict/train_formal.py

@@ -1,0 +1,52 @@
+{
+  "job_id": "0231",
+  "phase": "trajectory",
+  "run_name": "QRM-Prob_K64_s253",
+  "label": "QRM-Prob",
+  "cond": "QRM-Prob K64",
+  "calibration": "relevant_zero",
+  "reconstruction": "nearest",
+  "backward": "prob_ste",
+  "K": "64",
+  "seed": 253,
+  "range_tau": "6",
+  "range_grad": "full",
+  "dataset": "wikitext103",
+  "source_origin": "cloud_complement",
+  "checkpoint": "<REPO>/training_code/phaseB_base/formal_runs_probste_k64_5seeds_100m_v1/formal_124m_s253_qrm_nearest_k64_tau6_probste_100m/ckpt_step000153_20.1m.pt",
+  "ckpt_index": 0,
+  "is_final": 0,
+  "step": 153,
+  "tokens_done": 20054016,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 64,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0
+  },
+  "val_path": "<REPO>/training_code/phaseB_base/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 5.6032177293251575,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/formal_code_probste_5seeds_100m_v1/formal_qrm_probste_v1",
+  "eval_code_sha256": {
+    "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+    "quant_attention.py": "ce2bd02bc34defb1997f8233e6fc2bf054818b7288fe5c8592b3d28ed0fa3c2d"
+  },
+  "torch": "2.5.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "host": "local3090",
+  "seconds": {
+    "load": 1.9,
+    "nll": 42.9,
+    "geometry": 9.7
+  },
+  "finished": "2026-09-20T13:03:55"
+}

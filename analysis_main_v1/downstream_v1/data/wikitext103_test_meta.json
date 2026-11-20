@@ -1,0 +1,10 @@
+{
+  "corpus": "wikitext103_test",
+  "tokens": 283288,
+  "n_blocks": 276,
+  "block": 1024,
+  "tokenizer": "tiktoken:gpt2 encode_ordinary + EOT per document",
+  "dtype": "uint16",
+  "sha256": "345b5f4436ea6d8536d6a1853f7dd515772101e0b05c1dce415235d41339d4de",
+  "documents": 1
+}

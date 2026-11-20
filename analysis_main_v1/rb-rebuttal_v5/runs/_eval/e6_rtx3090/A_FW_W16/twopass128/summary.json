@@ -1,0 +1,56 @@
+{
+ "endpoint": "A_FW_W16",
+ "setting": "twopass128",
+ "checkpoint": "<REPO>/training_code/phaseB_base/rb-upload_staging_20261110/from_private-storage/formal_runs_qrm_k16_2p5b_v1/formal_124m_s1337_qrm_nearest_k16_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+ "eval_root": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_qrm_v1",
+ "eval_code_sha256": {
+  "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+  "quant_attention.py": "a402460d4545a76e19a65f858d4bee247fec26309431a94fd112670176546367"
+ },
+ "dataset": "finewebedu_3b",
+ "val_sha256": "682c9e4492c051ccb5cbde6e9a61099c17aab9f044a6201b901854e9f3943ec5",
+ "n_blocks": 976,
+ "mean_nll": 3.196562498807907,
+ "nonfinite": 0,
+ "recorded_native": 3.196657452182692,
+ "recorded_gpu": "RTX 5090",
+ "tf32": false,
+ "batch_size": 1,
+ "operator": {
+  "attn": "quant",
+  "K": 16,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "relevant_zero",
+  "range_tau": 6.0
+ },
+ "torch": "2.5.1+cu121",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "host": "local3090",
+ "seconds": 66.0,
+ "provenance": {
+  "checkpoint": {
+   "path": "<REPO>/training_code/phaseB_base/rb-upload_staging_20261110/from_private-storage/formal_runs_qrm_k16_2p5b_v1/formal_124m_s1337_qrm_nearest_k16_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+   "realpath": "<REPO>/training_code/phaseB_base/rb-upload_staging_20261110/from_private-storage/formal_runs_qrm_k16_2p5b_v1/formal_124m_s1337_qrm_nearest_k16_tau6_fullgrad_2p5b/ckpt_step019074_2500.1m.pt",
+   "bytes": 1492587357,
+   "sha256": "01166d9a7b24819baf0ca258b825d2bcf13a8f354cd7de0bc1b0b38959e4d138",
+   "manifest_sha256": "01166d9a7b24819baf0ca258b825d2bcf13a8f354cd7de0bc1b0b38959e4d138",
+   "manifest_source": "manifests/rb-recorded_sha256.tsv (private transfer record)",
+   "matches_manifest": true
+  },
+  "code_root": {
+   "path": "<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_qrm_v1",
+   "files": {
+    "model.py": "cf76032a5e4585054f1f6645e7ea755af64a0d4253f74c6530afe74cb56fb9f2",
+    "quant_attention.py": "a402460d4545a76e19a65f858d4bee247fec26309431a94fd112670176546367"
+   },
+   "sha256_of_file_hashes": "8d97b9c2d016f2ca583c68f25f496509b7feaad9878f9cf9b493a353d77bb7db"
+  },
+  "other_code_roots": [],
+  "scripts": {
+   "rb_e6.py": "97edfa7db6bdd4451d04e2e74f7ad79d6e258d6b76a65c096bbdfaba3a5ca6eb",
+   "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+   "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057"
+  }
+ }
+}

@@ -1,0 +1,6 @@
+--- rb_tail_weight
+02edd7846d6699758ebca1acd6f13771aa2d9f98c275dae0add4410a2c0eb401  rb_tail_weight/quant_attention.py
+9c8608a4ca1cbb58ade10f8e2b101894eda67fd9f85253f7994e168f1929d14d  rb_tail_weight/model.py
+--- rb_tail_prob
+7e42c921e1d969aba0184d18d8ef1e5013b60afc6ddf35c3846d45d74c223764  rb_tail_prob/quant_attention.py
+9c8608a4ca1cbb58ade10f8e2b101894eda67fd9f85253f7994e168f1929d14d  rb_tail_prob/model.py

@@ -1,0 +1,98 @@
+{
+  "label": "parent_formal_124m_s253_minmax_nearest_k4_probste_100m",
+  "role": "E2d branch point",
+  "checkpoint": "<POD_WORKSPACE>/parents_from_local/formal_124m_s253_minmax_nearest_k4_probste_100m/ckpt_step000306_40.1m.pt",
+  "step": 306,
+  "tokens_done": 40108032,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "nearest_surrogate_used": "prob",
+  "config": {
+    "run_name": "formal_124m_s253_minmax_nearest_k4_probste_100m",
+    "data_dir": "<CLOUD_DISK>/data/wikitext103",
+    "out_dir": "<CLOUD_DISK>/formal_runs_probste_5seeds_100m_v1",
+    "overwrite_run": false,
+    "n_layer": 12,
+    "n_head": 12,
+    "n_embd": 768,
+    "block_size": 1024,
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "max_tokens": 100000000,
+    "batch_tokens": 131072,
+    "micro_batch": 1,
+    "lr": 0.0006,
+    "min_lr_ratio": 0.1,
+    "warmup_tokens": 10000000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "grad_clip": 1.0,
+    "seed": 253,
+    "grad_checkpointing": false,
+    "eval_every_tokens": 5000000,
+    "log_every_steps": 0,
+    "health_every_steps": 0,
+    "eval_batches": 100,
+    "stats_batches": 1,
+    "ckpt_every_tokens": 20000000,
+    "ckpt_tokens": "",
+    "resume": false,
+    "compile": false,
+    "device": "cuda"
+  },
+  "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/../../D_robustness_124m_100m_5seed/code_snapshots/formal_code_probste_5seeds_100m_v1/formal_nearest_probste_v1",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce"
+  },
+  "dataset": "wikitext103",
+  "val_path": "<POD_WORKSPACE>/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "tf32": false,
+  "mean_nll": 5.03198572343269,
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "machine-B",
+  "seconds": 22.6,
+  "finished": "2026-11-12T11:30:08",
+  "provenance": {
+    "checkpoint": {
+      "path": "<POD_WORKSPACE>/parents_from_local/formal_124m_s253_minmax_nearest_k4_probste_100m/ckpt_step000306_40.1m.pt",
+      "realpath": "<POD_WORKSPACE>/parents_from_local/formal_124m_s253_minmax_nearest_k4_probste_100m/ckpt_step000306_40.1m.pt",
+      "bytes": 1492586425,
+      "sha256": "ea59e9b92aefd91aafb01b99e1a2fc8eb899c6a7ad72ce0f98bd30ac8b355f32",
+      "manifest_sha256": "ea59e9b92aefd91aafb01b99e1a2fc8eb899c6a7ad72ce0f98bd30ac8b355f32",
+      "manifest_source": "<POD_WORKSPACE>/parents_from_local/SHA256SUMS",
+      "matches_manifest": true
+    },
+    "code_root": {
+      "path": "<POD_WORKSPACE>/Training/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/formal_code_probste_5seeds_100m_v1/formal_nearest_probste_v1",
+      "files": {
+        "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+        "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce",
+        "train_formal.py": "cd4fe907f40b41029eeb09f4b042a97e926fc03518139385649ea9da47b872b9"
+      },
+      "sha256_of_file_hashes": "24869d5e8564e960b0f15cd5a4fb73bec5df64b0ad84e77c06253e1faa5c0b0d"
+    },
+    "other_code_roots": [],
+    "scripts": {
+      "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+      "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057",
+      "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed"
+    }
+  }
+}

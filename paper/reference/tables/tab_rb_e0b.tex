@@ -1,0 +1,27 @@
+\begin{tabular}{@{}lll@{}}
+\toprule
+Operator (range over the runs at that length) & softmax mass set to zero & row sum \\
+\midrule
+\FW--LERP $K{=}4$, 100M & 0.0094--0.0100 & 1.0000 \\
+\FW--LERP $K{=}16$, 100M & 0.0100--0.0103 & 1.0000 \\
+\FW--LERP $K{=}4$, 250M & 0.0136 & 1.0000 \\
+\FW--LERP $K{=}16$, 250M & 0.0134 & 1.0000 \\
+\FW--Weight $K{=}4$, 100M & 0.0064--0.0069 & 1.0000 \\
+\FW--Weight $K{=}4$, row maximum detached, 100M & 0.0013--0.0019 & 1.0000 \\
+IndexSoftmax, float normalization, 100M & 0.0067--0.0071 & 1.0000 \\
+IndexSoftmax, UINT8, 100M & 0.1161--0.1259 & 0.9136--0.9212 \\
+IndexSoftmax, float normalization, 250M & 0.0103 & 1.0000 \\
+IndexSoftmax, UINT8, 250M & 0.1187 & 0.9210 \\
+IndexSoftmax, UINT8, 2.5B & 0.1023 & 0.9336 \\
+EMA window, Weight-STE, 100M & 0.0010--0.0013 & 1.0000 \\
+EMA window, Prob-STE, 100M & 0.0003--0.0004 & 1.0000 \\
+FP8-E4M3, 100M & 0.0038--0.0039 & 1.0000 \\
+NVFP4-style, 100M & 0.0254--0.0255 & 1.0000 \\
+FP8-E4M3, 250M & 0.0050 & 1.0000 \\
+NVFP4-style, 250M & 0.0275 & 1.0000 \\
+UINT8 on $e^z$, 100M & 0.0076--0.0081 & 1.0000 \\
+MXFP8-style, 100M & 2e-7 & 1.0000 \\
+UINT8 on $e^z$, 250M & 0.0099 & 1.0000 \\
+MXFP8-style, 250M & 3e-7 & 1.0000 \\
+\bottomrule
+\end{tabular}

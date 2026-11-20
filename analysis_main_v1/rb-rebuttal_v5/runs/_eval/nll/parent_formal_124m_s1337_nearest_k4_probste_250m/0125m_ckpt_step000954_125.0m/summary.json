@@ -1,0 +1,98 @@
+{
+  "label": "parent_formal_124m_s1337_nearest_k4_probste_250m",
+  "role": "E2a/b branch point",
+  "checkpoint": "<CLOUD_DISK>/vast_formal_250m_v1/formal_runs_fbmatch_v1/formal_124m_s1337_nearest_k4_probste_250m/ckpt_step000954_125.0m.pt",
+  "step": 954,
+  "tokens_done": 125042688,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "nearest_surrogate_used": "prob",
+  "config": {
+    "run_name": "formal_124m_s1337_nearest_k4_probste_250m",
+    "data_dir": "<CLOUD_DISK>/data/finewebedu_3b",
+    "out_dir": "<CLOUD_DISK>/formal_runs_fbmatch_v1",
+    "overwrite_run": false,
+    "n_layer": 12,
+    "n_head": 12,
+    "n_embd": 768,
+    "block_size": 1024,
+    "attn": "quant",
+    "K": 4,
+    "approx": "nearest",
+    "range_grad": "full",
+    "max_tokens": 250000000,
+    "batch_tokens": 131072,
+    "micro_batch": 1,
+    "lr": 0.0006,
+    "min_lr_ratio": 0.1,
+    "warmup_tokens": 25000000,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "grad_clip": 1.0,
+    "seed": 1337,
+    "grad_checkpointing": false,
+    "eval_every_tokens": 25000000,
+    "log_every_steps": 0,
+    "health_every_steps": 50,
+    "eval_batches": 100,
+    "stats_batches": 1,
+    "ckpt_every_tokens": 25000000,
+    "ckpt_tokens": "25000000,50000000,75000000,100000000,125000000,150000000,175000000,200000000,225000000,250000000",
+    "resume": false,
+    "compile": false,
+    "device": "cuda"
+  },
+  "eval_root": "<CLOUD_DISK>/formal_code_factorial250_v1/formal_nearest_probste_v1",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce"
+  },
+  "dataset": "finewebedu_3b",
+  "val_path": "<POD_WORKSPACE>/data/finewebedu_3b/val.bin",
+  "val_sha256": "682c9e4492c051ccb5cbde6e9a61099c17aab9f044a6201b901854e9f3943ec5",
+  "n_blocks": 976,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "tf32": false,
+  "mean_nll": 4.352998110847395,
+  "torch": "2.13.0+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "host": "machine-B",
+  "seconds": 73.8,
+  "finished": "2026-11-12T11:30:59",
+  "provenance": {
+    "checkpoint": {
+      "path": "<CLOUD_DISK>/vast_formal_250m_v1/formal_runs_fbmatch_v1/formal_124m_s1337_nearest_k4_probste_250m/ckpt_step000954_125.0m.pt",
+      "realpath": "<POD_WORKSPACE>/cloud_mirror/vast_formal_250m_v1/formal_runs_fbmatch_v1/formal_124m_s1337_nearest_k4_probste_250m/ckpt_step000954_125.0m.pt",
+      "bytes": 1492586795,
+      "sha256": "c6ae244701c33a72a85d3ea3aeca4822f556342c421d29173f0f3dd91ac74804",
+      "manifest_sha256": "c6ae244701c33a72a85d3ea3aeca4822f556342c421d29173f0f3dd91ac74804",
+      "manifest_source": "manifests/rb-recorded_sha256.tsv (private transfer record)",
+      "matches_manifest": true
+    },
+    "code_root": {
+      "path": "<CLOUD_DISK>/formal_code_factorial250_v1/formal_nearest_probste_v1",
+      "files": {
+        "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+        "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce",
+        "train_formal.py": "cd4fe907f40b41029eeb09f4b042a97e926fc03518139385649ea9da47b872b9"
+      },
+      "sha256_of_file_hashes": "24869d5e8564e960b0f15cd5a4fb73bec5df64b0ad84e77c06253e1faa5c0b0d"
+    },
+    "other_code_roots": [],
+    "scripts": {
+      "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+      "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057",
+      "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed"
+    }
+  }
+}

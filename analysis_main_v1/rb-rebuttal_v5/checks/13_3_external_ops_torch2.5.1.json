@@ -1,0 +1,1991 @@
+{
+  "env": {
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "4c18080efea6cf9753d8c6bba40144d856f2faec10c80a4181e82cb658aa43c1"
+    }
+  },
+  "checks": [
+    {
+      "name": "[cpu] random n=64 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-1.8824",
+      "delta": "0.2689"
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.8989",
+      "delta": "1.1284"
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.4785",
+      "delta": "2.4969"
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=64 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-2.2456",
+      "delta": "0.3208"
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.7965",
+      "delta": "1.1138"
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.3230",
+      "delta": "2.4747"
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=256 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-2.5445",
+      "delta": "0.3635"
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.7142",
+      "delta": "1.1020"
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.1111",
+      "delta": "2.4444"
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] random n=1024 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-1.9432",
+      "delta": "0.2776"
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.8634",
+      "delta": "1.1233"
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.5123",
+      "delta": "2.5018"
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=64 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-2.2320",
+      "delta": "0.3189"
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.7861",
+      "delta": "1.1123"
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.3021",
+      "delta": "2.4717"
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=256 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-2.5900",
+      "delta": "0.3700"
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=0.3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.6879",
+      "delta": "1.0983"
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=3.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-17.1150",
+      "delta": "2.4450"
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] random n=1024 scale=8.0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-8.1782",
+      "delta": "1.1683"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-8.1782",
+      "delta": "1.1683"
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-20.2199",
+      "delta": "2.8886"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 1 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-19.0825",
+      "delta": "2.7261"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 2 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-58.6184",
+      "delta": "8.3741"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-50.1553",
+      "delta": "7.1650"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 4 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-56.1916",
+      "delta": "8.0274"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 5 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-38.9575",
+      "delta": "5.5654"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 6 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-28.3705",
+      "delta": "4.0529"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 7 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-14.1276",
+      "delta": "2.0182"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 8 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-8.3299",
+      "delta": "1.1900"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 9 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-6.7625",
+      "delta": "0.9661"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 10 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.8075",
+      "delta": "0.8296"
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores softmax_s7_100m layer 11 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.8075",
+      "delta": "0.8296"
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores softmax_s7_100m layer 11 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.9713",
+      "delta": "0.8530"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.9713",
+      "delta": "0.8530"
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 0 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-14.1327",
+      "delta": "2.0190"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 1 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-8.2932",
+      "delta": "1.1847"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 2 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-6.8616",
+      "delta": "0.9802"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 3 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-31.8017",
+      "delta": "4.5431"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 4 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-60.4777",
+      "delta": "8.6397"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 5 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-51.3560",
+      "delta": "7.3366"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 6 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-37.7175",
+      "delta": "5.3882"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 7 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-10.3133",
+      "delta": "1.4733"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 8 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-7.3301",
+      "delta": "1.0472"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 9 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-6.2217",
+      "delta": "0.8888"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 10 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.9277",
+      "delta": "0.8468"
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] real scores fwm_weight_k4_s7_100m layer 11 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 E3a-i training == ref_ops (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 E3a-i training == IntAttention idx_softmax_fp (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 E3a-ii codes == ref_ops codes (bitwise); value == code/255",
+      "passed": true,
+      "codes": true,
+      "value": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 EXAQ 3-bit training == ref_ops (bitwise)",
+      "passed": true,
+      "lo": "-5.9277",
+      "delta": "0.8468"
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 EXAQ 3-bit training == IntAttention-repo reproduction (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 indexsoftmax-fp training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 indexsoftmax-u8 training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 exaq-detach training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] real scores fwm_weight_k4_s7_100m layer 11 exaq-graph training probabilities == hard forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "surrogate gradient vs closed form (float64, 200 random rows): E3a_fp",
+      "passed": true,
+      "max_abs_err": "3.33e-16"
+    },
+    {
+      "name": "surrogate gradient vs closed form (float64, 200 random rows): E3a_u8",
+      "passed": true,
+      "max_abs_err": "3.33e-16"
+    },
+    {
+      "name": "surrogate gradient vs closed form (float64, 200 random rows): E3b_detach",
+      "passed": true,
+      "max_abs_err": "3.33e-16"
+    },
+    {
+      "name": "E3b-g surrogate gradient vs central finite differences (float64)",
+      "passed": true,
+      "max_rel_err": "2.60e-09",
+      "entries_checked": 2160,
+      "entries_skipped_near_kinks": 0
+    },
+    {
+      "name": "row gradients sum to zero: E3a",
+      "passed": true,
+      "max_abs_rowsum": "1.29e-16"
+    },
+    {
+      "name": "row gradients sum to zero: E3b_detach",
+      "passed": true,
+      "max_abs_rowsum": "6.26e-17"
+    },
+    {
+      "name": "row gradients sum to zero: E3b_graph",
+      "passed": true,
+      "max_abs_rowsum": "1.11e-16"
+    }
+  ],
+  "thirdparty_path": "<THIRD_PARTY>/IntAttention/ArtifactEvaluation/pysimulation",
+  "real_score_u8_stats": {
+    "softmax_s7_100m_L0": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.8772544860839844
+    },
+    "softmax_s7_100m_L1": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9413702487945557
+    },
+    "softmax_s7_100m_L2": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9136955738067627
+    },
+    "softmax_s7_100m_L3": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9748246073722839
+    },
+    "softmax_s7_100m_L4": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9762787818908691
+    },
+    "softmax_s7_100m_L5": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9671856760978699
+    },
+    "softmax_s7_100m_L6": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.981192946434021
+    },
+    "softmax_s7_100m_L7": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9657415151596069
+    },
+    "softmax_s7_100m_L8": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9412257075309753
+    },
+    "softmax_s7_100m_L9": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.8898428678512573
+    },
+    "softmax_s7_100m_L10": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.8451316356658936
+    },
+    "softmax_s7_100m_L11": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.800114631652832
+    },
+    "fwm_weight_k4_s7_100m_L0": {
+      "u8_rows_all_zero": 0.003173828125,
+      "u8_rowsum_mean": 0.81687992811203
+    },
+    "fwm_weight_k4_s7_100m_L1": {
+      "u8_rows_all_zero": 0.0061848959885537624,
+      "u8_rowsum_mean": 0.8913041949272156
+    },
+    "fwm_weight_k4_s7_100m_L2": {
+      "u8_rows_all_zero": 0.124755859375,
+      "u8_rowsum_mean": 0.7455753087997437
+    },
+    "fwm_weight_k4_s7_100m_L3": {
+      "u8_rows_all_zero": 0.2609049677848816,
+      "u8_rowsum_mean": 0.68224036693573
+    },
+    "fwm_weight_k4_s7_100m_L4": {
+      "u8_rows_all_zero": 0.011962890625,
+      "u8_rowsum_mean": 0.9429363012313843
+    },
+    "fwm_weight_k4_s7_100m_L5": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9766570925712585
+    },
+    "fwm_weight_k4_s7_100m_L6": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9779316782951355
+    },
+    "fwm_weight_k4_s7_100m_L7": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9805137515068054
+    },
+    "fwm_weight_k4_s7_100m_L8": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.9155925512313843
+    },
+    "fwm_weight_k4_s7_100m_L9": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.8658788204193115
+    },
+    "fwm_weight_k4_s7_100m_L10": {
+      "u8_rows_all_zero": 0.0,
+      "u8_rowsum_mean": 0.8278008699417114
+    },
+    "fwm_weight_k4_s7_100m_L11": {
+      "u8_rows_all_zero": 0.00016276042151730508,
+      "u8_rowsum_mean": 0.7918157577514648
+    }
+  },
+  "all_pass": true
+}

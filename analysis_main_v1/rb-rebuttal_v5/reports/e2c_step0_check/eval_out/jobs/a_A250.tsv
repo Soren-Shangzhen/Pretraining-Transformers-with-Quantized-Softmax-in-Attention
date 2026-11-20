@@ -1,0 +1,2 @@
+label	eval_root	checkpoint	dataset	tokens_m	role	surrogate
+parent_A250	<REPO>/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_formal_base_v2	<REPO>/training_code/phaseB_base/rb-upload_staging_20261110/from_private-storage/formal_runs_scale_v1/formal_124m_s1337_nearest_k4_fullgrad_2p5b/ckpt_step001908_250.1m.pt	finewebedu_3b	250.085376	parent	weight_strict

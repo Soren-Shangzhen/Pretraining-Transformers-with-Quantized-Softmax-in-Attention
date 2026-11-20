@@ -1,0 +1,57 @@
+{
+  "condition": "LERP K1",
+  "run_name": "formal_124m_s1337_lerp_k1_fullgrad_2p5b",
+  "cfg": "piqa",
+  "task": "piqa",
+  "kind": "mc",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 1,
+    "approx": "lerp",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "n_docs": 1838,
+  "n_rows": 3676,
+  "n_requests": 3676,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "6a23428e01d0f9190c2708bd8bf50b8f",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "piqa": {
+      "name": "piqa",
+      "alias": "piqa",
+      "sample_len": 1838,
+      "acc,none": 0.6066376496191512,
+      "acc_stderr,none": 0.011397418546689315,
+      "acc_norm,none": 0.5952121871599565,
+      "acc_norm_stderr,none": 0.011452361375057018
+    }
+  },
+  "seconds": 42.5,
+  "fingerprint": {
+    "checkpoint_sha256": "769531782f1016fa88f3b185994c060af632d6f6e223f0e3b2862383e5bc2b52",
+    "train_code_root": "<REPO>/training_code/formal_lerp_k1_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "piqa",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

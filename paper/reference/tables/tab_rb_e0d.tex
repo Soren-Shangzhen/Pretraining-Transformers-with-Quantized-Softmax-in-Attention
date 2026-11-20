@@ -1,0 +1,9 @@
+\begin{tabular}{@{}p{4.3cm}rrrrlp{2.6cm}@{}}
+\toprule
+Implementation (per 128$^3$ tile) & matmul & exp unit & shared mem. & bound & vs FA4 & function \\
+\midrule
+FA4, exact softmax, single pass & 1024 & 1024 & 768 & 1024 & 1.00$\times$ & exact softmax \\
+lookup operator, single pass, grid anchored at the running max & 1024 & 0 & 768 & 1024 & 1.00$\times$ & different from the trained operator \\
+lookup operator, two passes (full-row max first) & 1536 & 0 & 1280 & 1536 & 1.50$\times$ & same as the trained operator \\
+\bottomrule
+\end{tabular}

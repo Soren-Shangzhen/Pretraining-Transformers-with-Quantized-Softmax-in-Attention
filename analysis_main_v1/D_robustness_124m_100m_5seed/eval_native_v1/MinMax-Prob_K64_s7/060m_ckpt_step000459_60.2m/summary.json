@@ -1,0 +1,52 @@
+{
+  "job_id": "0437",
+  "phase": "trajectory",
+  "run_name": "MinMax-Prob_K64_s7",
+  "label": "MinMax-Prob",
+  "cond": "MinMax-Prob K64",
+  "calibration": "minmax_row_adaptive",
+  "reconstruction": "nearest",
+  "backward": "prob_ste",
+  "K": "64",
+  "seed": 7,
+  "range_tau": "",
+  "range_grad": "full",
+  "dataset": "wikitext103",
+  "source_origin": "cloud_complement",
+  "checkpoint": "<REPO>/training_code/phaseB_base/formal_runs_probste_k64_5seeds_100m_v1/formal_124m_s7_minmax_nearest_k64_probste_100m/ckpt_step000459_60.2m.pt",
+  "ckpt_index": 2,
+  "is_final": 0,
+  "step": 459,
+  "tokens_done": 60162048,
+  "checkpoint_operator": {
+    "attn": "quant",
+    "K": 64,
+    "approx": "nearest",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "val_path": "<REPO>/training_code/phaseB_base/data/wikitext103/val.bin",
+  "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+  "n_blocks": 243,
+  "block_size": 1024,
+  "batch_size": 1,
+  "autocast": "bfloat16",
+  "mean_nll": 4.522411156093142,
+  "geom_blocks": 8,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/formal_code_probste_5seeds_100m_v1/formal_nearest_probste_v1",
+  "eval_code_sha256": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "0e20aea0750abcaacae9eef17f7f3ffc3cfb36a2cfe25f23ac3af7b407176dce"
+  },
+  "torch": "2.5.1+cu121",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "host": "local3090",
+  "seconds": {
+    "load": 1.9,
+    "nll": 44.9,
+    "geometry": 10.2
+  },
+  "finished": "2026-09-20T15:30:04"
+}

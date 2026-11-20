@@ -1,0 +1,17 @@
+{
+  "run": "q32_lerp_100m",
+  "label": "LERP",
+  "K": 32,
+  "range_grad": "detach",
+  "seed": 1337,
+  "checkpoint": "<REPO>/training_code/legacy_exact_fp32/runs/q32_lerp_100m/ckpt_step000763_100.0m.pt",
+  "step": 763,
+  "tokens_done": 100007936,
+  "max_tokens": 100000000,
+  "mean_nll": 4.885882391360561,
+  "n_blocks": 243,
+  "batch_size": 1,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/legacy_exact_fp32",
+  "eval_code_sha256": "3da199f854b97c6460577283af09ee4fa5bde1e1036c1585263d616801f0d4de",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

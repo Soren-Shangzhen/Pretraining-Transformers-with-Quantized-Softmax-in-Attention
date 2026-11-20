@@ -1,0 +1,17 @@
+{
+  "title": "Round 3: naive reduced-precision softmax baselines (suite D setting) - registered before training",
+  "written_utc": "2026-09-24T22:16:28Z",
+  "authorization": "user instruction 2026-09-24; user chose run 2 = FP8 e4m3 exp, seed 7, and fp32 backward for the FP8 cast",
+  "runs": [
+    {"id": "R3-BF16EXP", "run_name": "sp_s7_softmax_bf16exp_100m", "attn": "softmax_bf16exp",
+     "definition": "w = exp(bf16(z)) in bfloat16, returned to fp32; z = s - rowmax in fp32; everything else as exact_fp32_softmax", "backward": "autograd native (bf16 casts)"},
+    {"id": "R3-FP8EXP", "run_name": "sp_s7_softmax_fp8e4m3exp_100m", "attn": "softmax_fp8e4m3exp",
+     "definition": "w = e4m3(exp(z)) (3-bit mantissa, values < 2^-10 flush to 0); forward bit-exact e4m3", "backward": "cast treated as identity, exp gradient in fp32 (fake-quant convention); native e4m3 gradient zeroes all score gradients at step 0 (round3/checks/diag_native_fp8.json)"}
+  ],
+  "code": "code/r3_lowprec_softmax (copy of rb_lowprec = phaseB base + reduced-exp modes, plus fp8 mode); no calibration, no K-interval grid, no surrogate other than the FP8 cast convention above",
+  "protocol": "identical to the seed-7 Exact control: 124M, WikiText-103, 100M tokens, 131072 tokens/update, lr 6e-4 cosine, warmup 10M, bf16 autocast outside fp32 attention, TF32 on, eager, no grad checkpointing, seed 7, local RTX 3090 (same GPU/env as the control)",
+  "controls": {"softmax": "runs/p3_s7_exact_100m", "k_interval_reference": ["LERP K4 s7 (runs/p3_s7_lerp_k4_fullgrad_100m)", "LERP K32 s7", "new strict FWM/MinMax K4 s7 (round 1)", "historical FWM/MinMax K4 s7"]},
+  "question": "How far from exact fp32 softmax does a plain reduced-precision exponential (bf16, FP8 e4m3) end after 100M tokens, compared with the K=4 interval operators at the same seed?",
+  "primary_metric": "endpoint paired NLL on 243 validation blocks, baseline minus same-seed exact softmax, 3090 evaluator, block bootstrap (16, 4000, 95%); trajectories at 20/40/60/80/100M",
+  "reading": "continuous values reported; single seed, so differences comparable to the five-seed Exact seed SD (0.0062) are not interpreted as ranking; no equivalence claim from an interval containing 0; instability (loss spikes, grad-norm growth) reported from logs"
+}

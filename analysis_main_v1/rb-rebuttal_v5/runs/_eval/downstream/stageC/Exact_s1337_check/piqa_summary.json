@@ -1,0 +1,57 @@
+{
+  "condition": "Exact_s1337_check",
+  "run_name": "formal_124m_s1337_exact_2p5b",
+  "cfg": "piqa",
+  "task": "piqa",
+  "kind": "mc",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "exact_fp32_softmax",
+    "K": 8,
+    "approx": "lerp",
+    "range_grad": "detach",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "n_docs": 1838,
+  "n_rows": 3676,
+  "n_requests": 3676,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "6a23428e01d0f9190c2708bd8bf50b8f",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "piqa": {
+      "name": "piqa",
+      "alias": "piqa",
+      "sample_len": 1838,
+      "acc,none": 0.6082698585418934,
+      "acc_stderr,none": 0.011389038597720108,
+      "acc_norm,none": 0.5973884657236126,
+      "acc_norm_stderr,none": 0.011442395233488875
+    }
+  },
+  "seconds": 34.6,
+  "fingerprint": {
+    "checkpoint_sha256": "a046e5185f0290e6ce36b89af162cdce3870325147838d53b5b4047ff325726f",
+    "train_code_root": "<CLOUD_DISK>/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "piqa",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

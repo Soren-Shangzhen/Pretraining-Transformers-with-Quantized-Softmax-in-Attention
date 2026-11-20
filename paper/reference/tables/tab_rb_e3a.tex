@@ -1,0 +1,9 @@
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Contrast & seed 7 & seed 42 & seed 1337 & mean, 95\% $t$ & 250M (seed 1337), 95\% CI \\
+\midrule
+float normalization (i) $-$ softmax & $-0.0236$ & $+0.0045$ & $-0.0117$ & \begin{tabular}[c]{@{}l@{}}$-0.0103$\\{[$-0.0453$, $+0.0247$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0014$\\{[$+0.0004$, $+0.0024$]}\end{tabular} \\\addlinespace[2pt]
+UINT8 probabilities (ii) $-$ softmax & $-0.0577$ & $-0.0220$ & $-0.0344$ & \begin{tabular}[c]{@{}l@{}}$-0.0380$\\{[$-0.0831$, $+0.0071$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$+0.0003$\\{[$-0.0011$, $+0.0016$]}\end{tabular} \\\addlinespace[2pt]
+(ii) $-$ (i) & $-0.0341$ & $-0.0264$ & $-0.0226$ & \begin{tabular}[c]{@{}l@{}}$-0.0277$\\{[$-0.0422$, $-0.0132$]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}$-0.0011$\\{[$-0.0027$, $+0.0004$]}\end{tabular} \\\addlinespace[2pt]
+\bottomrule
+\end{tabular}

@@ -1,0 +1,13 @@
+\setlength{\tabcolsep}{2pt}\begin{tabular}{@{}lllllp{2.35cm}@{}}
+\toprule
+Calibration & Off the graph & Operator & $\dNLL$, 100M & $\dNLL$, 250M & Span, off vs on (100M) \\
+\midrule
+per-row MinMax & $M$, $m$ & LERP $K{=}32$ & $+0.74$, $+0.80$, $+0.78$$^{a}$ & --- & 861--1193 vs 21--22 \\
+per-row MinMax & $M$ ($m$ kept)$^{b}$ & LERP $K{=}32$ & $+0.80$, $+0.72$ & --- & 1489--1739 vs 21 \\
+static (\FW) & $M$ & \FW--LERP $K{=}4$ & $+0.52$, $+0.83$ & $+1.71$ & 660--785 vs 28 \\
+static (\FW) & $M$ & \FW--LERP $K{=}16$ & $+0.09$, $+0.06$ & --- & 56--57 vs 25 \\
+static (\FW) & $M$ & \FW--Weight $K{=}4$ & $+1.08$, $+1.14$ & --- & 762--810 vs 19 \\
+tensor-level (EXAQ) & $\sigma$, minimum & 3-bit, Prob-STE & $+0.0205$ [$+0.0002$, $+0.0408$]$^{c}$ & $+0.055$ & 114--118 vs 25--26 \\
+per-head EMA & width (buffer) & \CH $K{=}4$ & $+0.216$ (W), $+0.206$ (P)$^{d}$ & $+0.307$, $+0.232$ & 51--54 (W), 677--800 (P) vs 25--26$^{e}$ \\
+\bottomrule
+\end{tabular}

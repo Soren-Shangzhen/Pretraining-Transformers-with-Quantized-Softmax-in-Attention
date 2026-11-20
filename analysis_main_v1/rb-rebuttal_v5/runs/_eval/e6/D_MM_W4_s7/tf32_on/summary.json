@@ -1,0 +1,56 @@
+{
+ "endpoint": "D_MM_W4_s7",
+ "setting": "tf32_on",
+ "checkpoint": "<POD_WORKSPACE>/endpoints_from_local/MM_W4_s7_100m.model_only.pt",
+ "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_local_phaseB_base",
+ "eval_code_sha256": {
+  "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+  "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+ },
+ "dataset": "wikitext103",
+ "val_sha256": "397ae25de9c593190ddc226fe15577337038a549046a90eaa785a1fc6fc7e979",
+ "n_blocks": 243,
+ "mean_nll": 4.361840371732359,
+ "nonfinite": 0,
+ "recorded_native": 4.361313138969641,
+ "recorded_gpu": "RTX 3090",
+ "tf32": true,
+ "batch_size": 1,
+ "operator": {
+  "attn": "quant",
+  "K": 4,
+  "approx": "nearest",
+  "range_grad": "full",
+  "range_mode": "minmax",
+  "range_tau": 6.0
+ },
+ "torch": "2.13.0+cu132",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "host": "machine-B",
+ "seconds": 12.6,
+ "provenance": {
+  "checkpoint": {
+   "path": "<POD_WORKSPACE>/endpoints_from_local/MM_W4_s7_100m.model_only.pt",
+   "realpath": "<POD_WORKSPACE>/endpoints_from_local/MM_W4_s7_100m.model_only.pt",
+   "bytes": 497526625,
+   "sha256": "187afc1a49524a76efe8ffac2ca05332c17502e7abc355a102d451a8c3f54def",
+   "manifest_sha256": "187afc1a49524a76efe8ffac2ca05332c17502e7abc355a102d451a8c3f54def",
+   "manifest_source": "<POD_WORKSPACE>/endpoints_from_local/SHA256SUMS",
+   "matches_manifest": true
+  },
+  "code_root": {
+   "path": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/round2/task1/roots/native_local_phaseB_base",
+   "files": {
+    "model.py": "dd032a5a65608b0a209516c391974148fc1dcea173432cd5d2550da84e9559b6",
+    "quant_attention.py": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704"
+   },
+   "sha256_of_file_hashes": "1cdfa7d44e2f012e9bfd41d50ba29b63845a4895eef9c38439453a62dc104b81"
+  },
+  "other_code_roots": [],
+  "scripts": {
+   "rb_e6.py": "97edfa7db6bdd4451d04e2e74f7ad79d6e258d6b76a65c096bbdfaba3a5ca6eb",
+   "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+   "common.py": "b7cf3cdbacfc14d0e2470fa1a56e867f7aa7d7712b015c85dfddb62a49530057"
+  }
+ }
+}

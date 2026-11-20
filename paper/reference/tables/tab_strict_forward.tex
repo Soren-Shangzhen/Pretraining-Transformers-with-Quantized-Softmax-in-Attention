@@ -1,0 +1,24 @@
+\begin{tabular}{llrl}
+\toprule
+Contrast (nats) & Evaluator & $\Delta$ & 95\% CI \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Strict pairs: the four strict-forward runs, strict-hard forward, evaluated on the training GPU}} \\
+MinMax: Prob $-$ Weight (strict pair) & RTX 5090 & -0.0770 & [-0.0812, -0.0729] \\
+FWM: Prob $-$ Weight (strict pair) & RTX 5090 & -0.0390 & [-0.0422, -0.0359] \\
+Interaction $(\mathrm{FWM}_P-\mathrm{FWM}_W)-(\mathrm{MM}_P-\mathrm{MM}_W)$ & RTX 5090 & +0.0381 & [+0.0331, +0.0425] \\
+\multicolumn{4}{@{}l}{\emph{Secondary evaluator: the same strict pairs re-evaluated on the RTX 3090}} \\
+MinMax: Prob $-$ Weight (strict pair) & RTX 3090 & -0.0772 & [-0.0816, -0.0731] \\
+FWM: Prob $-$ Weight (strict pair) & RTX 3090 & -0.0388 & [-0.0423, -0.0356] \\
+Interaction, as above & RTX 3090 & +0.0384 & [+0.0331, +0.0433] \\
+\midrule \multicolumn{4}{@{}l}{\emph{Historical comparisons: new strict runs vs the historical seed-7 runs (frozen weights, different training stack)}} \\
+MinMax: new Prob $-$ historical Prob, strict forward on both & RTX 5090 & +0.0008 & [-0.0024, +0.0040] \\
+FWM: new Prob $-$ historical Prob, strict forward on both & RTX 5090 & -0.0121 & [-0.0154, -0.0090] \\
+MinMax: new strict Weight $-$ historical Weight & RTX 3090 & -0.0017 & [-0.0047, +0.0012] \\
+FWM: new strict Weight $-$ historical Weight & RTX 3090 & +0.0030 & [+0.0001, +0.0059] \\
+MinMax: historical Prob, native $-$ strict forward (frozen weights) & RTX 5090 & -0.0001 & [-0.0005, +0.0003] \\
+FWM: historical Prob, native $-$ strict forward (frozen weights) & RTX 5090 & +0.0000 & [-0.0003, +0.0003] \\
+\midrule \multicolumn{4}{@{}l}{\emph{Background: historical seed-7 runs only (not a same-stack control)}} \\
+MinMax: historical Prob $-$ historical Weight, seed 7 & RTX 3090 & -0.0793 & [-0.0834, -0.0752] \\
+FWM: historical Prob $-$ historical Weight, seed 7 & RTX 3090 & -0.0240 & [-0.0264, -0.0216] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,17 @@
+{
+  "run": "q32_lerp_detachproj_100m",
+  "label": "LERP",
+  "K": 32,
+  "range_grad": "detach_proj",
+  "seed": 1337,
+  "checkpoint": "<REPO>/training_code/phaseB_base/runs/q32_lerp_detachproj_100m/ckpt_step000306_40.1m.pt",
+  "step": 306,
+  "tokens_done": 40108032,
+  "max_tokens": 100000000,
+  "mean_nll": 5.045126425385965,
+  "n_blocks": 243,
+  "batch_size": 1,
+  "eval_code": "<REPO>/analysis_main_v1/D_robustness_124m_100m_5seed/code_snapshots/local_phaseB_base",
+  "eval_code_sha256": "9d03d7a6d240c80c4ac01eddaaec3581a65aec952daf6d8101205bc832af0704",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

@@ -1,0 +1,14 @@
+\begin{tabular}{@{}ll@{}}
+\toprule
+Operator (124M @ 2.5B, seed 1337) & $\dNLL$ vs softmax [95\% CI] \\
+\midrule
+MinMax--LERP K4 & $+0.0047$ [$+0.0031$, $+0.0063$] \\
+MinMax--LERP K16 & $+0.0003$ [$-0.0013$, $+0.0020$] \\
+MinMax--LERP K32 & $+0.0019$ [$+0.0005$, $+0.0034$] \\
+\FW--Prob K4 & $+0.0193$ [$+0.0179$, $+0.0207$] \\
+\FW--Weight K4 & $+0.0427$ [$+0.0410$, $+0.0445$] \\
+\FW--Weight K16 & $+0.0039$ [$+0.0023$, $+0.0055$] \\
+\FW--LERP K4 & $+0.0069$ [$+0.0055$, $+0.0083$] \\
+IndexSoftmax, UINT8 & $+0.0172$ [$+0.0156$, $+0.0189$] \\
+\bottomrule
+\end{tabular}

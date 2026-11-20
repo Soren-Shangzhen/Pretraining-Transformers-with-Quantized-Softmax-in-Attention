@@ -1,0 +1,13 @@
+\begin{tabular}{lllll}
+\toprule
+Condition (seed 1337, 100M) & historical backward & historical $-$ softmax & full-gradient $-$ softmax & historical $-$ full \\
+\midrule
+MinMax--Weight K2 & detach & +2.467 [+2.410, +2.525] & --- & --- \\
+MinMax--Weight K4 & detach & +1.023 [+1.000, +1.045] & +0.1979 [+0.193, +0.203] & +0.825 [+0.806, +0.845] \\
+MinMax--Weight K8 & detach & +3.200 [+3.141, +3.258] & +0.1331 [+0.130, +0.137] & +3.066 [+3.009, +3.125] \\
+MinMax--Weight K16 & detach & +1.157 [+1.131, +1.185] & +0.0778 [+0.076, +0.080] & +1.079 [+1.053, +1.107] \\
+LERP K4 & detach & +0.748 [+0.733, +0.764] & +0.0944 [+0.091, +0.098] & +0.654 [+0.639, +0.668] \\
+LERP K32 & detach & +0.736 [+0.719, +0.752] & -0.0008 [-0.004, +0.002] & +0.737 [+0.721, +0.752] \\
+LERP K32 & detach + zero-sum proj. & +0.996 [+0.977, +1.013] & -0.0008 [-0.004, +0.002] & +0.997 [+0.979, +1.015] \\
+\bottomrule
+\end{tabular}

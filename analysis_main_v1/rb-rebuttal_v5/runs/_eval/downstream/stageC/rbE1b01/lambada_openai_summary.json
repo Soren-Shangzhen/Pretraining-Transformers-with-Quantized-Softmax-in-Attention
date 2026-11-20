@@ -1,0 +1,63 @@
+{
+  "condition": "rb-E1b-01",
+  "run_name": "rb-E1b-01",
+  "cfg": "lambada_openai",
+  "task": "lambada_openai",
+  "kind": "lambada",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 4,
+    "approx": "lerp",
+    "range_grad": "full",
+    "range_mode": "relevant_zero",
+    "range_tau": 6.0,
+    "tail_policy": "zero",
+    "resolved_h0": "",
+    "attn_variant": "",
+    "exaq_bits": 3,
+    "ema_decay": 0.999,
+    "nearest_surrogate": "prob"
+  },
+  "n_docs": 5153,
+  "n_rows": 5153,
+  "n_requests": 5153,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "3866b625240b7e88ef8a571e7cbaa6b3",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "lambada_openai": {
+      "name": "lambada_openai",
+      "alias": "lambada_openai",
+      "sample_len": 5153,
+      "perplexity,none": 212.9717635599117,
+      "perplexity_stderr,none": 10.955047635587935,
+      "acc,none": 0.217931302154085,
+      "acc_stderr,none": 0.005751674912949505
+    }
+  },
+  "seconds": 102.0,
+  "fingerprint": {
+    "checkpoint_sha256": "ef64eb0bad98839342701ed3cd6d688ced00ec8278b0bbacd667cc6ea424355f",
+    "train_code_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+    "lm_eval_version": "0.4.13",
+    "task": "lambada_openai",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}

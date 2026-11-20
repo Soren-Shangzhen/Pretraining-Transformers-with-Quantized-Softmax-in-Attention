@@ -1,0 +1,507 @@
+{
+  "env": {
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "rb_root_sha256": {
+      "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+      "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+      "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+    }
+  },
+  "checks": [
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_lerp_K4_full",
+      "passed": true,
+      "max_abs_err": "2.22e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_weight_strict_K4_full",
+      "passed": true,
+      "max_abs_err": "2.22e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_prob_K4_full",
+      "passed": true,
+      "max_abs_err": "2.22e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_lerp_K4_detach",
+      "passed": true,
+      "max_abs_err": "2.91e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_weight_strict_K4_detach",
+      "passed": true,
+      "max_abs_err": "1.80e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_prob_K4_detach",
+      "passed": true,
+      "max_abs_err": "2.91e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): resolved_weight_strict_K4",
+      "passed": true,
+      "max_abs_err": "3.33e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): resolved_weight_strict_K4_forward_vs_direct_f64",
+      "passed": true,
+      "max_abs_err": "1.11e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): resolved_prob_K4",
+      "passed": true,
+      "max_abs_err": "2.22e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): resolved_prob_K4_forward_vs_direct_f64",
+      "passed": true,
+      "max_abs_err": "1.11e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_lerp_K16_full",
+      "passed": true,
+      "max_abs_err": "2.43e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_weight_strict_K16_full",
+      "passed": true,
+      "max_abs_err": "3.33e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_prob_K16_full",
+      "passed": true,
+      "max_abs_err": "2.43e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_lerp_K16_detach",
+      "passed": true,
+      "max_abs_err": "7.36e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_weight_strict_K16_detach",
+      "passed": true,
+      "max_abs_err": "6.52e-16"
+    },
+    {
+      "name": "closed-form vs autograd (float64, 200 random rows): fwm_nearest_prob_K16_detach",
+      "passed": true,
+      "max_abs_err": "7.36e-16"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_lerp_K4_full",
+      "passed": true,
+      "max_abs_rowsum": "5.55e-17"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_nearest_weight_strict_K4_full",
+      "passed": true,
+      "max_abs_rowsum": "9.28e-17"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_nearest_prob_K4_full",
+      "passed": true,
+      "max_abs_rowsum": "5.55e-17"
+    },
+    {
+      "name": "row gradient sums to zero (full): resolved_weight_strict_K4",
+      "passed": true,
+      "max_abs_rowsum": "2.78e-16"
+    },
+    {
+      "name": "row gradient sums to zero (full): resolved_prob_K4",
+      "passed": true,
+      "max_abs_rowsum": "1.11e-16"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_lerp_K16_full",
+      "passed": true,
+      "max_abs_rowsum": "1.11e-16"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_nearest_weight_strict_K16_full",
+      "passed": true,
+      "max_abs_rowsum": "1.11e-16"
+    },
+    {
+      "name": "row gradient sums to zero (full): fwm_nearest_prob_K16_full",
+      "passed": true,
+      "max_abs_rowsum": "1.11e-16"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale0.5: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "4.8e-08"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K4 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K4 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale0.5: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "4.1e-08"
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K16 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K16 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer0 (h0=1.3) scale0.5: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "6.0e-08"
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer1 (h0=2.9) scale0.5: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "3.0e-08"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale2.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.2e-07"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K4 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K4 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale2.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.8e-07"
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K16 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K16 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer0 (h0=1.3) scale2.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "2.1e-07"
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer1 (h0=2.9) scale2.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.5e-07"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale6.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.2e-07"
+    },
+    {
+      "name": "[cpu] FWM-LERP K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K4 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K4 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale6.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.1e-07"
+    },
+    {
+      "name": "[cpu] FWM-LERP K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest weight_strict K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] FWM-Nearest prob K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] minmax-Nearest K16 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] relevant_zero-Nearest K16 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer0 (h0=1.3) scale6.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.9e-07"
+    },
+    {
+      "name": "[cpu] resolved freeze-h layer1 (h0=2.9) scale6.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "3.2e-07"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale0.5: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "4.4e-08"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K4 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K4 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K4 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale0.5: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "3.1e-08"
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K16 scale0.5: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K16 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K16 scale0.5: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer0 (h0=1.3) scale0.5: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "4.5e-08"
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer1 (h0=2.9) scale0.5: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "9.9e-09"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale2.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "8.9e-08"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K4 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K4 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K4 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale2.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "9.4e-08"
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K16 scale2.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K16 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K16 scale2.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer0 (h0=1.3) scale2.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.3e-07"
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer1 (h0=2.9) scale2.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.2e-07"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale6.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.2e-07"
+    },
+    {
+      "name": "[cuda] FWM-LERP K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K4 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K4 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K4 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale6.0: training forward == direct computation (bitwise)",
+      "passed": true,
+      "max_abs": "0.0e+00",
+      "vs_f64": "1.1e-07"
+    },
+    {
+      "name": "[cuda] FWM-LERP K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest weight_strict K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] FWM-Nearest prob K16 scale6.0: detach forward == full forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] minmax-Nearest K16 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] relevant_zero-Nearest K16 scale6.0: strict Weight-STE forward == strict Prob-STE forward (bitwise)",
+      "passed": true
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer0 (h0=1.3) scale6.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.7e-07"
+    },
+    {
+      "name": "[cuda] resolved freeze-h layer1 (h0=2.9) scale6.0: Weight-STE fwd == Prob-STE fwd (bitwise)",
+      "passed": true,
+      "vs_direct_f64": "1.7e-07"
+    }
+  ],
+  "all_pass": true
+}

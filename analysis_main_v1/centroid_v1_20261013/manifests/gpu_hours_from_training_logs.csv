@@ -1,0 +1,7 @@
+run,gpu_hours
+cv1_s7_fw_centroid2_k4_tau6_100m,5.370117930872721
+cv1_s7_fw_centroid_k4_tau6_100m,7.778328882924406
+cv1_s7_minmax_centroid2_k4_100m,5.899678300918703
+cv1_s7_minmax_centroid_k4_100m,4.90137672366703
+cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m,7.088116657738354
+TOTAL,31.037618496121215

@@ -1,0 +1,16 @@
+\setlength{\tabcolsep}{3pt}\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.1cm}*{9}{>{\raggedleft\arraybackslash}p{0.95cm}}@{}}
+\toprule
+ & \multicolumn{2}{c}{1--64 keys} & \multicolumn{2}{c}{65--256 keys} & \multicolumn{2}{c}{257--512 keys} & \multicolumn{3}{c@{}}{513--1024 keys} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-10}
+ & mass set to zero & row sum & mass set to zero & row sum & mass set to zero & row sum & mass set to zero & row sum & all-zero rows \\
+\midrule
+IndexSoftmax UINT8, 100M, seed 7 & 0.0039 & 0.9990 & 0.0379 & 0.9830 & 0.1094 & 0.9359 & 0.1778 & 0.8697 & 3.39e-6 \\
+IndexSoftmax UINT8, 100M, seed 42 & 0.0039 & 0.9991 & 0.0393 & 0.9820 & 0.1123 & 0.9331 & 0.1803 & 0.8677 & 0 \\
+IndexSoftmax UINT8, 100M, seed 1337 & 0.0039 & 0.9991 & 0.0377 & 0.9833 & 0.1047 & 0.9378 & 0.1651 & 0.8800 & 1.70e-6 \\
+IndexSoftmax UINT8, 250M & 0.0042 & 0.9995 & 0.0379 & 0.9837 & 0.1090 & 0.9392 & 0.1680 & 0.8787 & 7.97e-5 \\
+IndexSoftmax UINT8, 2.5B & 0.0042 & 0.9999 & 0.0347 & 0.9860 & 0.0876 & 0.9568 & 0.1471 & 0.8941 & 2.21e-3 \\
+softmax control, seed 7$^{\ast}$ & 0.0039 & 0.9991 & 0.0371 & 0.9834 & 0.1021 & 0.9390 & 0.1634 & 0.8816 & 1.70e-6 \\
+softmax control, seed 42$^{\ast}$ & 0.0037 & 0.9992 & 0.0369 & 0.9838 & 0.1046 & 0.9374 & 0.1678 & 0.8776 & 0 \\
+softmax control, seed 1337$^{\ast}$ & 0.0038 & 0.9991 & 0.0374 & 0.9833 & 0.1039 & 0.9375 & 0.1677 & 0.8771 & 1.70e-6 \\
+\bottomrule
+\end{tabular}

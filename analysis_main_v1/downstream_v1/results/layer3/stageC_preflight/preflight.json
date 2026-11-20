@@ -1,0 +1,530 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "native operator from checkpoint config",
+      "passed": true,
+      "detail": "{'attn': 'quant', 'K': 4, 'approx': 'nearest', 'range_grad': 'full', 'range_mode': 'relevant_zero', 'range_tau': 6.0}"
+    },
+    {
+      "check": "model in eval mode, dropout inactive",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "native forward is not silently exact softmax",
+      "passed": true,
+      "detail": "max|native-exact| logit diff = 6.2461; native attn_mode=quant"
+    },
+    {
+      "check": "Exact condition native == exact_fp32_softmax",
+      "passed": true,
+      "detail": "{'attn': 'exact_fp32_softmax', 'K': 8, 'approx': 'lerp', 'range_grad': 'detach', 'range_mode': 'minmax', 'range_tau': 6.0}"
+    },
+    {
+      "check": "Exact/blimp: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.813433 vs 0.813433"
+    },
+    {
+      "check": "Exact/blimp: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 268"
+    },
+    {
+      "check": "Exact/blimp: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/blimp: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.450000 vs 0.450000"
+    },
+    {
+      "check": "Exact/arc_easy: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.350000 vs 0.350000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "Exact/arc_easy: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "Exact/arc_easy: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/arc_easy: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/lambada_openai: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.350000 vs 0.350000"
+    },
+    {
+      "check": "Exact/lambada_openai: harness perplexity is per-example exp(mean target NLL)",
+      "passed": true,
+      "detail": "exp(mean NLL)=264.5221  token-weighted=127.7876  harness=264.5221"
+    },
+    {
+      "check": "Exact/lambada_openai: one row per document, no duplicates",
+      "passed": true,
+      "detail": "20 rows"
+    },
+    {
+      "check": "Exact/sciq_default: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.650000 vs 0.650000"
+    },
+    {
+      "check": "Exact/sciq_default: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.650000 vs 0.650000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "Exact/sciq_default: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "Exact/sciq_default: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_default: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.350000 vs 0.350000"
+    },
+    {
+      "check": "Exact/sciq_nosupport: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.350000 vs 0.350000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "Exact/sciq_nosupport: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "Exact/sciq_nosupport: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exact/sciq_nosupport: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.798507 vs 0.798507"
+    },
+    {
+      "check": "QRM-Weight K4/blimp: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 268"
+    },
+    {
+      "check": "QRM-Weight K4/blimp: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/blimp: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.500000 vs 0.500000"
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.350000 vs 0.350000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/arc_easy: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/lambada_openai: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.300000 vs 0.300000"
+    },
+    {
+      "check": "QRM-Weight K4/lambada_openai: harness perplexity is per-example exp(mean target NLL)",
+      "passed": true,
+      "detail": "exp(mean NLL)=323.2609  token-weighted=152.1319  harness=323.2609"
+    },
+    {
+      "check": "QRM-Weight K4/lambada_openai: one row per document, no duplicates",
+      "passed": true,
+      "detail": "20 rows"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.800000 vs 0.800000"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.700000 vs 0.700000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_default: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: rebuilt acc == harness acc",
+      "passed": true,
+      "detail": "0.500000 vs 0.500000"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: rebuilt acc_norm == harness acc_norm",
+      "passed": true,
+      "detail": "0.400000 vs 0.400000  (denominator = raw choice characters, delimiter excluded)"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: exactly one gold candidate per document",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: acc_correct == argmax(raw logprob) hits gold",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: margin == gold token-norm minus best wrong",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: no truncation in this sample",
+      "passed": true,
+      "detail": "0 truncated of 80"
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: scored-token count > 0 everywhere",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: token-norm score == raw / n_scored_tokens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: choice_chars == cont_chars minus target delimiter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: per-sample harness acc_norm == rebuilt acc_norm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "QRM-Weight K4/sciq_nosupport: no failed rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "blimp: identical example set, order and scored inputs across conditions",
+      "passed": true,
+      "detail": "7c55028efa616527"
+    },
+    {
+      "check": "arc_easy: identical example set, order and scored inputs across conditions",
+      "passed": true,
+      "detail": "ab79a00df71721bd"
+    },
+    {
+      "check": "lambada_openai: identical example set, order and scored inputs across conditions",
+      "passed": true,
+      "detail": "6c666b96d2c2f706"
+    },
+    {
+      "check": "sciq_default: identical example set, order and scored inputs across conditions",
+      "passed": true,
+      "detail": "2351e4f9efcdc5c5"
+    },
+    {
+      "check": "sciq_nosupport: identical example set, order and scored inputs across conditions",
+      "passed": true,
+      "detail": "248ed8e7fe5f9c03"
+    },
+    {
+      "check": "SciQ arms: same documents, one-to-one by doc_id",
+      "passed": true,
+      "detail": "20 docs"
+    },
+    {
+      "check": "SciQ arms: identical original document hashes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SciQ arms: identical gold index and candidate order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SciQ arms: different scored inputs (support removed)",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

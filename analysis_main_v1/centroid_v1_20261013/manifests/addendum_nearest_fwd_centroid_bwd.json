@@ -1,0 +1,32 @@
+{
+  "name": "centroid_v1 addendum: hard Nearest forward + Centroid backward",
+  "date": "2026-10-14",
+  "status": "written before the run; requested by the user ('只做一个：Nearest 前向 + Centroid 反向'); the only run of this addendum",
+  "question": "Is the FW-Centroid K4 training gap (+0.142 vs strict FW-Prob K4 at seed 7) caused by the Centroid backward or by the Centroid forward?",
+  "operator": "approx nearest_centroid_bwd in code/centroid_root_v2: P = P_N.detach() + (P_C - P_C.detach()); P_N the strict hard FW-Nearest probabilities (bitwise equal to the E2 strict Prob-STE root's forward, check V2), P_C the normalized Centroid probabilities on the same K+1 Nearest cells (FW tau 6, zero tail). Same surrogate placement as strict Prob-STE; only the surrogate branch (LERP -> Centroid) differs.",
+  "run": {"name": "cv1b_s7_fw_nearestfwd_centroidbwd_k4_tau6_100m",
+          "args": "--attn quant --approx nearest_centroid_bwd --cells nearest --K 4 --range_mode relevant_zero --range_tau 6 --range_grad full",
+          "recipe": "identical to the four centroid_v1 runs (124M, WikiText-103, 100M tokens, seed 7, local RTX 3090, bta env, eval every 5M on 100 batches for logging)",
+          "output_dir": "adaptive_k_interval_training_phaseB/files_adaptive_quant_phaseB/centroid_runs_20261013/"},
+  "evaluation": "20/40/60/80/100M checkpoints with code/eval_v2 (copy of code/eval; the geometry probe treats this mode as Nearest), full validation 243 blocks, batch 1, bf16 autocast outside fp32 attention, TF32 off, local 3090",
+  "decomposition_100M": {
+    "B_backward_effect": "NfCb - FWM-Prob K4 strict (same strict hard Nearest forward; Centroid vs LERP Jacobian)",
+    "F_forward_effect": "FW-Centroid - NfCb (same Centroid backward; Centroid vs Nearest forward)",
+    "total": "FW-Centroid - FWM-Prob K4 strict = B + F",
+    "backward_share": "B / total, from the same circular moving-block resamples for all three per-block arrays (block 16, 4000 resamples, RNG 20260920)"
+  },
+  "decision_rules": {
+    "backward_dominated": "CI of B excludes 0 and backward_share point estimate >= 0.75",
+    "forward_dominated": "CI of F excludes 0 and backward_share point estimate <= 0.25",
+    "mixed": "otherwise; report B, F and the share with intervals",
+    "labels": "per-contrast labels as in protocol_centroid_v1.json (not_separable / suggestive / clear_single_seed, Exact seed SD 0.0062)"
+  },
+  "secondary": ["NfCb - softmax", "NfCb - FWM-Prob K4 hist", "NfCb - FWM-Weight K4 hist (same local 3090 stack)", "trajectory 20-100M", "training-log stability", "geometry at 100M", "step-0 Q/K gradient norms (check V5)"],
+  "caveats_declared_in_advance": [
+    "single seed; evaluation CIs cover validation sampling only",
+    "the strict FWM-Prob control was trained on the gpu-host-A RTX 5090, the new run and FW-Centroid on the local 3090; previously audited stack effects are <= ~0.01, so B and F smaller than about 0.02 are not interpreted as mechanism evidence",
+    "the five-seed FWM-Prob K4 mean (+0.013, SD 0.009) is quoted as a second reference for the Nearest-forward/LERP-backward level"
+  ],
+  "no_adaptive_changes": "no early stopping, no further runs decided from this result",
+  "compute": "one run, about 5.5 h on the local 3090 alone, plus 5 checkpoint evaluations"
+}

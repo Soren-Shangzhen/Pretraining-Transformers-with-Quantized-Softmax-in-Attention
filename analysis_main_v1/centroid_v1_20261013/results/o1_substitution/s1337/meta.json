@@ -1,0 +1,9 @@
+{
+ "seed": 1337,
+ "checkpoint": "<REPO>/adaptive_k_interval_training_code_exact_fp32/files_adaptive_quant/runs/exact_fp32_softmax_100m/ckpt.pt",
+ "checkpoint_sha256": "15ccadda1b407a3fb8c78c37d3dccbba9f217dbbd08d35d0cebce9f19f13c305",
+ "ops_ref_sha256": "dffdf8e1a697f37b1567a8ede2995ceb676b04bf6cc365f0dedd2d3e9bffb31e",
+ "root_quant_sha256": "23f92c06b13e9a589b3cfe732a4f0b616791e46a62228cc49f5595ed9d1357b0",
+ "torch": "2.5.1+cu121",
+ "gpu": "NVIDIA GeForce RTX 3090"
+}

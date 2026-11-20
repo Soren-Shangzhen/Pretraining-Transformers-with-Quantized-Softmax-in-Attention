@@ -1,0 +1,28 @@
+{
+ "checkpoint": {
+  "path": "<POD_WORKSPACE>/A_eval_model_only/rb-E1b-01/ckpt_step019074_2500.1m.model_only.pt",
+  "realpath": "<POD_WORKSPACE>/A_eval_model_only/rb-E1b-01/ckpt_step019074_2500.1m.model_only.pt",
+  "bytes": 497528202,
+  "sha256": "ef64eb0bad98839342701ed3cd6d688ced00ec8278b0bbacd667cc6ea424355f",
+  "manifest_sha256": "ef64eb0bad98839342701ed3cd6d688ced00ec8278b0bbacd667cc6ea424355f",
+  "manifest_source": "<POD_WORKSPACE>/A_eval_model_only/SHA256SUMS",
+  "matches_manifest": true
+ },
+ "code_root": {
+  "path": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+  "files": {
+   "model.py": "3b120bfc2eae2a2b5f2e208ddc2fdb0b763b98383d3986497fee4e15419d1fda",
+   "quant_attention.py": "d563382c6a50d0e342e63deb1d90867bc05f4aaa29095aa247ae13ea607613e7",
+   "train_formal.py": "6a57f132be8771f6c8cc1457b8ca46c839fcb16ddc9d4b37245ae3d2ad9af4c4"
+  },
+  "sha256_of_file_hashes": "bcd74227691420bc0765d976b37e58de3e06ca1cd84d0e7713e82bcea50ee735"
+ },
+ "other_code_roots": [],
+ "scripts": {
+  "rb_downstream.py": "72dd82915b96aabea0865254513208f71bc6f4663a8b0ecf4a00877ea92bd5c0",
+  "rb_eval.py": "b06254b169e88b91206c6100876df1e56f963a7418ed670d9b904b4b83851998",
+  "rb_provenance.py": "94e665289cb51a0ddfde192abce22f4f6eb10ebae015ce907c8620668501f5ed",
+  "common_loader.py": "c7a2e67fcf2bfd14d336cb47241b1dd8e7e438c467d502457429faba712087ce",
+  "layer3_stageC.py": "a3e6f49a3c6406fd00c3b6404def394076e4b0dfa441699b26638f21f7147b91"
+ }
+}

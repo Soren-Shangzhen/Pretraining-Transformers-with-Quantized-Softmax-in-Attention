@@ -1,0 +1,30 @@
+[
+ {
+  "label": "C2_FWMP4S_s7",
+  "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/supplement_four_runs_20260923/code/e2_fwm_probste_strict",
+  "checkpoint": "<POD_WORKSPACE>/endpoints_from_local/sp_s7_fwm_nearest_k4_tau6_probste_strict_100m.100m.model_only.pt",
+  "dataset": "wikitext103",
+  "tokens_m": "100",
+  "role": "e2_fwm_probste_strict",
+  "surrogate": "prob",
+  "recorded_nll": "4.133017",
+  "recorded_gpu": "RTX 5090",
+  "got_nll": 4.133016777627262,
+  "diff": -2.2237273800129742e-07,
+  "passed": true
+ },
+ {
+  "label": "C2_FWMP4S_s7_rb",
+  "eval_root": "<POD_WORKSPACE>/Training/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1",
+  "checkpoint": "<POD_WORKSPACE>/endpoints_from_local/sp_s7_fwm_nearest_k4_tau6_probste_strict_100m.100m.model_only.pt",
+  "dataset": "wikitext103",
+  "tokens_m": "100",
+  "role": "rb-root_v1 strict FWM",
+  "surrogate": "prob",
+  "recorded_nll": "4.133017",
+  "recorded_gpu": "RTX 5090",
+  "got_nll": 4.133016777627262,
+  "diff": -2.2237273800129742e-07,
+  "passed": true
+ }
+]

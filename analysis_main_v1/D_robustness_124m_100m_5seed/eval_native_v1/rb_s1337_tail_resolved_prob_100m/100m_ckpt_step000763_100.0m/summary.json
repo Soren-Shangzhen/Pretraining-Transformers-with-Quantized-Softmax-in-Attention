@@ -1,0 +1,13 @@
+{
+  "run_name": "rb_s1337_tail_resolved_prob_100m",
+  "cond": "tail-resolved-Prob K4",
+  "seed": 1337,
+  "tail_policy": "resolved",
+  "code_root": "<REPO>/training_code/phaseB_base/code/rb_tail_prob",
+  "step": 763,
+  "tokens_done": 100007936,
+  "is_final": 1,
+  "n_blocks": 243,
+  "mean_nll": 4.163652585857689,
+  "checkpoint": "<REPO>/training_code/phaseB_base/runs_20260921/rb_s1337_tail_resolved_prob_100m/ckpt_step000763_100.0m.pt"
+}

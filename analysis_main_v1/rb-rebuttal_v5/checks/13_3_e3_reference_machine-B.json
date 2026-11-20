@@ -1,0 +1,556 @@
+{
+ "reference_meta": {
+  "source": "IntAttention-main ArtifactEvaluation/pysimulation (loaded read-only, not copied)",
+  "torch": "2.5.1+cu121",
+  "gpu": "NVIDIA GeForce RTX 3090"
+ },
+ "torch": "2.13.0+cu132",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "all_bitwise": false,
+ "results": [
+  {
+   "case": "random_n64_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1184,
+   "max_abs_diff": 1.1175870895385742e-08
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 2011,
+   "max_abs_diff": 1.1920928955078125e-07
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1772,
+   "max_abs_diff": 1.1920928955078125e-07
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n64_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": false,
+   "n_diff": 7903,
+   "max_abs_diff": 2.980232238769531e-07
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 70520,
+   "max_abs_diff": 1.4901161193847656e-08
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 68915,
+   "max_abs_diff": 4.76837158203125e-07
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 74446,
+   "max_abs_diff": 4.76837158203125e-07
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n256_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": false,
+   "n_diff": 128885,
+   "max_abs_diff": 2.384185791015625e-07
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 865374,
+   "max_abs_diff": 7.450580596923828e-09
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s0.3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 912618,
+   "max_abs_diff": 1.2814998626708984e-06
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s3.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 977261,
+   "max_abs_diff": 2.0265579223632812e-06
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "random_n1024_s8.0",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": false,
+   "n_diff": 1043721,
+   "max_abs_diff": 2.384185791015625e-07
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 971,
+   "max_abs_diff": 2.9802322387695312e-08
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "bin_boundaries",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": false,
+   "n_diff": 6780,
+   "max_abs_diff": 5.960464477539063e-08
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1098276,
+   "max_abs_diff": 1.1920928955078125e-07
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1865347,
+   "max_abs_diff": 1.4901161193847656e-07
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_softmax_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1565109,
+   "max_abs_diff": 2.9802322387695312e-08
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L0_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cpu",
+   "bitwise": false,
+   "n_diff": 1535309,
+   "max_abs_diff": 1.9371509552001953e-07
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "E3a-i",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "real_fwm_weight_k4_s7_100m_L11_h0-3",
+   "op": "EXAQ",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits6_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits10_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n64",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n64",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n512",
+   "op": "E3a-ii codes",
+   "device": "cpu",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  },
+  {
+   "case": "int_nbits12_n512",
+   "op": "E3a-ii codes",
+   "device": "cuda",
+   "bitwise": true,
+   "n_diff": 0,
+   "max_abs_diff": 0.0
+  }
+ ]
+}

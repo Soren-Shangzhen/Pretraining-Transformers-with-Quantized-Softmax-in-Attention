@@ -1,0 +1,17 @@
+{
+  "sample_id_hash": {
+    "A": "81adcc86b5d3a9157625add76f802dc216a6a5592ce0d12e9d3cb52ee659e170",
+    "B": "f1c6aa8240dd8c5c3137ae7d38e3dc504cac37cba13050fbd45dbe16a5368116",
+    "C": "9a51158867bacfe5a43c6cae5ba4a5fa248956bc8875f97d9fe721ab0554bf2d"
+  },
+  "probe_validity_exact_d64_induction_gain": {
+    "mean": 1.2238080894947052,
+    "ci_lo": 1.1259225773513317,
+    "ci_hi": 1.3275095443427563,
+    "positive": true
+  },
+  "exact_native_identity_Exact": {
+    "identical": true,
+    "max_abs_diff": 0.0
+  }
+}

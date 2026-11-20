@@ -1,0 +1,20 @@
+{
+  "task": "blimp",
+  "subset": "limit=200 per paradigm (~13,400 pairs of 67,000)",
+  "n_examples": 13400,
+  "n_requests": 26800,
+  "truncation_rate": 0.0,
+  "metric_name": "grammatical \u2212 ungrammatical log-likelihood margin",
+  "acc": 0.7947761194029851,
+  "acc_norm": 0.7433582089552239,
+  "chance": 0.5,
+  "acc_se": 0.0034888632993599327,
+  "acc_above_chance_pp": 29.47761194029851,
+  "metric_mean": 0.0667413562620812,
+  "metric_sd": 0.12277612889563035,
+  "metric_se": 0.0010606242116804232,
+  "detect_floor_metric": 0.0021212484233608464,
+  "detect_floor_acc_pp": 0.6977726598719866,
+  "mean_options": 2.0,
+  "seconds": null
+}

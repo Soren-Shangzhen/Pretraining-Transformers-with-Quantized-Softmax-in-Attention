@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# outputs of the paper generators (reference tables: paper/reference/tables/)
+/paper/tables/*.tex
+/paper/figures/*.pdf
+/paper/figures/*.png
+# unpacked reference tensors (gunzip -k of the .pt.gz)
+/analysis_main_v1/rb-rebuttal_v5/checks/e3_reference_tensors.pt
+# outputs of rb_dossier.py --out rb_dossier_regen and of rb_dossier_check.py
+/analysis_main_v1/rb-rebuttal_v5/code/eval/rb_dossier_regen/
+/analysis_main_v1/rb-rebuttal_v5/reports/rb-dossier_20261114/CHECK_REPORT.md
+# tokenized data and checkpoints
+/data/
+*.bin
+*.pt

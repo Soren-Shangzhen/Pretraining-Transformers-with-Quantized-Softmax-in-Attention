@@ -1,0 +1,11 @@
+\begin{tabular}{@{}lp{7.0cm}rr@{}}
+\toprule
+Format & Rule on $e^z$ & non-zero values & zero for $z\le$ \\
+\midrule
+BF16-exp & $\mathrm{bf16}(\exp(\mathrm{bf16}(z)))$ & 1021 & $-93$ \\
+FP8-E4M3 & E4M3 of $e^z$, round to nearest even & 56 & $-6.9315$ \\
+MXFP8-style & blocks of 32 keys, scale $2^{e}$ with $e$ the smallest integer such that block max $\le 448\cdot2^{e}$; E4M3 elements & 120 & $-12.4767$ \\
+NVFP4-style & tensor scale $2688/\max w$ (always 2688), blocks of 16 keys with E4M3 block scale, E2M1 elements & 7 & $-3.1781$ \\
+UINT8 & $\mathrm{round}(255\,e^z)/255$ (rounds $e^z$, not $p$) & 255 & $-6.2344$ \\
+\bottomrule
+\end{tabular}

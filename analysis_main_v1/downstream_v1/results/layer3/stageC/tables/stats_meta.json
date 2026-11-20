@@ -1,0 +1,70 @@
+{
+  "n_boot": 4000,
+  "boot_seed": 20260920,
+  "n_perm": 20000,
+  "perm_seed": 20260921,
+  "conditions": [
+    "Exact",
+    "LERP K1",
+    "LERP K2",
+    "LERP K4",
+    "LERP K16",
+    "LERP K32",
+    "MinMax-Prob K4",
+    "MinMax-Weight K4",
+    "MinMax-Weight K16",
+    "MinMax-Weight K32",
+    "MinMax-Weight K64",
+    "QRM-Prob K4",
+    "QRM-Weight K2",
+    "QRM-Weight K4",
+    "QRM-Weight K16"
+  ],
+  "configs": [
+    "blimp",
+    "hellaswag",
+    "piqa",
+    "arc_easy",
+    "sciq_default",
+    "sciq_nosupport",
+    "lambada_openai"
+  ],
+  "bh_families": {
+    "blimp:acc_macro": 14,
+    "blimp:margin_macro": 14,
+    "hellaswag:acc_norm": 14,
+    "hellaswag:acc": 14,
+    "hellaswag:margin": 14,
+    "piqa:acc_norm": 14,
+    "piqa:acc": 14,
+    "piqa:margin": 14,
+    "arc_easy:acc_norm": 14,
+    "arc_easy:acc": 14,
+    "arc_easy:margin": 14,
+    "sciq_default:acc": 14,
+    "sciq_default:acc_norm": 14,
+    "sciq_default:margin": 14,
+    "sciq_nosupport:acc": 14,
+    "sciq_nosupport:acc_norm": 14,
+    "sciq_nosupport:margin": 14,
+    "lambada_openai:acc": 14,
+    "lambada_openai:target_nll_corpus_token_weighted": 14,
+    "lambada_openai:target_nll_example_mean": 14,
+    "lambada_openai:target_nll_token_norm_example_mean": 14
+  },
+  "sciq_did_families": {
+    "sciq_did:acc": 14,
+    "sciq_did:acc_norm": 14
+  },
+  "n_documents": {
+    "blimp": 13400,
+    "hellaswag": 10042,
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "sciq_default": 1000,
+    "sciq_nosupport": 1000,
+    "lambada_openai": 5153
+  },
+  "blimp_n_paradigms": 67,
+  "note": "95% bootstrap intervals are not multiplicity-adjusted; BH q values are per (configuration x metric) family of 14 comparisons. Single training seed per condition: all intervals and tests reflect evaluation-sample uncertainty only."
+}

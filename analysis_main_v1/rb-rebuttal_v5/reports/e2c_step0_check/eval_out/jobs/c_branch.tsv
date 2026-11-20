@@ -1,0 +1,2 @@
+label	eval_root	checkpoint	dataset	tokens_m	role	surrogate
+branch_E2c03	<REPO>/analysis_main_v1/rb-rebuttal_v5/code/rb-root_v1	<REPO>/training_code/phaseB_base/rb-runs_B_20261110/rb-E2c-03/ckpt_step001947_255.2m.pt	finewebedu_3b	255.215616	branch	weight_strict

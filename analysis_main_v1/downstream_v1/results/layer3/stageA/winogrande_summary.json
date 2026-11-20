@@ -1,0 +1,20 @@
+{
+  "task": "winogrande",
+  "subset": "full",
+  "n_examples": 1267,
+  "n_requests": 2534,
+  "truncation_rate": 0.0,
+  "metric_name": "length-normalised margin (gold \u2212 best wrong)",
+  "acc": 0.4340962904498816,
+  "acc_norm": 0.4340962904498816,
+  "chance": 0.5,
+  "acc_se": 0.013924384279357615,
+  "acc_above_chance_pp": -6.590370955011837,
+  "metric_mean": -0.008104326689257679,
+  "metric_sd": 0.07577756353851871,
+  "metric_se": 0.002128885627288596,
+  "detect_floor_metric": 0.004257771254577192,
+  "detect_floor_acc_pp": 2.784876855871523,
+  "mean_options": 2.0,
+  "seconds": null
+}

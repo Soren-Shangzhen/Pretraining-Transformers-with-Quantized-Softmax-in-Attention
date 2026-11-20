@@ -1,0 +1,21 @@
+\begin{tabular}{llrlrcc}
+\toprule
+Condition & Corpus & $\dNLL$ & 95\% CI & BH $q$ & CI excl.\ 0 & CI inside $\pm0.01$ \\
+\midrule
+LERP K2 & WikiText-103 test & +0.0052 & [-0.0005, +0.0106] & 0.087 & no & no \\
+LERP K2 & PTB test & -0.0162 & [-0.0235, -0.0090] & <0.001 & yes & no \\
+LERP K2 & C4 validation & +0.0131 & [+0.0096, +0.0165] & <0.001 & yes & no \\
+LERP K4 & WikiText-103 test & +0.0023 & [-0.0020, +0.0068] & 0.318 & no & yes \\
+LERP K4 & PTB test & -0.0177 & [-0.0238, -0.0123] & <0.001 & yes & no \\
+LERP K4 & C4 validation & +0.0045 & [+0.0012, +0.0078] & 0.007 & yes & yes \\
+LERP K16 & WikiText-103 test & -0.0084 & [-0.0130, -0.0036] & <0.001 & yes & no \\
+LERP K16 & PTB test & -0.0578 & [-0.0639, -0.0519] & <0.001 & yes & no \\
+LERP K16 & C4 validation & -0.0007 & [-0.0036, +0.0022] & 0.656 & no & yes \\
+LERP K32 & WikiText-103 test & -0.0059 & [-0.0099, -0.0021] & 0.004 & yes & yes \\
+LERP K32 & PTB test & -0.0393 & [-0.0460, -0.0330] & <0.001 & yes & no \\
+LERP K32 & C4 validation & +0.0011 & [-0.0015, +0.0038] & 0.444 & no & yes \\
+FWM--Weight K16 & WikiText-103 test & -0.0021 & [-0.0070, +0.0026] & 0.391 & no & yes \\
+FWM--Weight K16 & PTB test & +0.0227 & [+0.0167, +0.0286] & <0.001 & yes & no \\
+FWM--Weight K16 & C4 validation & +0.0050 & [+0.0018, +0.0082] & 0.002 & yes & yes \\
+\bottomrule
+\end{tabular}

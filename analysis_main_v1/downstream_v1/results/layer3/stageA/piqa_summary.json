@@ -1,0 +1,20 @@
+{
+  "task": "piqa",
+  "subset": "full",
+  "n_examples": 1838,
+  "n_requests": 3676,
+  "truncation_rate": 0.0,
+  "metric_name": "length-normalised margin (gold \u2212 best wrong)",
+  "acc": 0.6082698585418934,
+  "acc_norm": 0.6001088139281828,
+  "chance": 0.5,
+  "acc_se": 0.011385939961124131,
+  "acc_above_chance_pp": 10.826985854189342,
+  "metric_mean": 0.016571452299449934,
+  "metric_sd": 0.18110700504616664,
+  "metric_se": 0.004224375305646446,
+  "detect_floor_metric": 0.008448750611292893,
+  "detect_floor_acc_pp": 2.2771879922248264,
+  "mean_options": 2.0,
+  "seconds": null
+}

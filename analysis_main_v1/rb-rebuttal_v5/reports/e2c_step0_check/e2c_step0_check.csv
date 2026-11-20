@@ -1,0 +1,930 @@
+section,parent,item,value,unit,note
+step3,A250,recorded_nll_5090,4.946148487876673,nats,
+step3,A250,nll_a_native,4.945910524637973,nats,
+step3,A250,a_minus_recorded,-0.00023796323870062253,nats,
+step3,A250,nll_a_rbroot,4.9462156173635705,nats,
+step3,A250,nll_b_frozen,5.177732705581383,nats,
+step3,A250,diff_b_minus_a,0.2318221809434109,nats,
+step3,A250,ci_lo,0.22444427328520133,nats,
+step3,A250,ci_hi,0.23951489910727644,nats,
+step3,A250,frac_blocks_b_worse,1.0,fraction,
+step3,A250,diff_b_minus_arb,0.23151708821781347,nats,
+step3,A250,arb_minus_a,0.00030509272559744413,nats,
+step3,B50,recorded_nll_5090,5.451376285220756,nats,
+step3,B50,nll_a_native,5.451426690230604,nats,
+step3,B50,a_minus_recorded,5.040500984776486e-05,nats,
+step3,B50,nll_a_rbroot,5.451377908714482,nats,
+step3,B50,nll_b_frozen,5.467505249820772,nats,
+step3,B50,diff_b_minus_a,0.016078559590167688,nats,
+step3,B50,ci_lo,0.015245577118924407,nats,
+step3,B50,ci_hi,0.016897567227238515,nats,
+step3,B50,frac_blocks_b_worse,0.9272540983606558,fraction,
+step3,B50,diff_b_minus_arb,0.016127341106289723,nats,
+step3,B50,arb_minus_a,-4.878151612203629e-05,nats,
+step3,B125,recorded_nll_5090,4.575187379219493,nats,
+step3,B125,nll_a_native,4.575432153998828,nats,
+step3,B125,a_minus_recorded,0.00024477477933526615,nats,
+step3,B125,nll_a_rbroot,4.575584577732399,nats,
+step3,B125,nll_b_frozen,4.8083010687202705,nats,
+step3,B125,diff_b_minus_a,0.23286891472144206,nats,
+step3,B125,ci_lo,0.2271303869356386,nats,
+step3,B125,ci_hi,0.23884333082642714,nats,
+step3,B125,frac_blocks_b_worse,1.0,fraction,
+step3,B125,diff_b_minus_arb,0.2327164909878715,nats,
+step3,B125,arb_minus_a,0.00015242373357053662,nats,
+control,rb-E2c-03 255M,nll_native_rb_eval,8.502364220189266,nats,
+control,rb-E2c-03 255M,nll_through_wrapper,8.502364220189266,nats,
+control,rb-E2c-03 255M,bitwise_equal,True,,
+control,rb-E2c-03 255M,recorded_nll_5090,8.50238548243632,nats,
+step1,A250,step01_train_loss_WtoW,4.920573,,"optimizer step 1909, tokens 250.216M"
+step1,A250,step01_train_loss_frozen,5.160231,,"optimizer step 1909, tokens 250.216M"
+step1,A250,step01_train_loss_frozen_minus_WtoW,0.2396579999999994,,"optimizer step 1909, tokens 250.216M"
+step1,A250,step01_grad_norm_WtoW,4.871948,,"optimizer step 1909, tokens 250.216M"
+step1,A250,step01_grad_norm_frozen,225.671494,,"optimizer step 1909, tokens 250.216M"
+step1,A250,step02_train_loss_WtoW,4.939124,,"optimizer step 1910, tokens 250.348M"
+step1,A250,step02_train_loss_frozen,5.330276,,"optimizer step 1910, tokens 250.348M"
+step1,A250,step02_train_loss_frozen_minus_WtoW,0.3911519999999999,,"optimizer step 1910, tokens 250.348M"
+step1,A250,step02_grad_norm_WtoW,5.190099,,"optimizer step 1910, tokens 250.348M"
+step1,A250,step02_grad_norm_frozen,127.106415,,"optimizer step 1910, tokens 250.348M"
+step1,A250,step03_train_loss_WtoW,4.891913,,"optimizer step 1911, tokens 250.479M"
+step1,A250,step03_train_loss_frozen,5.506653,,"optimizer step 1911, tokens 250.479M"
+step1,A250,step03_train_loss_frozen_minus_WtoW,0.6147400000000003,,"optimizer step 1911, tokens 250.479M"
+step1,A250,step03_grad_norm_WtoW,3.078281,,"optimizer step 1911, tokens 250.479M"
+step1,A250,step03_grad_norm_frozen,336.618195,,"optimizer step 1911, tokens 250.479M"
+step1,A250,step04_train_loss_WtoW,4.900068,,"optimizer step 1912, tokens 250.61M"
+step1,A250,step04_train_loss_frozen,5.788475,,"optimizer step 1912, tokens 250.61M"
+step1,A250,step04_train_loss_frozen_minus_WtoW,0.888407,,"optimizer step 1912, tokens 250.61M"
+step1,A250,step04_grad_norm_WtoW,14.10034,,"optimizer step 1912, tokens 250.61M"
+step1,A250,step04_grad_norm_frozen,618.43927,,"optimizer step 1912, tokens 250.61M"
+step1,A250,step05_train_loss_WtoW,4.974936,,"optimizer step 1913, tokens 250.741M"
+step1,A250,step05_train_loss_frozen,5.978901,,"optimizer step 1913, tokens 250.741M"
+step1,A250,step05_train_loss_frozen_minus_WtoW,1.003965,,"optimizer step 1913, tokens 250.741M"
+step1,A250,step05_grad_norm_WtoW,11.232124,,"optimizer step 1913, tokens 250.741M"
+step1,A250,step05_grad_norm_frozen,46.6828,,"optimizer step 1913, tokens 250.741M"
+step1,A250,step06_train_loss_WtoW,4.964036,,"optimizer step 1914, tokens 250.872M"
+step1,A250,step06_train_loss_frozen,5.84828,,"optimizer step 1914, tokens 250.872M"
+step1,A250,step06_train_loss_frozen_minus_WtoW,0.8842439999999998,,"optimizer step 1914, tokens 250.872M"
+step1,A250,step06_grad_norm_WtoW,13.817849,,"optimizer step 1914, tokens 250.872M"
+step1,A250,step06_grad_norm_frozen,45.552746,,"optimizer step 1914, tokens 250.872M"
+step1,A250,step07_train_loss_WtoW,4.964857,,"optimizer step 1915, tokens 251.003M"
+step1,A250,step07_train_loss_frozen,5.744318,,"optimizer step 1915, tokens 251.003M"
+step1,A250,step07_train_loss_frozen_minus_WtoW,0.7794609999999995,,"optimizer step 1915, tokens 251.003M"
+step1,A250,step07_grad_norm_WtoW,7.096372,,"optimizer step 1915, tokens 251.003M"
+step1,A250,step07_grad_norm_frozen,70.400856,,"optimizer step 1915, tokens 251.003M"
+step1,A250,step08_train_loss_WtoW,4.977134,,"optimizer step 1916, tokens 251.134M"
+step1,A250,step08_train_loss_frozen,5.730364,,"optimizer step 1916, tokens 251.134M"
+step1,A250,step08_train_loss_frozen_minus_WtoW,0.7532299999999994,,"optimizer step 1916, tokens 251.134M"
+step1,A250,step08_grad_norm_WtoW,10.286894,,"optimizer step 1916, tokens 251.134M"
+step1,A250,step08_grad_norm_frozen,3742.087891,,"optimizer step 1916, tokens 251.134M"
+step1,A250,step09_train_loss_WtoW,4.978742,,"optimizer step 1917, tokens 251.265M"
+step1,A250,step09_train_loss_frozen,5.896998,,"optimizer step 1917, tokens 251.265M"
+step1,A250,step09_train_loss_frozen_minus_WtoW,0.9182560000000004,,"optimizer step 1917, tokens 251.265M"
+step1,A250,step09_grad_norm_WtoW,6.074398,,"optimizer step 1917, tokens 251.265M"
+step1,A250,step09_grad_norm_frozen,256.114227,,"optimizer step 1917, tokens 251.265M"
+step1,A250,step10_train_loss_WtoW,4.890519,,"optimizer step 1918, tokens 251.396M"
+step1,A250,step10_train_loss_frozen,5.87193,,"optimizer step 1918, tokens 251.396M"
+step1,A250,step10_train_loss_frozen_minus_WtoW,0.9814109999999996,,"optimizer step 1918, tokens 251.396M"
+step1,A250,step10_grad_norm_WtoW,7.578687,,"optimizer step 1918, tokens 251.396M"
+step1,A250,step10_grad_norm_frozen,27345.964844,,"optimizer step 1918, tokens 251.396M"
+step1,A250,step11_train_loss_WtoW,4.926016,,"optimizer step 1919, tokens 251.527M"
+step1,A250,step11_train_loss_frozen,5.939743,,"optimizer step 1919, tokens 251.527M"
+step1,A250,step11_train_loss_frozen_minus_WtoW,1.0137270000000005,,"optimizer step 1919, tokens 251.527M"
+step1,A250,step11_grad_norm_WtoW,16.275522,,"optimizer step 1919, tokens 251.527M"
+step1,A250,step11_grad_norm_frozen,25252.359375,,"optimizer step 1919, tokens 251.527M"
+step1,A250,step12_train_loss_WtoW,4.947011,,"optimizer step 1920, tokens 251.658M"
+step1,A250,step12_train_loss_frozen,6.038855,,"optimizer step 1920, tokens 251.658M"
+step1,A250,step12_train_loss_frozen_minus_WtoW,1.091844,,"optimizer step 1920, tokens 251.658M"
+step1,A250,step12_grad_norm_WtoW,10.886517,,"optimizer step 1920, tokens 251.658M"
+step1,A250,step12_grad_norm_frozen,570616.0625,,"optimizer step 1920, tokens 251.658M"
+step1,A250,step13_train_loss_WtoW,4.946687,,"optimizer step 1921, tokens 251.789M"
+step1,A250,step13_train_loss_frozen,6.140734,,"optimizer step 1921, tokens 251.789M"
+step1,A250,step13_train_loss_frozen_minus_WtoW,1.1940470000000003,,"optimizer step 1921, tokens 251.789M"
+step1,A250,step13_grad_norm_WtoW,4.970739,,"optimizer step 1921, tokens 251.789M"
+step1,A250,step13_grad_norm_frozen,209532.8125,,"optimizer step 1921, tokens 251.789M"
+step1,A250,step14_train_loss_WtoW,4.922433,,"optimizer step 1922, tokens 251.92M"
+step1,A250,step14_train_loss_frozen,6.249608,,"optimizer step 1922, tokens 251.92M"
+step1,A250,step14_train_loss_frozen_minus_WtoW,1.3271750000000004,,"optimizer step 1922, tokens 251.92M"
+step1,A250,step14_grad_norm_WtoW,2.289082,,"optimizer step 1922, tokens 251.92M"
+step1,A250,step14_grad_norm_frozen,6084118.0,,"optimizer step 1922, tokens 251.92M"
+step1,A250,step15_train_loss_WtoW,4.869301,,"optimizer step 1923, tokens 252.051M"
+step1,A250,step15_train_loss_frozen,6.405671,,"optimizer step 1923, tokens 252.051M"
+step1,A250,step15_train_loss_frozen_minus_WtoW,1.5363699999999998,,"optimizer step 1923, tokens 252.051M"
+step1,A250,step15_grad_norm_WtoW,5.813316,,"optimizer step 1923, tokens 252.051M"
+step1,A250,step15_grad_norm_frozen,1389998.375,,"optimizer step 1923, tokens 252.051M"
+step1,A250,step16_train_loss_WtoW,4.905665,,"optimizer step 1924, tokens 252.183M"
+step1,A250,step16_train_loss_frozen,6.495423,,"optimizer step 1924, tokens 252.183M"
+step1,A250,step16_train_loss_frozen_minus_WtoW,1.5897579999999998,,"optimizer step 1924, tokens 252.183M"
+step1,A250,step16_grad_norm_WtoW,5.49187,,"optimizer step 1924, tokens 252.183M"
+step1,A250,step16_grad_norm_frozen,3890481.0,,"optimizer step 1924, tokens 252.183M"
+step1,A250,step17_train_loss_WtoW,4.851512,,"optimizer step 1925, tokens 252.314M"
+step1,A250,step17_train_loss_frozen,6.536287,,"optimizer step 1925, tokens 252.314M"
+step1,A250,step17_train_loss_frozen_minus_WtoW,1.684775,,"optimizer step 1925, tokens 252.314M"
+step1,A250,step17_grad_norm_WtoW,1.991388,,"optimizer step 1925, tokens 252.314M"
+step1,A250,step17_grad_norm_frozen,80810.835938,,"optimizer step 1925, tokens 252.314M"
+step1,A250,step18_train_loss_WtoW,4.782414,,"optimizer step 1926, tokens 252.445M"
+step1,A250,step18_train_loss_frozen,6.596335,,"optimizer step 1926, tokens 252.445M"
+step1,A250,step18_train_loss_frozen_minus_WtoW,1.813921,,"optimizer step 1926, tokens 252.445M"
+step1,A250,step18_grad_norm_WtoW,2.251236,,"optimizer step 1926, tokens 252.445M"
+step1,A250,step18_grad_norm_frozen,125892.929688,,"optimizer step 1926, tokens 252.445M"
+step1,A250,step19_train_loss_WtoW,4.810137,,"optimizer step 1927, tokens 252.576M"
+step1,A250,step19_train_loss_frozen,6.702914,,"optimizer step 1927, tokens 252.576M"
+step1,A250,step19_train_loss_frozen_minus_WtoW,1.892777,,"optimizer step 1927, tokens 252.576M"
+step1,A250,step19_grad_norm_WtoW,1.573392,,"optimizer step 1927, tokens 252.576M"
+step1,A250,step19_grad_norm_frozen,576372.1875,,"optimizer step 1927, tokens 252.576M"
+step1,A250,step20_train_loss_WtoW,4.787435,,"optimizer step 1928, tokens 252.707M"
+step1,A250,step20_train_loss_frozen,6.814584,,"optimizer step 1928, tokens 252.707M"
+step1,A250,step20_train_loss_frozen_minus_WtoW,2.027149,,"optimizer step 1928, tokens 252.707M"
+step1,A250,step20_grad_norm_WtoW,2.61171,,"optimizer step 1928, tokens 252.707M"
+step1,A250,step20_grad_norm_frozen,191.337097,,"optimizer step 1928, tokens 252.707M"
+step1,A250,step21_train_loss_WtoW,4.732043,,"optimizer step 1929, tokens 252.838M"
+step1,A250,step21_train_loss_frozen,6.720337,,"optimizer step 1929, tokens 252.838M"
+step1,A250,step21_train_loss_frozen_minus_WtoW,1.988294,,"optimizer step 1929, tokens 252.838M"
+step1,A250,step21_grad_norm_WtoW,4.197773,,"optimizer step 1929, tokens 252.838M"
+step1,A250,step21_grad_norm_frozen,333.044403,,"optimizer step 1929, tokens 252.838M"
+step1,A250,step22_train_loss_WtoW,4.791533,,"optimizer step 1930, tokens 252.969M"
+step1,A250,step22_train_loss_frozen,6.688696,,"optimizer step 1930, tokens 252.969M"
+step1,A250,step22_train_loss_frozen_minus_WtoW,1.897163,,"optimizer step 1930, tokens 252.969M"
+step1,A250,step22_grad_norm_WtoW,3.809836,,"optimizer step 1930, tokens 252.969M"
+step1,A250,step22_grad_norm_frozen,9564.427734,,"optimizer step 1930, tokens 252.969M"
+step1,A250,step23_train_loss_WtoW,4.745344,,"optimizer step 1931, tokens 253.1M"
+step1,A250,step23_train_loss_frozen,6.581085,,"optimizer step 1931, tokens 253.1M"
+step1,A250,step23_train_loss_frozen_minus_WtoW,1.835741,,"optimizer step 1931, tokens 253.1M"
+step1,A250,step23_grad_norm_WtoW,2.741625,,"optimizer step 1931, tokens 253.1M"
+step1,A250,step23_grad_norm_frozen,46645.863281,,"optimizer step 1931, tokens 253.1M"
+step1,A250,step24_train_loss_WtoW,4.790639,,"optimizer step 1932, tokens 253.231M"
+step1,A250,step24_train_loss_frozen,6.528456,,"optimizer step 1932, tokens 253.231M"
+step1,A250,step24_train_loss_frozen_minus_WtoW,1.7378170000000006,,"optimizer step 1932, tokens 253.231M"
+step1,A250,step24_grad_norm_WtoW,2.912958,,"optimizer step 1932, tokens 253.231M"
+step1,A250,step24_grad_norm_frozen,14100.099609,,"optimizer step 1932, tokens 253.231M"
+step1,A250,step25_train_loss_WtoW,4.738062,,"optimizer step 1933, tokens 253.362M"
+step1,A250,step25_train_loss_frozen,6.534459,,"optimizer step 1933, tokens 253.362M"
+step1,A250,step25_train_loss_frozen_minus_WtoW,1.7963969999999998,,"optimizer step 1933, tokens 253.362M"
+step1,A250,step25_grad_norm_WtoW,5.572779,,"optimizer step 1933, tokens 253.362M"
+step1,A250,step25_grad_norm_frozen,152136.53125,,"optimizer step 1933, tokens 253.362M"
+step1,A250,step26_train_loss_WtoW,4.777407,,"optimizer step 1934, tokens 253.493M"
+step1,A250,step26_train_loss_frozen,6.762525,,"optimizer step 1934, tokens 253.493M"
+step1,A250,step26_train_loss_frozen_minus_WtoW,1.985118,,"optimizer step 1934, tokens 253.493M"
+step1,A250,step26_grad_norm_WtoW,10.7255,,"optimizer step 1934, tokens 253.493M"
+step1,A250,step26_grad_norm_frozen,176008.421875,,"optimizer step 1934, tokens 253.493M"
+step1,A250,step27_train_loss_WtoW,4.736801,,"optimizer step 1935, tokens 253.624M"
+step1,A250,step27_train_loss_frozen,7.19502,,"optimizer step 1935, tokens 253.624M"
+step1,A250,step27_train_loss_frozen_minus_WtoW,2.4582190000000006,,"optimizer step 1935, tokens 253.624M"
+step1,A250,step27_grad_norm_WtoW,5.893851,,"optimizer step 1935, tokens 253.624M"
+step1,A250,step27_grad_norm_frozen,768796.625,,"optimizer step 1935, tokens 253.624M"
+step1,A250,step28_train_loss_WtoW,4.84577,,"optimizer step 1936, tokens 253.755M"
+step1,A250,step28_train_loss_frozen,7.741637,,"optimizer step 1936, tokens 253.755M"
+step1,A250,step28_train_loss_frozen_minus_WtoW,2.895867,,"optimizer step 1936, tokens 253.755M"
+step1,A250,step28_grad_norm_WtoW,25.044039,,"optimizer step 1936, tokens 253.755M"
+step1,A250,step28_grad_norm_frozen,29740528.0,,"optimizer step 1936, tokens 253.755M"
+step1,A250,step29_train_loss_WtoW,4.890723,,"optimizer step 1937, tokens 253.886M"
+step1,A250,step29_train_loss_frozen,7.991719,,"optimizer step 1937, tokens 253.886M"
+step1,A250,step29_train_loss_frozen_minus_WtoW,3.1009959999999994,,"optimizer step 1937, tokens 253.886M"
+step1,A250,step29_grad_norm_WtoW,14.293254,,"optimizer step 1937, tokens 253.886M"
+step1,A250,step29_grad_norm_frozen,303109696.0,,"optimizer step 1937, tokens 253.886M"
+step1,A250,step30_train_loss_WtoW,4.934127,,"optimizer step 1938, tokens 254.018M"
+step1,A250,step30_train_loss_frozen,8.367242,,"optimizer step 1938, tokens 254.018M"
+step1,A250,step30_train_loss_frozen_minus_WtoW,3.433114999999999,,"optimizer step 1938, tokens 254.018M"
+step1,A250,step30_grad_norm_WtoW,21.4953,,"optimizer step 1938, tokens 254.018M"
+step1,A250,step30_grad_norm_frozen,5144401.5,,"optimizer step 1938, tokens 254.018M"
+step1,A250,step31_train_loss_WtoW,5.09608,,"optimizer step 1939, tokens 254.149M"
+step1,A250,step31_train_loss_frozen,8.562361,,"optimizer step 1939, tokens 254.149M"
+step1,A250,step31_train_loss_frozen_minus_WtoW,3.4662809999999995,,"optimizer step 1939, tokens 254.149M"
+step1,A250,step31_grad_norm_WtoW,49.607395,,"optimizer step 1939, tokens 254.149M"
+step1,A250,step31_grad_norm_frozen,884147008.0,,"optimizer step 1939, tokens 254.149M"
+step1,A250,step32_train_loss_WtoW,5.165186,,"optimizer step 1940, tokens 254.28M"
+step1,A250,step32_train_loss_frozen,8.598738,,"optimizer step 1940, tokens 254.28M"
+step1,A250,step32_train_loss_frozen_minus_WtoW,3.4335520000000006,,"optimizer step 1940, tokens 254.28M"
+step1,A250,step32_grad_norm_WtoW,8.938069,,"optimizer step 1940, tokens 254.28M"
+step1,A250,step32_grad_norm_frozen,7763218.0,,"optimizer step 1940, tokens 254.28M"
+step1,A250,step33_train_loss_WtoW,5.037599,,"optimizer step 1941, tokens 254.411M"
+step1,A250,step33_train_loss_frozen,8.612639,,"optimizer step 1941, tokens 254.411M"
+step1,A250,step33_train_loss_frozen_minus_WtoW,3.57504,,"optimizer step 1941, tokens 254.411M"
+step1,A250,step33_grad_norm_WtoW,7.148813,,"optimizer step 1941, tokens 254.411M"
+step1,A250,step33_grad_norm_frozen,612550.3125,,"optimizer step 1941, tokens 254.411M"
+step1,A250,step34_train_loss_WtoW,4.940905,,"optimizer step 1942, tokens 254.542M"
+step1,A250,step34_train_loss_frozen,8.602445,,"optimizer step 1942, tokens 254.542M"
+step1,A250,step34_train_loss_frozen_minus_WtoW,3.66154,,"optimizer step 1942, tokens 254.542M"
+step1,A250,step34_grad_norm_WtoW,5.300579,,"optimizer step 1942, tokens 254.542M"
+step1,A250,step34_grad_norm_frozen,788.9776,,"optimizer step 1942, tokens 254.542M"
+step1,A250,step35_train_loss_WtoW,4.891013,,"optimizer step 1943, tokens 254.673M"
+step1,A250,step35_train_loss_frozen,8.589703,,"optimizer step 1943, tokens 254.673M"
+step1,A250,step35_train_loss_frozen_minus_WtoW,3.69869,,"optimizer step 1943, tokens 254.673M"
+step1,A250,step35_grad_norm_WtoW,5.9286,,"optimizer step 1943, tokens 254.673M"
+step1,A250,step35_grad_norm_frozen,11789.094727,,"optimizer step 1943, tokens 254.673M"
+step1,A250,step36_train_loss_WtoW,4.902461,,"optimizer step 1944, tokens 254.804M"
+step1,A250,step36_train_loss_frozen,8.556968,,"optimizer step 1944, tokens 254.804M"
+step1,A250,step36_train_loss_frozen_minus_WtoW,3.654507,,"optimizer step 1944, tokens 254.804M"
+step1,A250,step36_grad_norm_WtoW,8.961193,,"optimizer step 1944, tokens 254.804M"
+step1,A250,step36_grad_norm_frozen,113358.742188,,"optimizer step 1944, tokens 254.804M"
+step1,A250,step37_train_loss_WtoW,4.896258,,"optimizer step 1945, tokens 254.935M"
+step1,A250,step37_train_loss_frozen,8.4777,,"optimizer step 1945, tokens 254.935M"
+step1,A250,step37_train_loss_frozen_minus_WtoW,3.581442,,"optimizer step 1945, tokens 254.935M"
+step1,A250,step37_grad_norm_WtoW,7.485996,,"optimizer step 1945, tokens 254.935M"
+step1,A250,step37_grad_norm_frozen,118264.648438,,"optimizer step 1945, tokens 254.935M"
+step1,A250,step38_train_loss_WtoW,4.87236,,"optimizer step 1946, tokens 255.066M"
+step1,A250,step38_train_loss_frozen,8.563408,,"optimizer step 1946, tokens 255.066M"
+step1,A250,step38_train_loss_frozen_minus_WtoW,3.691048000000001,,"optimizer step 1946, tokens 255.066M"
+step1,A250,step38_grad_norm_WtoW,6.029562,,"optimizer step 1946, tokens 255.066M"
+step1,A250,step38_grad_norm_frozen,95070.421875,,"optimizer step 1946, tokens 255.066M"
+step1,A250,step39_train_loss_WtoW,4.842229,,"optimizer step 1947, tokens 255.197M"
+step1,A250,step39_train_loss_frozen,8.50377,,"optimizer step 1947, tokens 255.197M"
+step1,A250,step39_train_loss_frozen_minus_WtoW,3.661541,,"optimizer step 1947, tokens 255.197M"
+step1,A250,step39_grad_norm_WtoW,5.576714,,"optimizer step 1947, tokens 255.197M"
+step1,A250,step39_grad_norm_frozen,7436.018555,,"optimizer step 1947, tokens 255.197M"
+step1,A250,step40_train_loss_WtoW,4.808765,,"optimizer step 1948, tokens 255.328M"
+step1,A250,step40_train_loss_frozen,8.472536,,"optimizer step 1948, tokens 255.328M"
+step1,A250,step40_train_loss_frozen_minus_WtoW,3.663771,,"optimizer step 1948, tokens 255.328M"
+step1,A250,step40_grad_norm_WtoW,5.238097,,"optimizer step 1948, tokens 255.328M"
+step1,A250,step40_grad_norm_frozen,118867.921875,,"optimizer step 1948, tokens 255.328M"
+step1,B50,step01_train_loss_WtoW,5.461291,,"optimizer step 383, tokens 50.201M"
+step1,B50,step01_train_loss_frozen,5.476878,,"optimizer step 383, tokens 50.201M"
+step1,B50,step01_train_loss_frozen_minus_WtoW,0.015587,,"optimizer step 383, tokens 50.201M"
+step1,B50,step01_grad_norm_WtoW,0.539203,,"optimizer step 383, tokens 50.201M"
+step1,B50,step01_grad_norm_frozen,0.774128,,"optimizer step 383, tokens 50.201M"
+step1,B50,step02_train_loss_WtoW,5.474729,,"optimizer step 384, tokens 50.332M"
+step1,B50,step02_train_loss_frozen,5.48524,,"optimizer step 384, tokens 50.332M"
+step1,B50,step02_train_loss_frozen_minus_WtoW,0.0105110000000001,,"optimizer step 384, tokens 50.332M"
+step1,B50,step02_grad_norm_WtoW,0.550846,,"optimizer step 384, tokens 50.332M"
+step1,B50,step02_grad_norm_frozen,0.568388,,"optimizer step 384, tokens 50.332M"
+step1,B50,step03_train_loss_WtoW,5.419809,,"optimizer step 385, tokens 50.463M"
+step1,B50,step03_train_loss_frozen,5.437328,,"optimizer step 385, tokens 50.463M"
+step1,B50,step03_train_loss_frozen_minus_WtoW,0.017519,,"optimizer step 385, tokens 50.463M"
+step1,B50,step03_grad_norm_WtoW,0.492314,,"optimizer step 385, tokens 50.463M"
+step1,B50,step03_grad_norm_frozen,0.53556,,"optimizer step 385, tokens 50.463M"
+step1,B50,step04_train_loss_WtoW,5.491985,,"optimizer step 386, tokens 50.594M"
+step1,B50,step04_train_loss_frozen,5.519762,,"optimizer step 386, tokens 50.594M"
+step1,B50,step04_train_loss_frozen_minus_WtoW,0.0277770000000003,,"optimizer step 386, tokens 50.594M"
+step1,B50,step04_grad_norm_WtoW,0.486301,,"optimizer step 386, tokens 50.594M"
+step1,B50,step04_grad_norm_frozen,0.604011,,"optimizer step 386, tokens 50.594M"
+step1,B50,step05_train_loss_WtoW,5.460177,,"optimizer step 387, tokens 50.725M"
+step1,B50,step05_train_loss_frozen,5.490389,,"optimizer step 387, tokens 50.725M"
+step1,B50,step05_train_loss_frozen_minus_WtoW,0.0302120000000005,,"optimizer step 387, tokens 50.725M"
+step1,B50,step05_grad_norm_WtoW,0.516586,,"optimizer step 387, tokens 50.725M"
+step1,B50,step05_grad_norm_frozen,0.728132,,"optimizer step 387, tokens 50.725M"
+step1,B50,step06_train_loss_WtoW,5.425281,,"optimizer step 388, tokens 50.856M"
+step1,B50,step06_train_loss_frozen,5.457045,,"optimizer step 388, tokens 50.856M"
+step1,B50,step06_train_loss_frozen_minus_WtoW,0.0317639999999999,,"optimizer step 388, tokens 50.856M"
+step1,B50,step06_grad_norm_WtoW,0.489501,,"optimizer step 388, tokens 50.856M"
+step1,B50,step06_grad_norm_frozen,0.689361,,"optimizer step 388, tokens 50.856M"
+step1,B50,step07_train_loss_WtoW,5.454078,,"optimizer step 389, tokens 50.987M"
+step1,B50,step07_train_loss_frozen,5.483241,,"optimizer step 389, tokens 50.987M"
+step1,B50,step07_train_loss_frozen_minus_WtoW,0.0291629999999996,,"optimizer step 389, tokens 50.987M"
+step1,B50,step07_grad_norm_WtoW,0.499453,,"optimizer step 389, tokens 50.987M"
+step1,B50,step07_grad_norm_frozen,0.632203,,"optimizer step 389, tokens 50.987M"
+step1,B50,step08_train_loss_WtoW,5.435312,,"optimizer step 390, tokens 51.118M"
+step1,B50,step08_train_loss_frozen,5.452729,,"optimizer step 390, tokens 51.118M"
+step1,B50,step08_train_loss_frozen_minus_WtoW,0.017417,,"optimizer step 390, tokens 51.118M"
+step1,B50,step08_grad_norm_WtoW,0.553339,,"optimizer step 390, tokens 51.118M"
+step1,B50,step08_grad_norm_frozen,0.523425,,"optimizer step 390, tokens 51.118M"
+step1,B50,step09_train_loss_WtoW,5.384852,,"optimizer step 391, tokens 51.249M"
+step1,B50,step09_train_loss_frozen,5.403036,,"optimizer step 391, tokens 51.249M"
+step1,B50,step09_train_loss_frozen_minus_WtoW,0.0181839999999997,,"optimizer step 391, tokens 51.249M"
+step1,B50,step09_grad_norm_WtoW,0.499685,,"optimizer step 391, tokens 51.249M"
+step1,B50,step09_grad_norm_frozen,0.504264,,"optimizer step 391, tokens 51.249M"
+step1,B50,step10_train_loss_WtoW,5.41764,,"optimizer step 392, tokens 51.38M"
+step1,B50,step10_train_loss_frozen,5.438888,,"optimizer step 392, tokens 51.38M"
+step1,B50,step10_train_loss_frozen_minus_WtoW,0.0212480000000008,,"optimizer step 392, tokens 51.38M"
+step1,B50,step10_grad_norm_WtoW,0.508112,,"optimizer step 392, tokens 51.38M"
+step1,B50,step10_grad_norm_frozen,0.467059,,"optimizer step 392, tokens 51.38M"
+step1,B50,step11_train_loss_WtoW,5.494601,,"optimizer step 393, tokens 51.511M"
+step1,B50,step11_train_loss_frozen,5.519127,,"optimizer step 393, tokens 51.511M"
+step1,B50,step11_train_loss_frozen_minus_WtoW,0.0245259999999998,,"optimizer step 393, tokens 51.511M"
+step1,B50,step11_grad_norm_WtoW,0.470022,,"optimizer step 393, tokens 51.511M"
+step1,B50,step11_grad_norm_frozen,0.540276,,"optimizer step 393, tokens 51.511M"
+step1,B50,step12_train_loss_WtoW,5.477133,,"optimizer step 394, tokens 51.642M"
+step1,B50,step12_train_loss_frozen,5.494553,,"optimizer step 394, tokens 51.642M"
+step1,B50,step12_train_loss_frozen_minus_WtoW,0.0174199999999995,,"optimizer step 394, tokens 51.642M"
+step1,B50,step12_grad_norm_WtoW,0.52765,,"optimizer step 394, tokens 51.642M"
+step1,B50,step12_grad_norm_frozen,0.544508,,"optimizer step 394, tokens 51.642M"
+step1,B50,step13_train_loss_WtoW,5.443628,,"optimizer step 395, tokens 51.773M"
+step1,B50,step13_train_loss_frozen,5.458152,,"optimizer step 395, tokens 51.773M"
+step1,B50,step13_train_loss_frozen_minus_WtoW,0.0145239999999997,,"optimizer step 395, tokens 51.773M"
+step1,B50,step13_grad_norm_WtoW,0.535352,,"optimizer step 395, tokens 51.773M"
+step1,B50,step13_grad_norm_frozen,0.559715,,"optimizer step 395, tokens 51.773M"
+step1,B50,step14_train_loss_WtoW,5.41341,,"optimizer step 396, tokens 51.905M"
+step1,B50,step14_train_loss_frozen,5.436746,,"optimizer step 396, tokens 51.905M"
+step1,B50,step14_train_loss_frozen_minus_WtoW,0.0233360000000004,,"optimizer step 396, tokens 51.905M"
+step1,B50,step14_grad_norm_WtoW,0.484356,,"optimizer step 396, tokens 51.905M"
+step1,B50,step14_grad_norm_frozen,0.576863,,"optimizer step 396, tokens 51.905M"
+step1,B50,step15_train_loss_WtoW,5.424843,,"optimizer step 397, tokens 52.036M"
+step1,B50,step15_train_loss_frozen,5.441993,,"optimizer step 397, tokens 52.036M"
+step1,B50,step15_train_loss_frozen_minus_WtoW,0.01715,,"optimizer step 397, tokens 52.036M"
+step1,B50,step15_grad_norm_WtoW,0.529105,,"optimizer step 397, tokens 52.036M"
+step1,B50,step15_grad_norm_frozen,0.538195,,"optimizer step 397, tokens 52.036M"
+step1,B50,step16_train_loss_WtoW,5.474467,,"optimizer step 398, tokens 52.167M"
+step1,B50,step16_train_loss_frozen,5.481691,,"optimizer step 398, tokens 52.167M"
+step1,B50,step16_train_loss_frozen_minus_WtoW,0.0072239999999998,,"optimizer step 398, tokens 52.167M"
+step1,B50,step16_grad_norm_WtoW,0.519324,,"optimizer step 398, tokens 52.167M"
+step1,B50,step16_grad_norm_frozen,0.484433,,"optimizer step 398, tokens 52.167M"
+step1,B50,step17_train_loss_WtoW,5.408374,,"optimizer step 399, tokens 52.298M"
+step1,B50,step17_train_loss_frozen,5.426943,,"optimizer step 399, tokens 52.298M"
+step1,B50,step17_train_loss_frozen_minus_WtoW,0.0185689999999993,,"optimizer step 399, tokens 52.298M"
+step1,B50,step17_grad_norm_WtoW,0.500076,,"optimizer step 399, tokens 52.298M"
+step1,B50,step17_grad_norm_frozen,0.563624,,"optimizer step 399, tokens 52.298M"
+step1,B50,step18_train_loss_WtoW,5.384927,,"optimizer step 400, tokens 52.429M"
+step1,B50,step18_train_loss_frozen,5.397456,,"optimizer step 400, tokens 52.429M"
+step1,B50,step18_train_loss_frozen_minus_WtoW,0.0125289999999997,,"optimizer step 400, tokens 52.429M"
+step1,B50,step18_grad_norm_WtoW,0.530948,,"optimizer step 400, tokens 52.429M"
+step1,B50,step18_grad_norm_frozen,0.573786,,"optimizer step 400, tokens 52.429M"
+step1,B50,step19_train_loss_WtoW,5.381185,,"optimizer step 401, tokens 52.56M"
+step1,B50,step19_train_loss_frozen,5.383799,,"optimizer step 401, tokens 52.56M"
+step1,B50,step19_train_loss_frozen_minus_WtoW,0.0026139999999994,,"optimizer step 401, tokens 52.56M"
+step1,B50,step19_grad_norm_WtoW,0.603271,,"optimizer step 401, tokens 52.56M"
+step1,B50,step19_grad_norm_frozen,0.505619,,"optimizer step 401, tokens 52.56M"
+step1,B50,step20_train_loss_WtoW,5.397478,,"optimizer step 402, tokens 52.691M"
+step1,B50,step20_train_loss_frozen,5.391387,,"optimizer step 402, tokens 52.691M"
+step1,B50,step20_train_loss_frozen_minus_WtoW,-0.0060910000000005,,"optimizer step 402, tokens 52.691M"
+step1,B50,step20_grad_norm_WtoW,0.690389,,"optimizer step 402, tokens 52.691M"
+step1,B50,step20_grad_norm_frozen,0.526076,,"optimizer step 402, tokens 52.691M"
+step1,B50,step21_train_loss_WtoW,5.413164,,"optimizer step 403, tokens 52.822M"
+step1,B50,step21_train_loss_frozen,5.409959,,"optimizer step 403, tokens 52.822M"
+step1,B50,step21_train_loss_frozen_minus_WtoW,-0.0032050000000003,,"optimizer step 403, tokens 52.822M"
+step1,B50,step21_grad_norm_WtoW,0.576079,,"optimizer step 403, tokens 52.822M"
+step1,B50,step21_grad_norm_frozen,0.472903,,"optimizer step 403, tokens 52.822M"
+step1,B50,step22_train_loss_WtoW,5.458571,,"optimizer step 404, tokens 52.953M"
+step1,B50,step22_train_loss_frozen,5.457051,,"optimizer step 404, tokens 52.953M"
+step1,B50,step22_train_loss_frozen_minus_WtoW,-0.0015200000000001,,"optimizer step 404, tokens 52.953M"
+step1,B50,step22_grad_norm_WtoW,0.619941,,"optimizer step 404, tokens 52.953M"
+step1,B50,step22_grad_norm_frozen,0.532627,,"optimizer step 404, tokens 52.953M"
+step1,B50,step23_train_loss_WtoW,5.388593,,"optimizer step 405, tokens 53.084M"
+step1,B50,step23_train_loss_frozen,5.388483,,"optimizer step 405, tokens 53.084M"
+step1,B50,step23_train_loss_frozen_minus_WtoW,-0.0001100000000002,,"optimizer step 405, tokens 53.084M"
+step1,B50,step23_grad_norm_WtoW,0.562237,,"optimizer step 405, tokens 53.084M"
+step1,B50,step23_grad_norm_frozen,0.559828,,"optimizer step 405, tokens 53.084M"
+step1,B50,step24_train_loss_WtoW,5.394835,,"optimizer step 406, tokens 53.215M"
+step1,B50,step24_train_loss_frozen,5.392257,,"optimizer step 406, tokens 53.215M"
+step1,B50,step24_train_loss_frozen_minus_WtoW,-0.0025779999999997,,"optimizer step 406, tokens 53.215M"
+step1,B50,step24_grad_norm_WtoW,0.515352,,"optimizer step 406, tokens 53.215M"
+step1,B50,step24_grad_norm_frozen,0.466256,,"optimizer step 406, tokens 53.215M"
+step1,B50,step25_train_loss_WtoW,5.446283,,"optimizer step 407, tokens 53.346M"
+step1,B50,step25_train_loss_frozen,5.444251,,"optimizer step 407, tokens 53.346M"
+step1,B50,step25_train_loss_frozen_minus_WtoW,-0.0020319999999998,,"optimizer step 407, tokens 53.346M"
+step1,B50,step25_grad_norm_WtoW,0.51937,,"optimizer step 407, tokens 53.346M"
+step1,B50,step25_grad_norm_frozen,0.463253,,"optimizer step 407, tokens 53.346M"
+step1,B50,step26_train_loss_WtoW,5.38068,,"optimizer step 408, tokens 53.477M"
+step1,B50,step26_train_loss_frozen,5.378474,,"optimizer step 408, tokens 53.477M"
+step1,B50,step26_train_loss_frozen_minus_WtoW,-0.0022060000000001,,"optimizer step 408, tokens 53.477M"
+step1,B50,step26_grad_norm_WtoW,0.507166,,"optimizer step 408, tokens 53.477M"
+step1,B50,step26_grad_norm_frozen,0.498442,,"optimizer step 408, tokens 53.477M"
+step1,B50,step27_train_loss_WtoW,5.348122,,"optimizer step 409, tokens 53.608M"
+step1,B50,step27_train_loss_frozen,5.345109,,"optimizer step 409, tokens 53.608M"
+step1,B50,step27_train_loss_frozen_minus_WtoW,-0.0030130000000001,,"optimizer step 409, tokens 53.608M"
+step1,B50,step27_grad_norm_WtoW,0.560856,,"optimizer step 409, tokens 53.608M"
+step1,B50,step27_grad_norm_frozen,0.528521,,"optimizer step 409, tokens 53.608M"
+step1,B50,step28_train_loss_WtoW,5.39823,,"optimizer step 410, tokens 53.74M"
+step1,B50,step28_train_loss_frozen,5.39336,,"optimizer step 410, tokens 53.74M"
+step1,B50,step28_train_loss_frozen_minus_WtoW,-0.0048699999999994,,"optimizer step 410, tokens 53.74M"
+step1,B50,step28_grad_norm_WtoW,0.572486,,"optimizer step 410, tokens 53.74M"
+step1,B50,step28_grad_norm_frozen,0.504669,,"optimizer step 410, tokens 53.74M"
+step1,B50,step29_train_loss_WtoW,5.424076,,"optimizer step 411, tokens 53.871M"
+step1,B50,step29_train_loss_frozen,5.420617,,"optimizer step 411, tokens 53.871M"
+step1,B50,step29_train_loss_frozen_minus_WtoW,-0.0034590000000003,,"optimizer step 411, tokens 53.871M"
+step1,B50,step29_grad_norm_WtoW,0.544932,,"optimizer step 411, tokens 53.871M"
+step1,B50,step29_grad_norm_frozen,0.509302,,"optimizer step 411, tokens 53.871M"
+step1,B50,step30_train_loss_WtoW,5.425682,,"optimizer step 412, tokens 54.002M"
+step1,B50,step30_train_loss_frozen,5.426192,,"optimizer step 412, tokens 54.002M"
+step1,B50,step30_train_loss_frozen_minus_WtoW,0.0005100000000002,,"optimizer step 412, tokens 54.002M"
+step1,B50,step30_grad_norm_WtoW,0.451102,,"optimizer step 412, tokens 54.002M"
+step1,B50,step30_grad_norm_frozen,0.485317,,"optimizer step 412, tokens 54.002M"
+step1,B50,step31_train_loss_WtoW,5.442833,,"optimizer step 413, tokens 54.133M"
+step1,B50,step31_train_loss_frozen,5.448137,,"optimizer step 413, tokens 54.133M"
+step1,B50,step31_train_loss_frozen_minus_WtoW,0.0053039999999997,,"optimizer step 413, tokens 54.133M"
+step1,B50,step31_grad_norm_WtoW,0.477147,,"optimizer step 413, tokens 54.133M"
+step1,B50,step31_grad_norm_frozen,0.57937,,"optimizer step 413, tokens 54.133M"
+step1,B50,step32_train_loss_WtoW,5.379801,,"optimizer step 414, tokens 54.264M"
+step1,B50,step32_train_loss_frozen,5.385826,,"optimizer step 414, tokens 54.264M"
+step1,B50,step32_train_loss_frozen_minus_WtoW,0.0060250000000001,,"optimizer step 414, tokens 54.264M"
+step1,B50,step32_grad_norm_WtoW,0.536638,,"optimizer step 414, tokens 54.264M"
+step1,B50,step32_grad_norm_frozen,0.647908,,"optimizer step 414, tokens 54.264M"
+step1,B50,step33_train_loss_WtoW,5.396405,,"optimizer step 415, tokens 54.395M"
+step1,B50,step33_train_loss_frozen,5.406911,,"optimizer step 415, tokens 54.395M"
+step1,B50,step33_train_loss_frozen_minus_WtoW,0.0105060000000003,,"optimizer step 415, tokens 54.395M"
+step1,B50,step33_grad_norm_WtoW,0.55037,,"optimizer step 415, tokens 54.395M"
+step1,B50,step33_grad_norm_frozen,0.705123,,"optimizer step 415, tokens 54.395M"
+step1,B50,step34_train_loss_WtoW,5.358657,,"optimizer step 416, tokens 54.526M"
+step1,B50,step34_train_loss_frozen,5.372259,,"optimizer step 416, tokens 54.526M"
+step1,B50,step34_train_loss_frozen_minus_WtoW,0.0136019999999996,,"optimizer step 416, tokens 54.526M"
+step1,B50,step34_grad_norm_WtoW,0.512158,,"optimizer step 416, tokens 54.526M"
+step1,B50,step34_grad_norm_frozen,0.654205,,"optimizer step 416, tokens 54.526M"
+step1,B50,step35_train_loss_WtoW,5.336621,,"optimizer step 417, tokens 54.657M"
+step1,B50,step35_train_loss_frozen,5.333866,,"optimizer step 417, tokens 54.657M"
+step1,B50,step35_train_loss_frozen_minus_WtoW,-0.0027549999999996,,"optimizer step 417, tokens 54.657M"
+step1,B50,step35_grad_norm_WtoW,0.567983,,"optimizer step 417, tokens 54.657M"
+step1,B50,step35_grad_norm_frozen,0.502965,,"optimizer step 417, tokens 54.657M"
+step1,B50,step36_train_loss_WtoW,5.391753,,"optimizer step 418, tokens 54.788M"
+step1,B50,step36_train_loss_frozen,5.393812,,"optimizer step 418, tokens 54.788M"
+step1,B50,step36_train_loss_frozen_minus_WtoW,0.002059,,"optimizer step 418, tokens 54.788M"
+step1,B50,step36_grad_norm_WtoW,0.598701,,"optimizer step 418, tokens 54.788M"
+step1,B50,step36_grad_norm_frozen,0.532972,,"optimizer step 418, tokens 54.788M"
+step1,B50,step37_train_loss_WtoW,5.412499,,"optimizer step 419, tokens 54.919M"
+step1,B50,step37_train_loss_frozen,5.407344,,"optimizer step 419, tokens 54.919M"
+step1,B50,step37_train_loss_frozen_minus_WtoW,-0.0051550000000002,,"optimizer step 419, tokens 54.919M"
+step1,B50,step37_grad_norm_WtoW,0.605448,,"optimizer step 419, tokens 54.919M"
+step1,B50,step37_grad_norm_frozen,0.501725,,"optimizer step 419, tokens 54.919M"
+step1,B50,step38_train_loss_WtoW,5.336577,,"optimizer step 420, tokens 55.05M"
+step1,B50,step38_train_loss_frozen,5.334047,,"optimizer step 420, tokens 55.05M"
+step1,B50,step38_train_loss_frozen_minus_WtoW,-0.0025300000000001,,"optimizer step 420, tokens 55.05M"
+step1,B50,step38_grad_norm_WtoW,0.544668,,"optimizer step 420, tokens 55.05M"
+step1,B50,step38_grad_norm_frozen,0.482714,,"optimizer step 420, tokens 55.05M"
+step1,B50,step39_train_loss_WtoW,5.380588,,"optimizer step 421, tokens 55.181M"
+step1,B50,step39_train_loss_frozen,5.371143,,"optimizer step 421, tokens 55.181M"
+step1,B50,step39_train_loss_frozen_minus_WtoW,-0.0094450000000003,,"optimizer step 421, tokens 55.181M"
+step1,B50,step39_grad_norm_WtoW,0.570202,,"optimizer step 421, tokens 55.181M"
+step1,B50,step39_grad_norm_frozen,0.450874,,"optimizer step 421, tokens 55.181M"
+step1,B50,step40_train_loss_WtoW,5.397935,,"optimizer step 422, tokens 55.312M"
+step1,B50,step40_train_loss_frozen,5.382607,,"optimizer step 422, tokens 55.312M"
+step1,B50,step40_train_loss_frozen_minus_WtoW,-0.0153280000000002,,"optimizer step 422, tokens 55.312M"
+step1,B50,step40_grad_norm_WtoW,0.571138,,"optimizer step 422, tokens 55.312M"
+step1,B50,step40_grad_norm_frozen,0.442947,,"optimizer step 422, tokens 55.312M"
+step1,B125,step01_train_loss_WtoW,4.563751,,"optimizer step 955, tokens 125.174M"
+step1,B125,step01_train_loss_frozen,4.799954,,"optimizer step 955, tokens 125.174M"
+step1,B125,step01_train_loss_frozen_minus_WtoW,0.2362029999999997,,"optimizer step 955, tokens 125.174M"
+step1,B125,step01_grad_norm_WtoW,0.879181,,"optimizer step 955, tokens 125.174M"
+step1,B125,step01_grad_norm_frozen,16.492363,,"optimizer step 955, tokens 125.174M"
+step1,B125,step02_train_loss_WtoW,4.558032,,"optimizer step 956, tokens 125.305M"
+step1,B125,step02_train_loss_frozen,4.797313,,"optimizer step 956, tokens 125.305M"
+step1,B125,step02_train_loss_frozen_minus_WtoW,0.239281,,"optimizer step 956, tokens 125.305M"
+step1,B125,step02_grad_norm_WtoW,1.050634,,"optimizer step 956, tokens 125.305M"
+step1,B125,step02_grad_norm_frozen,5.259248,,"optimizer step 956, tokens 125.305M"
+step1,B125,step03_train_loss_WtoW,4.582867,,"optimizer step 957, tokens 125.436M"
+step1,B125,step03_train_loss_frozen,4.773915,,"optimizer step 957, tokens 125.436M"
+step1,B125,step03_train_loss_frozen_minus_WtoW,0.1910479999999994,,"optimizer step 957, tokens 125.436M"
+step1,B125,step03_grad_norm_WtoW,0.806019,,"optimizer step 957, tokens 125.436M"
+step1,B125,step03_grad_norm_frozen,3.100748,,"optimizer step 957, tokens 125.436M"
+step1,B125,step04_train_loss_WtoW,4.603485,,"optimizer step 958, tokens 125.567M"
+step1,B125,step04_train_loss_frozen,4.776485,,"optimizer step 958, tokens 125.567M"
+step1,B125,step04_train_loss_frozen_minus_WtoW,0.173,,"optimizer step 958, tokens 125.567M"
+step1,B125,step04_grad_norm_WtoW,1.539665,,"optimizer step 958, tokens 125.567M"
+step1,B125,step04_grad_norm_frozen,3.753232,,"optimizer step 958, tokens 125.567M"
+step1,B125,step05_train_loss_WtoW,4.608705,,"optimizer step 959, tokens 125.698M"
+step1,B125,step05_train_loss_frozen,4.774405,,"optimizer step 959, tokens 125.698M"
+step1,B125,step05_train_loss_frozen_minus_WtoW,0.1657000000000001,,"optimizer step 959, tokens 125.698M"
+step1,B125,step05_grad_norm_WtoW,2.646729,,"optimizer step 959, tokens 125.698M"
+step1,B125,step05_grad_norm_frozen,6.577029,,"optimizer step 959, tokens 125.698M"
+step1,B125,step06_train_loss_WtoW,4.62638,,"optimizer step 960, tokens 125.829M"
+step1,B125,step06_train_loss_frozen,4.785137,,"optimizer step 960, tokens 125.829M"
+step1,B125,step06_train_loss_frozen_minus_WtoW,0.1587569999999996,,"optimizer step 960, tokens 125.829M"
+step1,B125,step06_grad_norm_WtoW,1.335245,,"optimizer step 960, tokens 125.829M"
+step1,B125,step06_grad_norm_frozen,4.512956,,"optimizer step 960, tokens 125.829M"
+step1,B125,step07_train_loss_WtoW,4.622459,,"optimizer step 961, tokens 125.96M"
+step1,B125,step07_train_loss_frozen,4.748693,,"optimizer step 961, tokens 125.96M"
+step1,B125,step07_train_loss_frozen_minus_WtoW,0.1262340000000001,,"optimizer step 961, tokens 125.96M"
+step1,B125,step07_grad_norm_WtoW,1.08628,,"optimizer step 961, tokens 125.96M"
+step1,B125,step07_grad_norm_frozen,2.500586,,"optimizer step 961, tokens 125.96M"
+step1,B125,step08_train_loss_WtoW,4.542329,,"optimizer step 962, tokens 126.091M"
+step1,B125,step08_train_loss_frozen,4.666571,,"optimizer step 962, tokens 126.091M"
+step1,B125,step08_train_loss_frozen_minus_WtoW,0.1242420000000006,,"optimizer step 962, tokens 126.091M"
+step1,B125,step08_grad_norm_WtoW,0.910731,,"optimizer step 962, tokens 126.091M"
+step1,B125,step08_grad_norm_frozen,1.826284,,"optimizer step 962, tokens 126.091M"
+step1,B125,step09_train_loss_WtoW,4.601619,,"optimizer step 963, tokens 126.222M"
+step1,B125,step09_train_loss_frozen,4.701478,,"optimizer step 963, tokens 126.222M"
+step1,B125,step09_train_loss_frozen_minus_WtoW,0.0998589999999994,,"optimizer step 963, tokens 126.222M"
+step1,B125,step09_grad_norm_WtoW,1.052889,,"optimizer step 963, tokens 126.222M"
+step1,B125,step09_grad_norm_frozen,1.872856,,"optimizer step 963, tokens 126.222M"
+step1,B125,step10_train_loss_WtoW,4.576511,,"optimizer step 964, tokens 126.353M"
+step1,B125,step10_train_loss_frozen,4.67872,,"optimizer step 964, tokens 126.353M"
+step1,B125,step10_train_loss_frozen_minus_WtoW,0.1022090000000002,,"optimizer step 964, tokens 126.353M"
+step1,B125,step10_grad_norm_WtoW,1.561765,,"optimizer step 964, tokens 126.353M"
+step1,B125,step10_grad_norm_frozen,2.132046,,"optimizer step 964, tokens 126.353M"
+step1,B125,step11_train_loss_WtoW,4.578742,,"optimizer step 965, tokens 126.484M"
+step1,B125,step11_train_loss_frozen,4.660541,,"optimizer step 965, tokens 126.484M"
+step1,B125,step11_train_loss_frozen_minus_WtoW,0.0817990000000001,,"optimizer step 965, tokens 126.484M"
+step1,B125,step11_grad_norm_WtoW,1.191172,,"optimizer step 965, tokens 126.484M"
+step1,B125,step11_grad_norm_frozen,2.142676,,"optimizer step 965, tokens 126.484M"
+step1,B125,step12_train_loss_WtoW,4.58792,,"optimizer step 966, tokens 126.616M"
+step1,B125,step12_train_loss_frozen,4.67057,,"optimizer step 966, tokens 126.616M"
+step1,B125,step12_train_loss_frozen_minus_WtoW,0.0826499999999992,,"optimizer step 966, tokens 126.616M"
+step1,B125,step12_grad_norm_WtoW,1.706627,,"optimizer step 966, tokens 126.616M"
+step1,B125,step12_grad_norm_frozen,1.29218,,"optimizer step 966, tokens 126.616M"
+step1,B125,step13_train_loss_WtoW,4.651642,,"optimizer step 967, tokens 126.747M"
+step1,B125,step13_train_loss_frozen,4.717099,,"optimizer step 967, tokens 126.747M"
+step1,B125,step13_train_loss_frozen_minus_WtoW,0.0654570000000003,,"optimizer step 967, tokens 126.747M"
+step1,B125,step13_grad_norm_WtoW,1.045897,,"optimizer step 967, tokens 126.747M"
+step1,B125,step13_grad_norm_frozen,1.824964,,"optimizer step 967, tokens 126.747M"
+step1,B125,step14_train_loss_WtoW,4.632919,,"optimizer step 968, tokens 126.878M"
+step1,B125,step14_train_loss_frozen,4.699074,,"optimizer step 968, tokens 126.878M"
+step1,B125,step14_train_loss_frozen_minus_WtoW,0.0661550000000001,,"optimizer step 968, tokens 126.878M"
+step1,B125,step14_grad_norm_WtoW,0.945963,,"optimizer step 968, tokens 126.878M"
+step1,B125,step14_grad_norm_frozen,1.656052,,"optimizer step 968, tokens 126.878M"
+step1,B125,step15_train_loss_WtoW,4.568649,,"optimizer step 969, tokens 127.009M"
+step1,B125,step15_train_loss_frozen,4.633872,,"optimizer step 969, tokens 127.009M"
+step1,B125,step15_train_loss_frozen_minus_WtoW,0.0652230000000004,,"optimizer step 969, tokens 127.009M"
+step1,B125,step15_grad_norm_WtoW,0.961062,,"optimizer step 969, tokens 127.009M"
+step1,B125,step15_grad_norm_frozen,4.986283,,"optimizer step 969, tokens 127.009M"
+step1,B125,step16_train_loss_WtoW,4.581457,,"optimizer step 970, tokens 127.14M"
+step1,B125,step16_train_loss_frozen,4.669744,,"optimizer step 970, tokens 127.14M"
+step1,B125,step16_train_loss_frozen_minus_WtoW,0.0882869999999993,,"optimizer step 970, tokens 127.14M"
+step1,B125,step16_grad_norm_WtoW,0.877958,,"optimizer step 970, tokens 127.14M"
+step1,B125,step16_grad_norm_frozen,1.472083,,"optimizer step 970, tokens 127.14M"
+step1,B125,step17_train_loss_WtoW,4.596649,,"optimizer step 971, tokens 127.271M"
+step1,B125,step17_train_loss_frozen,4.663996,,"optimizer step 971, tokens 127.271M"
+step1,B125,step17_train_loss_frozen_minus_WtoW,0.0673469999999998,,"optimizer step 971, tokens 127.271M"
+step1,B125,step17_grad_norm_WtoW,0.900585,,"optimizer step 971, tokens 127.271M"
+step1,B125,step17_grad_norm_frozen,1.652591,,"optimizer step 971, tokens 127.271M"
+step1,B125,step18_train_loss_WtoW,4.608498,,"optimizer step 972, tokens 127.402M"
+step1,B125,step18_train_loss_frozen,4.666824,,"optimizer step 972, tokens 127.402M"
+step1,B125,step18_train_loss_frozen_minus_WtoW,0.0583260000000001,,"optimizer step 972, tokens 127.402M"
+step1,B125,step18_grad_norm_WtoW,0.990368,,"optimizer step 972, tokens 127.402M"
+step1,B125,step18_grad_norm_frozen,1.700702,,"optimizer step 972, tokens 127.402M"
+step1,B125,step19_train_loss_WtoW,4.604858,,"optimizer step 973, tokens 127.533M"
+step1,B125,step19_train_loss_frozen,4.656258,,"optimizer step 973, tokens 127.533M"
+step1,B125,step19_train_loss_frozen_minus_WtoW,0.0514000000000001,,"optimizer step 973, tokens 127.533M"
+step1,B125,step19_grad_norm_WtoW,0.833088,,"optimizer step 973, tokens 127.533M"
+step1,B125,step19_grad_norm_frozen,1.11897,,"optimizer step 973, tokens 127.533M"
+step1,B125,step20_train_loss_WtoW,4.540287,,"optimizer step 974, tokens 127.664M"
+step1,B125,step20_train_loss_frozen,4.586024,,"optimizer step 974, tokens 127.664M"
+step1,B125,step20_train_loss_frozen_minus_WtoW,0.0457369999999999,,"optimizer step 974, tokens 127.664M"
+step1,B125,step20_grad_norm_WtoW,0.863315,,"optimizer step 974, tokens 127.664M"
+step1,B125,step20_grad_norm_frozen,1.26415,,"optimizer step 974, tokens 127.664M"
+step1,B125,step21_train_loss_WtoW,4.569242,,"optimizer step 975, tokens 127.795M"
+step1,B125,step21_train_loss_frozen,4.609382,,"optimizer step 975, tokens 127.795M"
+step1,B125,step21_train_loss_frozen_minus_WtoW,0.04014,,"optimizer step 975, tokens 127.795M"
+step1,B125,step21_grad_norm_WtoW,0.790391,,"optimizer step 975, tokens 127.795M"
+step1,B125,step21_grad_norm_frozen,1.100444,,"optimizer step 975, tokens 127.795M"
+step1,B125,step22_train_loss_WtoW,4.563948,,"optimizer step 976, tokens 127.926M"
+step1,B125,step22_train_loss_frozen,4.599167,,"optimizer step 976, tokens 127.926M"
+step1,B125,step22_train_loss_frozen_minus_WtoW,0.0352189999999996,,"optimizer step 976, tokens 127.926M"
+step1,B125,step22_grad_norm_WtoW,0.891467,,"optimizer step 976, tokens 127.926M"
+step1,B125,step22_grad_norm_frozen,1.089158,,"optimizer step 976, tokens 127.926M"
+step1,B125,step23_train_loss_WtoW,4.61057,,"optimizer step 977, tokens 128.057M"
+step1,B125,step23_train_loss_frozen,4.643448,,"optimizer step 977, tokens 128.057M"
+step1,B125,step23_train_loss_frozen_minus_WtoW,0.0328780000000001,,"optimizer step 977, tokens 128.057M"
+step1,B125,step23_grad_norm_WtoW,1.185851,,"optimizer step 977, tokens 128.057M"
+step1,B125,step23_grad_norm_frozen,1.636117,,"optimizer step 977, tokens 128.057M"
+step1,B125,step24_train_loss_WtoW,4.597634,,"optimizer step 978, tokens 128.188M"
+step1,B125,step24_train_loss_frozen,4.639015,,"optimizer step 978, tokens 128.188M"
+step1,B125,step24_train_loss_frozen_minus_WtoW,0.0413809999999994,,"optimizer step 978, tokens 128.188M"
+step1,B125,step24_grad_norm_WtoW,1.088314,,"optimizer step 978, tokens 128.188M"
+step1,B125,step24_grad_norm_frozen,1.207038,,"optimizer step 978, tokens 128.188M"
+step1,B125,step25_train_loss_WtoW,4.556187,,"optimizer step 979, tokens 128.319M"
+step1,B125,step25_train_loss_frozen,4.588797,,"optimizer step 979, tokens 128.319M"
+step1,B125,step25_train_loss_frozen_minus_WtoW,0.0326099999999991,,"optimizer step 979, tokens 128.319M"
+step1,B125,step25_grad_norm_WtoW,0.963553,,"optimizer step 979, tokens 128.319M"
+step1,B125,step25_grad_norm_frozen,1.713947,,"optimizer step 979, tokens 128.319M"
+step1,B125,step26_train_loss_WtoW,4.532014,,"optimizer step 980, tokens 128.451M"
+step1,B125,step26_train_loss_frozen,4.563496,,"optimizer step 980, tokens 128.451M"
+step1,B125,step26_train_loss_frozen_minus_WtoW,0.0314819999999995,,"optimizer step 980, tokens 128.451M"
+step1,B125,step26_grad_norm_WtoW,0.988677,,"optimizer step 980, tokens 128.451M"
+step1,B125,step26_grad_norm_frozen,1.125278,,"optimizer step 980, tokens 128.451M"
+step1,B125,step27_train_loss_WtoW,4.570715,,"optimizer step 981, tokens 128.582M"
+step1,B125,step27_train_loss_frozen,4.593318,,"optimizer step 981, tokens 128.582M"
+step1,B125,step27_train_loss_frozen_minus_WtoW,0.0226030000000001,,"optimizer step 981, tokens 128.582M"
+step1,B125,step27_grad_norm_WtoW,1.063155,,"optimizer step 981, tokens 128.582M"
+step1,B125,step27_grad_norm_frozen,0.937258,,"optimizer step 981, tokens 128.582M"
+step1,B125,step28_train_loss_WtoW,4.613346,,"optimizer step 982, tokens 128.713M"
+step1,B125,step28_train_loss_frozen,4.633792,,"optimizer step 982, tokens 128.713M"
+step1,B125,step28_train_loss_frozen_minus_WtoW,0.0204459999999997,,"optimizer step 982, tokens 128.713M"
+step1,B125,step28_grad_norm_WtoW,1.112302,,"optimizer step 982, tokens 128.713M"
+step1,B125,step28_grad_norm_frozen,0.998598,,"optimizer step 982, tokens 128.713M"
+step1,B125,step29_train_loss_WtoW,4.508579,,"optimizer step 983, tokens 128.844M"
+step1,B125,step29_train_loss_frozen,4.530567,,"optimizer step 983, tokens 128.844M"
+step1,B125,step29_train_loss_frozen_minus_WtoW,0.0219879999999994,,"optimizer step 983, tokens 128.844M"
+step1,B125,step29_grad_norm_WtoW,0.996432,,"optimizer step 983, tokens 128.844M"
+step1,B125,step29_grad_norm_frozen,0.998555,,"optimizer step 983, tokens 128.844M"
+step1,B125,step30_train_loss_WtoW,4.534063,,"optimizer step 984, tokens 128.975M"
+step1,B125,step30_train_loss_frozen,4.550561,,"optimizer step 984, tokens 128.975M"
+step1,B125,step30_train_loss_frozen_minus_WtoW,0.0164980000000003,,"optimizer step 984, tokens 128.975M"
+step1,B125,step30_grad_norm_WtoW,1.114597,,"optimizer step 984, tokens 128.975M"
+step1,B125,step30_grad_norm_frozen,1.012935,,"optimizer step 984, tokens 128.975M"
+step1,B125,step31_train_loss_WtoW,4.614642,,"optimizer step 985, tokens 129.106M"
+step1,B125,step31_train_loss_frozen,4.623514,,"optimizer step 985, tokens 129.106M"
+step1,B125,step31_train_loss_frozen_minus_WtoW,0.0088720000000002,,"optimizer step 985, tokens 129.106M"
+step1,B125,step31_grad_norm_WtoW,1.183825,,"optimizer step 985, tokens 129.106M"
+step1,B125,step31_grad_norm_frozen,1.425911,,"optimizer step 985, tokens 129.106M"
+step1,B125,step32_train_loss_WtoW,4.62988,,"optimizer step 986, tokens 129.237M"
+step1,B125,step32_train_loss_frozen,4.639125,,"optimizer step 986, tokens 129.237M"
+step1,B125,step32_train_loss_frozen_minus_WtoW,0.0092449999999999,,"optimizer step 986, tokens 129.237M"
+step1,B125,step32_grad_norm_WtoW,1.069679,,"optimizer step 986, tokens 129.237M"
+step1,B125,step32_grad_norm_frozen,0.96792,,"optimizer step 986, tokens 129.237M"
+step1,B125,step33_train_loss_WtoW,4.550569,,"optimizer step 987, tokens 129.368M"
+step1,B125,step33_train_loss_frozen,4.565784,,"optimizer step 987, tokens 129.368M"
+step1,B125,step33_train_loss_frozen_minus_WtoW,0.0152149999999995,,"optimizer step 987, tokens 129.368M"
+step1,B125,step33_grad_norm_WtoW,0.914378,,"optimizer step 987, tokens 129.368M"
+step1,B125,step33_grad_norm_frozen,2.4931,,"optimizer step 987, tokens 129.368M"
+step1,B125,step34_train_loss_WtoW,4.546692,,"optimizer step 988, tokens 129.499M"
+step1,B125,step34_train_loss_frozen,4.577871,,"optimizer step 988, tokens 129.499M"
+step1,B125,step34_train_loss_frozen_minus_WtoW,0.0311789999999998,,"optimizer step 988, tokens 129.499M"
+step1,B125,step34_grad_norm_WtoW,0.908273,,"optimizer step 988, tokens 129.499M"
+step1,B125,step34_grad_norm_frozen,1.283578,,"optimizer step 988, tokens 129.499M"
+step1,B125,step35_train_loss_WtoW,4.557167,,"optimizer step 989, tokens 129.63M"
+step1,B125,step35_train_loss_frozen,4.582671,,"optimizer step 989, tokens 129.63M"
+step1,B125,step35_train_loss_frozen_minus_WtoW,0.0255040000000006,,"optimizer step 989, tokens 129.63M"
+step1,B125,step35_grad_norm_WtoW,0.956636,,"optimizer step 989, tokens 129.63M"
+step1,B125,step35_grad_norm_frozen,1.114645,,"optimizer step 989, tokens 129.63M"
+step1,B125,step36_train_loss_WtoW,4.560113,,"optimizer step 990, tokens 129.761M"
+step1,B125,step36_train_loss_frozen,4.579864,,"optimizer step 990, tokens 129.761M"
+step1,B125,step36_train_loss_frozen_minus_WtoW,0.0197509999999994,,"optimizer step 990, tokens 129.761M"
+step1,B125,step36_grad_norm_WtoW,0.914171,,"optimizer step 990, tokens 129.761M"
+step1,B125,step36_grad_norm_frozen,1.071134,,"optimizer step 990, tokens 129.761M"
+step1,B125,step37_train_loss_WtoW,4.545341,,"optimizer step 991, tokens 129.892M"
+step1,B125,step37_train_loss_frozen,4.57233,,"optimizer step 991, tokens 129.892M"
+step1,B125,step37_train_loss_frozen_minus_WtoW,0.0269890000000003,,"optimizer step 991, tokens 129.892M"
+step1,B125,step37_grad_norm_WtoW,0.82161,,"optimizer step 991, tokens 129.892M"
+step1,B125,step37_grad_norm_frozen,1.30231,,"optimizer step 991, tokens 129.892M"
+step1,B125,step38_train_loss_WtoW,4.589941,,"optimizer step 992, tokens 130.023M"
+step1,B125,step38_train_loss_frozen,4.607568,,"optimizer step 992, tokens 130.023M"
+step1,B125,step38_train_loss_frozen_minus_WtoW,0.017627,,"optimizer step 992, tokens 130.023M"
+step1,B125,step38_grad_norm_WtoW,0.906449,,"optimizer step 992, tokens 130.023M"
+step1,B125,step38_grad_norm_frozen,0.962681,,"optimizer step 992, tokens 130.023M"
+step1,B125,step39_train_loss_WtoW,4.565615,,"optimizer step 993, tokens 130.154M"
+step1,B125,step39_train_loss_frozen,4.589017,,"optimizer step 993, tokens 130.154M"
+step1,B125,step39_train_loss_frozen_minus_WtoW,0.0234019999999999,,"optimizer step 993, tokens 130.154M"
+step1,B125,step39_grad_norm_WtoW,0.783503,,"optimizer step 993, tokens 130.154M"
+step1,B125,step39_grad_norm_frozen,1.123177,,"optimizer step 993, tokens 130.154M"
+step1,B125,step40_train_loss_WtoW,4.561956,,"optimizer step 994, tokens 130.286M"
+step1,B125,step40_train_loss_frozen,4.584694,,"optimizer step 994, tokens 130.286M"
+step1,B125,step40_train_loss_frozen_minus_WtoW,0.0227379999999994,,"optimizer step 994, tokens 130.286M"
+step1,B125,step40_grad_norm_WtoW,0.82996,,"optimizer step 994, tokens 130.286M"
+step1,B125,step40_grad_norm_frozen,1.246784,,"optimizer step 994, tokens 130.286M"
+step4,A250,layer00_h0,25.021593,,
+step4,A250,layer00_width_mean,25.02158988028913,,
+step4,A250,layer00_width_p10,11.315276527404786,,
+step4,A250,layer00_width_p50,25.63654518127441,,
+step4,A250,layer00_width_p90,37.48252487182617,,
+step4,A250,layer00_width_cv,0.4050680925886536,,
+step4,A250,layer00_frac_rows_width_gt_2h0,0.0035129521016617,,
+step4,A250,layer00_frac_rows_width_lt_half_h0,0.1167725643532095,,
+step4,A250,layer01_h0,60.573802,,
+step4,A250,layer01_width_mean,60.57470823150479,,
+step4,A250,layer01_width_p10,42.20383224487305,,
+step4,A250,layer01_width_p50,60.00178909301758,,
+step4,A250,layer01_width_p90,80.65085067749024,,
+step4,A250,layer01_width_cv,0.25864270957064,,
+step4,A250,layer01_frac_rows_width_gt_2h0,0.0,,
+step4,A250,layer01_frac_rows_width_lt_half_h0,0.0329199250570218,,
+step4,A250,layer02_h0,20.024882,,
+step4,A250,layer02_width_mean,20.024258579434598,,
+step4,A250,layer02_width_p10,6.750410509109497,,
+step4,A250,layer02_width_p50,20.443042755126957,,
+step4,A250,layer02_width_p90,33.09359474182129,,
+step4,A250,layer02_width_cv,0.5006190029313157,,
+step4,A250,layer02_frac_rows_width_gt_2h0,0.017554578038449,,
+step4,A250,layer02_frac_rows_width_lt_half_h0,0.153398908439231,,
+step4,A250,layer03_h0,59.742705,,
+step4,A250,layer03_width_mean,59.74147352911216,,
+step4,A250,layer03_width_p10,13.689126586914066,,
+step4,A250,layer03_width_p50,66.91286087036133,,
+step4,A250,layer03_width_p90,93.71098175048829,,
+step4,A250,layer03_width_cv,0.4881104254718017,,
+step4,A250,layer03_frac_rows_width_gt_2h0,0.0001425545780384,,
+step4,A250,layer03_frac_rows_width_lt_half_h0,0.2165811339198436,,
+step4,A250,layer04_h0,62.155911,,
+step4,A250,layer04_width_mean,62.15411471328117,,
+step4,A250,layer04_width_p10,30.89217224121094,,
+step4,A250,layer04_width_p50,63.48575019836426,,
+step4,A250,layer04_width_p90,90.71052322387696,,
+step4,A250,layer04_width_cv,0.3621246661915277,,
+step4,A250,layer04_frac_rows_width_gt_2h0,0.0001934669273378,,
+step4,A250,layer04_frac_rows_width_lt_half_h0,0.1017126914304333,,
+step4,A250,layer05_h0,54.775483,,
+step4,A250,layer05_width_mean,54.77093539577076,,
+step4,A250,layer05_width_p10,30.144769287109376,,
+step4,A250,layer05_width_p50,55.087650299072266,,
+step4,A250,layer05_width_p90,78.88787155151368,,
+step4,A250,layer05_width_cv,0.3464973985468107,,
+step4,A250,layer05_frac_rows_width_gt_2h0,0.0022706907787552,,
+step4,A250,layer05_frac_rows_width_lt_half_h0,0.0684261974584555,,
+step4,A250,layer06_h0,39.413426,,
+step4,A250,layer06_width_mean,39.41217200409496,,
+step4,A250,layer06_width_p10,17.916290283203125,,
+step4,A250,layer06_width_p50,37.71197700500488,,
+step4,A250,layer06_width_p90,61.62946434020997,,
+step4,A250,layer06_width_cv,0.4745966407040345,,
+step4,A250,layer06_frac_rows_width_gt_2h0,0.0502810361681329,,
+step4,A250,layer06_frac_rows_width_lt_half_h0,0.1330237862495927,,
+step4,A250,layer07_h0,23.187504,,
+step4,A250,layer07_width_mean,23.186089964568342,,
+step4,A250,layer07_width_p10,6.200742292404175,,
+step4,A250,layer07_width_p50,18.290467262268063,,
+step4,A250,layer07_width_p90,44.9818702697754,,
+step4,A250,layer07_width_cv,0.7800498750251075,,
+step4,A250,layer07_frac_rows_width_gt_2h0,0.0922633594004561,,
+step4,A250,layer07_frac_rows_width_lt_half_h0,0.2856691919191919,,
+step4,A250,layer08_h0,14.432136,,
+step4,A250,layer08_width_mean,14.430761935077086,,
+step4,A250,layer08_width_p10,4.849525737762452,,
+step4,A250,layer08_width_p50,11.57738971710205,,
+step4,A250,layer08_width_p90,27.530673217773447,,
+step4,A250,layer08_width_cv,0.7431539426118766,,
+step4,A250,layer08_frac_rows_width_gt_2h0,0.0918458781362007,,
+step4,A250,layer08_frac_rows_width_lt_half_h0,0.2145955522971652,,
+step4,A250,layer09_h0,12.114406,,
+step4,A250,layer09_width_mean,12.11181522838094,,
+step4,A250,layer09_width_p10,4.873567771911621,,
+step4,A250,layer09_width_p50,11.065744876861572,,
+step4,A250,layer09_width_p90,21.05450439453125,,
+step4,A250,layer09_width_cv,0.5345672604514752,,
+step4,A250,layer09_frac_rows_width_gt_2h0,0.033357771260997,,
+step4,A250,layer09_frac_rows_width_lt_half_h0,0.2054415118931248,,
+step4,A250,layer10_h0,9.700631,,
+step4,A250,layer10_width_mean,9.70451561780358,,
+step4,A250,layer10_width_p10,5.41122260093689,,
+step4,A250,layer10_width_p50,9.453639030456545,,
+step4,A250,layer10_width_p90,14.42733097076416,,
+step4,A250,layer10_width_cv,0.3637337779838274,,
+step4,A250,layer10_frac_rows_width_gt_2h0,0.0070055392636037,,
+step4,A250,layer10_frac_rows_width_lt_half_h0,0.0682632779406973,,
+step4,A250,layer11_h0,10.564618,,
+step4,A250,layer11_width_mean,10.570871516581503,,
+step4,A250,layer11_width_p10,5.892753648757934,,
+step4,A250,layer11_width_p50,10.222633361816406,,
+step4,A250,layer11_width_p90,15.869631481170655,,
+step4,A250,layer11_width_cv,0.3655197669739211,,
+step4,A250,layer11_frac_rows_width_gt_2h0,0.0081663408276311,,
+step4,A250,layer11_frac_rows_width_lt_half_h0,0.0674283154121863,,
+step4,B50,layer00_h0,1.398775,,
+step4,B50,layer00_width_mean,1.3987745394953837,,
+step4,B50,layer00_width_p10,0.4869531512260437,,
+step4,B50,layer00_width_p50,1.1940612196922302,,
+step4,B50,layer00_width_p90,2.6342668533325195,,
+step4,B50,layer00_width_cv,0.6275743699941138,,
+step4,B50,layer00_frac_rows_width_gt_2h0,0.0805229716520039,,
+step4,B50,layer00_frac_rows_width_lt_half_h0,0.2511302541544477,,
+step4,B50,layer01_h0,4.924105,,
+step4,B50,layer01_width_mean,4.924191698222353,,
+step4,B50,layer01_width_p10,1.2485312938690185,,
+step4,B50,layer01_width_p50,3.8939536809921274,,
+step4,B50,layer01_width_p90,10.388450050354006,,
+step4,B50,layer01_width_cv,0.7596689126791405,,
+step4,B50,layer01_frac_rows_width_gt_2h0,0.1159274193548387,,
+step4,B50,layer01_frac_rows_width_lt_half_h0,0.3109828119908765,,
+step4,B50,layer02_h0,2.506495,,
+step4,B50,layer02_width_mean,2.506445410095368,,
+step4,B50,layer02_width_p10,0.9594565749168396,,
+step4,B50,layer02_width_p50,2.032974600791931,,
+step4,B50,layer02_width_p90,4.753373908996583,,
+step4,B50,layer02_width_cv,0.6476072931555977,,
+step4,B50,layer02_frac_rows_width_gt_2h0,0.0858585858585858,,
+step4,B50,layer02_frac_rows_width_lt_half_h0,0.2065310361681329,,
+step4,B50,layer03_h0,4.201291,,
+step4,B50,layer03_width_mean,4.201512117769403,,
+step4,B50,layer03_width_p10,1.315575158596039,,
+step4,B50,layer03_width_p50,2.7640459537506104,,
+step4,B50,layer03_width_p90,9.067834949493408,,
+step4,B50,layer03_width_cv,0.8472101455942356,,
+step4,B50,layer03_frac_rows_width_gt_2h0,0.1269448517432388,,
+step4,B50,layer03_frac_rows_width_lt_half_h0,0.3455522971652004,,
+step4,B50,layer04_h0,8.273577,,
+step4,B50,layer04_width_mean,8.273591974191792,,
+step4,B50,layer04_width_p10,2.582734060287476,,
+step4,B50,layer04_width_p50,7.587073087692261,,
+step4,B50,layer04_width_p90,14.152099895477296,,
+step4,B50,layer04_width_cv,0.6134490718716789,,
+step4,B50,layer04_frac_rows_width_gt_2h0,0.0654223688497882,,
+step4,B50,layer04_frac_rows_width_lt_half_h0,0.20403633105246,,
+step4,B50,layer05_h0,8.62449,,
+step4,B50,layer05_width_mean,8.624402018952793,,
+step4,B50,layer05_width_p10,2.553183603286744,,
+step4,B50,layer05_width_p50,8.13917064666748,,
+step4,B50,layer05_width_p90,15.638864994049072,,
+step4,B50,layer05_width_cv,0.5837206645478897,,
+step4,B50,layer05_frac_rows_width_gt_2h0,0.0738432714239165,,
+step4,B50,layer05_frac_rows_width_lt_half_h0,0.2124674160964483,,
+step4,B50,layer06_h0,7.414962,,
+step4,B50,layer06_width_mean,7.414910786852857,,
+step4,B50,layer06_width_p10,2.4320013523101807,,
+step4,B50,layer06_width_p50,7.171612024307251,,
+step4,B50,layer06_width_p90,12.660824584960938,,
+step4,B50,layer06_width_cv,0.5223275900254987,,
+step4,B50,layer06_frac_rows_width_gt_2h0,0.034274193548387,,
+step4,B50,layer06_frac_rows_width_lt_half_h0,0.1955034213098729,,
+step4,B50,layer07_h0,6.52943,,
+step4,B50,layer07_width_mean,6.53064467247913,,
+step4,B50,layer07_width_p10,2.3031625270843508,,
+step4,B50,layer07_width_p50,6.156795978546143,,
+step4,B50,layer07_width_p90,10.892901039123537,,
+step4,B50,layer07_width_cv,0.5448862580353661,,
+step4,B50,layer07_frac_rows_width_gt_2h0,0.0543947539915281,,
+step4,B50,layer07_frac_rows_width_lt_half_h0,0.1832029977191267,,
+step4,B50,layer08_h0,4.627206,,
+step4,B50,layer08_width_mean,4.629148296978699,,
+step4,B50,layer08_width_p10,1.7508786916732788,,
+step4,B50,layer08_width_p50,4.380726099014282,,
+step4,B50,layer08_width_p90,7.720073223114014,,
+step4,B50,layer08_width_cv,0.5179639157158009,,
+step4,B50,layer08_frac_rows_width_gt_2h0,0.0412899152818507,,
+step4,B50,layer08_frac_rows_width_lt_half_h0,0.1731834473769957,,
+step4,B50,layer09_h0,3.793493,,
+step4,B50,layer09_width_mean,3.7937758068918863,,
+step4,B50,layer09_width_p10,1.4825040936470033,,
+step4,B50,layer09_width_p50,3.536064624786377,,
+step4,B50,layer09_width_p90,6.438390493392944,,
+step4,B50,layer09_width_cv,0.5133333228523211,,
+step4,B50,layer09_frac_rows_width_gt_2h0,0.0425830889540566,,
+step4,B50,layer09_frac_rows_width_lt_half_h0,0.1697315900944933,,
+step4,B50,layer10_h0,2.602424,,
+step4,B50,layer10_width_mean,2.601676809631225,,
+step4,B50,layer10_width_p10,0.998335337638855,,
+step4,B50,layer10_width_p50,2.223427176475525,,
+step4,B50,layer10_width_p90,4.72093267440796,,
+step4,B50,layer10_width_cv,0.6065569293122897,,
+step4,B50,layer10_frac_rows_width_gt_2h0,0.0708496252851091,,
+step4,B50,layer10_frac_rows_width_lt_half_h0,0.1873676278918214,,
+step4,B50,layer11_h0,2.196885,,
+step4,B50,layer11_width_mean,2.196985022730268,,
+step4,B50,layer11_width_p10,0.8106271266937256,,
+step4,B50,layer11_width_p50,1.7306523323059082,,
+step4,B50,layer11_width_p90,4.229716587066651,,
+step4,B50,layer11_width_cv,0.6630559231512588,,
+step4,B50,layer11_frac_rows_width_gt_2h0,0.0887402248289345,,
+step4,B50,layer11_frac_rows_width_lt_half_h0,0.231427174975562,,
+step4,B125,layer00_h0,6.038305,,
+step4,B125,layer00_width_mean,6.038305109943275,,
+step4,B125,layer00_width_p10,2.644517159461976,,
+step4,B125,layer00_width_p50,5.916994571685791,,
+step4,B125,layer00_width_p90,9.539904212951662,,
+step4,B125,layer00_width_cv,0.4532043768535281,,
+step4,B125,layer00_frac_rows_width_gt_2h0,0.0204871293580971,,
+step4,B125,layer00_frac_rows_width_lt_half_h0,0.1301523297491039,,
+step4,B125,layer01_h0,16.599321,,
+step4,B125,layer01_width_mean,16.599827341017072,,
+step4,B125,layer01_width_p10,4.9170889377594,,
+step4,B125,layer01_width_p50,15.475555419921877,,
+step4,B125,layer01_width_p90,30.5004581451416,,
+step4,B125,layer01_width_cv,0.5999694711805779,,
+step4,B125,layer01_frac_rows_width_gt_2h0,0.053030303030303,,
+step4,B125,layer01_frac_rows_width_lt_half_h0,0.2768511730205278,,
+step4,B125,layer02_h0,3.600654,,
+step4,B125,layer02_width_mean,3.6003684763086223,,
+step4,B125,layer02_width_p10,1.1205724000930786,,
+step4,B125,layer02_width_p50,2.4428396224975586,,
+step4,B125,layer02_width_p90,7.083047246932984,,
+step4,B125,layer02_width_cv,0.9841341316237856,,
+step4,B125,layer02_frac_rows_width_gt_2h0,0.0980979146301727,,
+step4,B125,layer02_frac_rows_width_lt_half_h0,0.2848749592701206,,
+step4,B125,layer03_h0,17.188646,,
+step4,B125,layer03_width_mean,17.188260388727116,,
+step4,B125,layer03_width_p10,2.021122479438782,,
+step4,B125,layer03_width_p50,17.346651077270508,,
+step4,B125,layer03_width_p90,32.57994079589844,,
+step4,B125,layer03_width_cv,0.6082440638104606,,
+step4,B125,layer03_frac_rows_width_gt_2h0,0.0685992994460736,,
+step4,B125,layer03_frac_rows_width_lt_half_h0,0.2225582437275985,,
+step4,B125,layer04_h0,22.334167,,
+step4,B125,layer04_width_mean,22.333257655929028,,
+step4,B125,layer04_width_p10,9.55250759124756,,
+step4,B125,layer04_width_p50,21.677005767822266,,
+step4,B125,layer04_width_p90,35.922484207153325,,
+step4,B125,layer04_width_cv,0.4517070243191652,,
+step4,B125,layer04_frac_rows_width_gt_2h0,0.0261282176604757,,
+step4,B125,layer04_frac_rows_width_lt_half_h0,0.1470246823069403,,
+step4,B125,layer05_h0,18.09299,,
+step4,B125,layer05_width_mean,18.09336444016385,,
+step4,B125,layer05_width_p10,7.685694408416748,,
+step4,B125,layer05_width_p50,16.86850643157959,,
+step4,B125,layer05_width_p90,29.89539775848389,,
+step4,B125,layer05_width_cv,0.4867935299262979,,
+step4,B125,layer05_frac_rows_width_gt_2h0,0.0470939231019876,,
+step4,B125,layer05_frac_rows_width_lt_half_h0,0.1454158520690778,,
+step4,B125,layer06_h0,16.626243,,
+step4,B125,layer06_width_mean,16.625994707760878,,
+step4,B125,layer06_width_p10,7.485238742828369,,
+step4,B125,layer06_width_p50,15.373494625091553,,
+step4,B125,layer06_width_p90,27.637048912048343,,
+step4,B125,layer06_width_cv,0.463294455805146,,
+step4,B125,layer06_frac_rows_width_gt_2h0,0.0255274519387422,,
+step4,B125,layer06_frac_rows_width_lt_half_h0,0.1286147768002606,,
+step4,B125,layer07_h0,13.298043,,
+step4,B125,layer07_width_mean,13.298672756152856,,
+step4,B125,layer07_width_p10,4.866587543487549,,
+step4,B125,layer07_width_p50,10.66217565536499,,
+step4,B125,layer07_width_p90,22.932530403137207,,
+step4,B125,layer07_width_cv,0.7303216169695975,,
+step4,B125,layer07_frac_rows_width_gt_2h0,0.0668580971000325,,
+step4,B125,layer07_frac_rows_width_lt_half_h0,0.2096061420658194,,
+step4,B125,layer08_h0,9.027258,,
+step4,B125,layer08_width_mean,9.028547754950042,,
+step4,B125,layer08_width_p10,4.153664064407349,,
+step4,B125,layer08_width_p50,7.159179210662842,,
+step4,B125,layer08_width_p90,13.92391452789307,,
+step4,B125,layer08_width_cv,0.7681823006418058,,
+step4,B125,layer08_frac_rows_width_gt_2h0,0.0758186705767351,,
+step4,B125,layer08_frac_rows_width_lt_half_h0,0.1338689312479635,,
+step4,B125,layer09_h0,6.422319,,
+step4,B125,layer09_width_mean,6.4241553271740415,,
+step4,B125,layer09_width_p10,3.6069227695465087,,
+step4,B125,layer09_width_p50,6.152240753173828,,
+step4,B125,layer09_width_p90,9.631292819976808,,
+step4,B125,layer09_width_cv,0.3769587441447466,,
+step4,B125,layer09_frac_rows_width_gt_2h0,0.0123411534701857,,
+step4,B125,layer09_frac_rows_width_lt_half_h0,0.06524926686217,,
+step4,B125,layer10_h0,4.293497,,
+step4,B125,layer10_width_mean,4.292349407107743,,
+step4,B125,layer10_width_p10,1.9840197443962095,,
+step4,B125,layer10_width_p50,4.1362175941467285,,
+step4,B125,layer10_width_p90,6.841888999938966,,
+step4,B125,layer10_width_cv,0.4348764356205097,,
+step4,B125,layer10_frac_rows_width_gt_2h0,0.0204667644183773,,
+step4,B125,layer10_frac_rows_width_lt_half_h0,0.123981753014011,,
+step4,B125,layer11_h0,3.708741,,
+step4,B125,layer11_width_mean,3.7075096323391112,,
+step4,B125,layer11_width_p10,1.7669095039367675,,
+step4,B125,layer11_width_p50,3.500121593475342,,
+step4,B125,layer11_width_p90,5.942982864379883,,
+step4,B125,layer11_width_cv,0.4450894226915639,,
+step4,B125,layer11_frac_rows_width_gt_2h0,0.0265355164548712,,
+step4,B125,layer11_frac_rows_width_lt_half_h0,0.1154793906810035,,
+rule,A250,band,0.1 to 1.0 (middle),,
+rule,B50,band,abs < 0.1,,
+rule,B125,band,0.1 to 1.0 (middle),,
+rule,A250,reading (rule applies to the jumping lineage),in between: both factors contribute,,

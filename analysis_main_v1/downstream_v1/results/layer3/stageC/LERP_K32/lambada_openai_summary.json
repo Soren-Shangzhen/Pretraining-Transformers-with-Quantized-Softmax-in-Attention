@@ -1,0 +1,57 @@
+{
+  "condition": "LERP K32",
+  "run_name": "formal_124m_s1337_lerp_k32_fullgrad_2p5b",
+  "cfg": "lambada_openai",
+  "task": "lambada_openai",
+  "kind": "lambada",
+  "limit": null,
+  "forward_mode": "native",
+  "operator": {
+    "attn": "quant",
+    "K": 32,
+    "approx": "lerp",
+    "range_grad": "full",
+    "range_mode": "minmax",
+    "range_tau": 6.0
+  },
+  "n_docs": 5153,
+  "n_rows": 5153,
+  "n_requests": 5153,
+  "n_subtasks": 1,
+  "truncated": 0,
+  "truncation_rate": 0.0,
+  "failures": 0,
+  "retries": 0,
+  "order_hash": "3866b625240b7e88ef8a571e7cbaa6b3",
+  "target_delimiters": [
+    " "
+  ],
+  "acc_norm_rule": "argmax(total_logprob / len(raw choice string in characters)), delimiter excluded; verbatim lm-eval Task.process_results",
+  "harness_results": {
+    "lambada_openai": {
+      "name": "lambada_openai",
+      "alias": "lambada_openai",
+      "sample_len": 5153,
+      "perplexity,none": 182.61798253279684,
+      "perplexity_stderr,none": 9.14520605998606,
+      "acc,none": 0.2239472152144382,
+      "acc_stderr,none": 0.00580805254635645
+    }
+  },
+  "seconds": 74.1,
+  "fingerprint": {
+    "checkpoint_sha256": "b1986057ffd6b2195fa2b6262c3f6cc86e7b906558c7f779ec2d03d00aaf9a26",
+    "train_code_root": "<REPO>/training_code/formal_code_factorial250_v1/formal_base_v2",
+    "lm_eval_version": "0.4.13",
+    "task": "lambada_openai",
+    "limit": null,
+    "scorer_version": "stageC-1.0",
+    "seeds": {
+      "random_seed": 20260920,
+      "numpy_random_seed": 20260920,
+      "torch_random_seed": 20260920,
+      "fewshot_random_seed": 20260920
+    },
+    "task_yaml_sha": ""
+  }
+}
