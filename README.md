@@ -1,7 +1,7 @@
 # Pretraining Transformers with Quantized Softmax in Attention
 
 Code, run manifests and evaluation results for the paper *Pretraining Transformers with Quantized Softmax in Attention*
-(Shangzhen Zhu, Muyan Hu, Tomasz Kozlowski). The paper studies K-interval attention, which approximates the exponential
+(Shangzhen Zhu, Muyan Hu, Tomasz Kozlowski; [arXiv:2609.33591](https://arxiv.org/abs/2609.33591)). The paper studies K-interval attention, which approximates the exponential
 of softmax attention with K+1 grid values, during pretraining: per-row grid calibration (MinMax or a fixed window at the
 row maximum, FWM), interpolation (LERP) versus hard rounding (Nearest), and the placement of the straight-through
 surrogate relative to normalization (Weight-STE, Prob-STE).
@@ -10,8 +10,8 @@ This repository holds the training code of every run the paper reports (the 202 
 Table S28), the evaluations and checks whose results it prints, the stored per-checkpoint evaluation results, and the
 scripts that regenerate every generated table, figure and number of the paper from those results.
 `REPRODUCTION_INDEX.md` maps each run to its manifest, code and result files, each table and figure to its source
-files, and gives the commands. Appendix letters and table and figure numbers are those of the arXiv version of the
-paper.
+files, and gives the commands. Appendix letters and table and figure numbers are those of version 3 of the arXiv paper
+(arXiv:2609.33591v3).
 
 ## Repository layout
 
@@ -142,7 +142,7 @@ manifests and `summary.json` files.
 @article{zhu2026pretraining,
   title   = {Pretraining Transformers with Quantized Softmax in Attention},
   author  = {Zhu, Shangzhen and Hu, Muyan and Kozlowski, Tomasz},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2609.33591},
   year    = {2026}
 }
 ```

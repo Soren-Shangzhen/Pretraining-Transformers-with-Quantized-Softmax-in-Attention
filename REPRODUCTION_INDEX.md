@@ -1,8 +1,8 @@
 # REPRODUCTION_INDEX
 
 Index of this repository, the released code of the paper *Pretraining Transformers with Quantized Softmax in
-Attention*. Appendix letters and table and figure numbers are those of the arXiv version of the paper (Appendices A–J,
-Tables S1–S57, Figures S1–S15). It lists the manifests, code and result files of every run the paper
+Attention* (arXiv:2609.33591). Appendix letters and table and figure numbers are those of version 3 of the arXiv paper
+(arXiv:2609.33591v3; Appendices A–J, Tables S1–S57, Figures S1–S15). It lists the manifests, code and result files of every run the paper
 reports (section 2), maps each table and figure to its generator and source files (section 4; Appendix I tables and
 figures to their runs in section 5), and gives the commands for evaluation, analysis, tables, figures and checks
 (section 6). Every path is relative to the root of this repository. Model checkpoints and tokenized data are not included
